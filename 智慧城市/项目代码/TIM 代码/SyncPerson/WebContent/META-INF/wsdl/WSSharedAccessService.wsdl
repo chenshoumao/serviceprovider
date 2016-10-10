@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:pim="http://pim.services.ws.itim.ibm.com" xmlns:pimex="http://pim.exceptions.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns3="http://pim.model.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+			<import namespace="http://model.ws.itim.ibm.com"/>
+			<import namespace="http://pim.exceptions.ws.itim.ibm.com"/>
+			<complexType name="ArrayOf_xsd_string">
+				<sequence>
+					<element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOf_tns1_WSAttribute">
+				<sequence>
+					<element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+				</sequence>
+			</complexType>
+
+			<element name="pimfault" type="pimex:WSExtLoginServiceException"/>
+			<element name="pimfault1" type="pimex:WSExtApplicationException"/>
+
+
+        </schema>
+
+		<schema elementFormDefault="qualified" targetNamespace="http://pim.services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+			<import namespace="http://pim.model.ws.itim.ibm.com"/>
+			<import namespace="http://model.ws.itim.ibm.com"/>
+			
+			<element name="login">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="userID" type="string"/>
+						<element maxOccurs="1" minOccurs="1" name="password" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="loginResponse">
+				<complexType>
+					<sequence>
+
+						<element name="session" type="tns1:WSSession"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="logout">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="logoutResponse">
+				<complexType>
+					<sequence>
+
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAuthorizedSharedAccess">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+						<element maxOccurs="1" minOccurs="1" name="serviceURI" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAuthorizedSharedAccessResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="unbounded" minOccurs="0" name="out" type="tns3:WSSharedAccess"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAuthorizedSharedAccessByServiceDN">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+						<element maxOccurs="1" minOccurs="1" name="serviceDN" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAuthorizedSharedAccessByServiceDNResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="unbounded" minOccurs="0" name="out" type="tns3:WSSharedAccess"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAllAuthorizedSharedAccess">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+						<element maxOccurs="1" minOccurs="1" name="serviceURI" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAllAuthorizedSharedAccessResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="unbounded" minOccurs="0" name="out" type="tns3:WSSharedAccess"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAllAuthorizedSharedAccessByServiceDN">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+						<element maxOccurs="1" minOccurs="1" name="serviceDN" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getAllAuthorizedSharedAccessByServiceDNResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="unbounded" minOccurs="0" name="out" type="tns3:WSSharedAccess"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="checkInAllResponse">
+				<complexType>
+					<sequence>
+
+						<element name="out" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="getCredentialAttributes">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession">
+						</element>
+						<element maxOccurs="1" minOccurs="1" name="credCompDN" type="string">
+						</element>
+						<element maxOccurs="unbounded" minOccurs="1" name="attributeNames" type="string">
+						</element>
+						<element maxOccurs="1" minOccurs="0" name="justification" type="string">
+						</element>
+						<element maxOccurs="1" minOccurs="0" name="duration" type="integer">
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getCredentialAttributesResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="out" type="tns3:WSCredentialAttributes">
+						</element>
+						
+					</sequence>
+				</complexType>
+			</element>
+
+
+			<element name="checkInAllIDs">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="checkInAllIDsResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="unbounded" minOccurs="0" name="requestIDs" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+
+
+			<element name="getCredential">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession">
+						</element>
+						<element maxOccurs="1" minOccurs="1" name="credCompDN" type="string">
+						</element>
+						<element maxOccurs="1" minOccurs="0" name="justification" type="string"/>
+						<element maxOccurs="1" minOccurs="0" name="duration" type="integer">
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="getCredentialResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="out" type="tns3:WSCredential"/>
+					</sequence>
+				</complexType>
+			</element>
+
+
+			<element name="checkIn">
+				<complexType>
+					<sequence>
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+						<element maxOccurs="1" minOccurs="1" name="leaseDN" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="checkInResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="0" name="requestID" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="checkoutWithoutWorkflow">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession"/>
+						<element maxOccurs="1" minOccurs="1" name="credCompDN" type="string"/>
+						<element maxOccurs="1" minOccurs="0" name="justification" type="string"/>
+						<element maxOccurs="1" minOccurs="0" name="duration" type="integer">
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="checkoutWithoutWorkflowResponse">
+				<complexType>
+					<sequence>
+
+						<element name="out" type="tns3:WSCredential"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="checkout">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="1" name="session" type="tns1:WSSession">
+						</element>
+						<element maxOccurs="1" minOccurs="1" name="credCompDN" type="string">
+						</element>
+						<element maxOccurs="1" minOccurs="0" name="justification" type="string">
+						</element>
+						<element maxOccurs="1" minOccurs="0" name="duration" type="integer">
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="checkoutResponse">
+				<complexType>
+					<sequence>
+
+						<element maxOccurs="1" minOccurs="0" name="credential" type="tns3:WSCredential">
+						</element>
+						<element maxOccurs="1" minOccurs="0" name="requestId" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			
+
+		
+			<element name="NewElement" type="tns3:WSSharedAccess"/>
+		</schema>
+		
+		<schema elementFormDefault="qualified" targetNamespace="http://pim.model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+			<import namespace="http://model.ws.itim.ibm.com"/>
+			<complexType name="WSCredential">
+				<sequence>
+					<element maxOccurs="1" minOccurs="1" name="userID" type="string">
+					</element>
+					<element maxOccurs="1" minOccurs="0" name="password" type="string">
+					</element>
+
+
+					<element maxOccurs="1" minOccurs="0" name="leaseInfo" type="tns3:WSLeaseInfo"/>
+					<element maxOccurs="1" minOccurs="0" name="isPasswordViewable" type="boolean"/>
+				</sequence>
+			</complexType>
+			<complexType name="WSSharedAccess">
+				<sequence>
+					<element maxOccurs="1" minOccurs="1" name="credCompDN" type="string"/>
+					<element maxOccurs="1" minOccurs="0" name="name" type="string"/>
+					<element maxOccurs="1" minOccurs="0" name="description" type="string"/>
+					<element maxOccurs="1" minOccurs="1" name="isPool" type="boolean"/>
+				</sequence>
+			</complexType>
+		
+			<complexType name="WSLeaseInfo">
+				<sequence>
+					<element name="expiration" type="dateTime"/>
+					<element name="leaseDN" type="string"/>
+				</sequence>
+			</complexType>
+		
+			<complexType name="WSCredentialAttributes">
+				<sequence>
+					<element maxOccurs="1" minOccurs="0" name="leaseInfo" type="tns3:WSLeaseInfo">
+					</element>
+					<element maxOccurs="unbounded" minOccurs="1" name="attributes" type="tns1:WSAttribute"/>
+				</sequence>
+			</complexType>
+		
+		
+		</schema>
+		<schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+			<import namespace="http://services.ws.itim.ibm.com"/>
+			<complexType name="WSLocale">
+				<sequence>
+					<element name="country" nillable="true" type="xsd:string"/>
+					<element name="variant" nillable="true" type="xsd:string"/>
+					<element name="language" nillable="true" type="xsd:string"/>
+				</sequence>
+			</complexType>
+			<complexType name="WSSession">
+				<sequence>
+					<element name="clientSession" nillable="true" type="xsd:string"/>
+					<element name="enforceChallengeResponse" type="xsd:boolean"/>
+					<element name="locale" nillable="true" type="tns1:WSLocale"/>
+					<element name="sessionID" type="xsd:long"/>
+				</sequence>
+			</complexType>
+			<complexType name="WSAttribute">
+				<sequence>
+					<element name="name" nillable="true" type="xsd:string"/>
+					<element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+				</sequence>
+			</complexType>
+		</schema>
+		<schema elementFormDefault="qualified" targetNamespace="http://pim.exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+			<complexType name="WSExtLoginServiceException">
+				<sequence>
+					<element maxOccurs="1" minOccurs="0" name="msgKey" type="string"/>
+					<element maxOccurs="unbounded" minOccurs="0" name="msgParameters" type="string"/>
+				</sequence>
+			</complexType>
+			<complexType name="WSExtApplicationException">
+				<sequence>
+					<element maxOccurs="1" minOccurs="0" name="msgKey" type="string"/>
+					<element maxOccurs="unbounded" minOccurs="0" name="msgParameters" type="string"/>
+				</sequence>
+			</complexType>
+		</schema>
+	</wsdl:types>
+
+	<wsdl:message name="WSExtLoginServiceException">
+		<wsdl:part element="impl:pimfault" name="fault"/>
+	</wsdl:message>
+
+	<wsdl:message name="WSExtApplicationException">
+		<wsdl:part element="impl:pimfault1" name="fault"/>
+	</wsdl:message>
+
+	<wsdl:message name="loginRequest">
+		<wsdl:part element="pim:login" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="loginResponse">
+		<wsdl:part element="pim:loginResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="logoutRequest">
+		<wsdl:part element="pim:logout" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="logoutResponse">
+		<wsdl:part element="pim:logoutResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAuthorizedSharedAccessRequest">
+		<wsdl:part element="pim:getAuthorizedSharedAccess" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAuthorizedSharedAccessResponse">
+		<wsdl:part element="pim:getAuthorizedSharedAccessResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAllAuthorizedSharedAccessRequest">
+		<wsdl:part element="pim:getAllAuthorizedSharedAccess" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAllAuthorizedSharedAccessResponse">
+		<wsdl:part element="pim:getAllAuthorizedSharedAccessResponse" name="parameters"/>
+	</wsdl:message>
+
+
+
+
+	<wsdl:message name="getCredentialRequest">
+		<wsdl:part element="pim:getCredential" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getCredentialResponse">
+		<wsdl:part element="pim:getCredentialResponse" name="parameters"/>
+	</wsdl:message>
+
+
+	<wsdl:message name="getCredentialAttributesRequest">
+		<wsdl:part element="pim:getCredentialAttributes" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getCredentialAttributesResponse">
+		<wsdl:part element="pim:getCredentialAttributesResponse" name="parameters"/>
+	</wsdl:message>
+
+
+	<wsdl:message name="checkInAllIDsRequest">
+		<wsdl:part element="pim:checkInAllIDs" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="checkInAllIDsResponse">
+		<wsdl:part element="pim:checkInAllIDsResponse" name="parameters"/>
+	</wsdl:message>
+
+
+	<wsdl:message name="checkInRequest">
+		<wsdl:part element="pim:checkIn" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="checkInResponse">
+		<wsdl:part element="pim:checkInResponse" name="parameters"/>
+	</wsdl:message>
+
+
+	<wsdl:message name="checkoutWithoutWorkflowRequest">
+		<wsdl:part element="pim:checkoutWithoutWorkflow" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="checkoutWithoutWorkflowResponse">
+		<wsdl:part element="pim:checkoutWithoutWorkflowResponse" name="parameters"/>
+	</wsdl:message>
+
+
+	<wsdl:message name="checkoutRequest">
+		<wsdl:part element="pim:checkout" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="checkoutResponse">
+		<wsdl:part element="pim:checkoutResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAuthorizedSharedAccessByServiceDNRequest">
+		<wsdl:part element="pim:getAuthorizedSharedAccessByServiceDN" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAuthorizedSharedAccessByServiceDNResponse">
+		<wsdl:part element="pim:getAuthorizedSharedAccessByServiceDNResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAllAuthorizedSharedAccessByServiceDNRequest">
+		<wsdl:part element="pim:getAllAuthorizedSharedAccessByServiceDN" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="getAllAuthorizedSharedAccessByServiceDNResponse">
+		<wsdl:part element="pim:getAllAuthorizedSharedAccessByServiceDNResponse" name="parameters"/>
+	</wsdl:message>
+
+
+	<wsdl:portType name="WSSharedAccessService">
+
+		<wsdl:operation name="login">
+			<wsdl:input message="impl:loginRequest"/>
+			<wsdl:output message="impl:loginResponse"/>
+			<wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="logout">
+			<wsdl:input message="impl:logoutRequest"/>
+			<wsdl:output message="impl:logoutResponse"/>
+			<wsdl:fault message="impl:WSExtApplicationException" name="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="getAuthorizedSharedAccess">
+			<wsdl:input message="impl:getAuthorizedSharedAccessRequest"/>
+			<wsdl:output message="impl:getAuthorizedSharedAccessResponse"/>
+			<wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+			<wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+		</wsdl:operation>
+		<wsdl:operation name="getAuthorizedSharedAccessByServiceDN">
+			<wsdl:input message="impl:getAuthorizedSharedAccessByServiceDNRequest"/>
+			<wsdl:output message="impl:getAuthorizedSharedAccessByServiceDNResponse"/>
+            <wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+            <wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+        </wsdl:operation>
+		<wsdl:operation name="getAllAuthorizedSharedAccess">
+			<wsdl:input message="impl:getAllAuthorizedSharedAccessRequest"/>
+			<wsdl:output message="impl:getAllAuthorizedSharedAccessResponse"/>
+			<wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+			<wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+		</wsdl:operation>
+		<wsdl:operation name="getAllAuthorizedSharedAccessByServiceDN">
+			<wsdl:input message="impl:getAllAuthorizedSharedAccessByServiceDNRequest"/>
+			<wsdl:output message="impl:getAllAuthorizedSharedAccessByServiceDNResponse"/>
+            <wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+            <wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+        </wsdl:operation>
+		<wsdl:operation name="getCredential">
+			<wsdl:input message="impl:getCredentialRequest"/>
+			<wsdl:output message="impl:getCredentialResponse"/>
+			<wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+			<wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+		</wsdl:operation>
+
+
+		<wsdl:operation name="getCredentialAttributes">
+			<wsdl:input message="impl:getCredentialAttributesRequest"/>
+			<wsdl:output message="impl:getCredentialAttributesResponse"/>
+			<wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+			<wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="checkIn">
+			<wsdl:input message="impl:checkInRequest"/>
+			<wsdl:output message="impl:checkInResponse"/>
+			<wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+			<wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="checkInAllIDs">
+			<wsdl:input message="impl:checkInAllIDsRequest"/>
+			<wsdl:output message="impl:checkInAllIDsResponse"/>
+			<wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+			<wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+		</wsdl:operation>
+		<wsdl:operation name="checkoutWithoutWorkflow">
+			<wsdl:input message="impl:checkoutWithoutWorkflowRequest"/>
+			<wsdl:output message="impl:checkoutWithoutWorkflowResponse"/>
+            <wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+            <wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+        </wsdl:operation>
+		<wsdl:operation name="checkout">
+			<wsdl:input message="impl:checkoutRequest"/>
+			<wsdl:output message="impl:checkoutResponse"/>
+            <wsdl:fault message="impl:WSExtLoginServiceException" name="fault"/>
+            <wsdl:fault message="impl:WSExtApplicationException" name="fault1"/>
+        </wsdl:operation>
+
+
+	</wsdl:portType>
+
+	<wsdl:binding name="WSSharedAccessSoapBinding" type="impl:WSSharedAccessService">
+
+		<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="login">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/login"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="logout">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/logout"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getAuthorizedSharedAccess">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/getAuthorizedSharedAccess"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getAllAuthorizedSharedAccess">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/getAllAuthorizedSharedAccess"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getCredential">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/getCredential"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getCredentialAttributes">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/getCredentialAttributes"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="checkIn">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/checkIn"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="checkInAllIDs">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/checkInAllIDs"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="checkoutWithoutWorkflow">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/checkoutWithoutWorkflow"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="checkout">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/checkout"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getAuthorizedSharedAccessByServiceDN">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/getAuthorizedSharedAccessByServiceDN"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getAllAuthorizedSharedAccessByServiceDN">
+
+			<wsdlsoap:operation soapAction="http://services.ws.itim.ibm.com/getAllAuthorizedSharedAccessByServiceDN"/>
+			<wsdl:input>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+
+				<wsdlsoap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+
+				<wsdlsoap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+			<wsdl:fault name="fault1">
+
+				<wsdlsoap:fault name="fault1" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="WSSharedAccessService">
+
+		<wsdl:port binding="impl:WSSharedAccessSoapBinding" name="WSSharedAccess">
+
+			<wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSSharedAccessService"/>
+
+		</wsdl:port>
+
+	</wsdl:service>
+
+</wsdl:definitions>

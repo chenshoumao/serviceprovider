@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+  	<import namespace="http://exceptions.ws.itim.ibm.com"/>
+  	<import namespace="http://model.ws.itim.ibm.com"/>
+  	<element name="createAccess">
+  		<complexType>
+  			<sequence>
+  				<element name="session" type="tns1:WSSession"/>
+  				<element name="wsAccessEntitlement" type="tns1:WSAccessEntitlement"/>
+  				<element maxOccurs="unbounded" name="wsNewUserAccesses" type="tns1:WSNewUserAccess"/>
+  				<element name="date" type="xsd:dateTime"/>
+  				
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<complexType name="ArrayOf_xsd_string">
+  		<sequence>
+  			<element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+  		</sequence>
+  	</complexType>
+  	<complexType name="ArrayOf_tns1_WSAttribute">
+  		<sequence>
+  			<element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+  		</sequence>
+  	</complexType>
+  	<complexType name="ArrayOf_tns1_WSUserAccess">
+  		<sequence>
+  			<element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSUserAccess"/>
+  		</sequence>
+  	</complexType>
+  	<complexType name="ArrayOf_tns1_WSNewUserAccess">
+  		<sequence>
+  			<element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSNewUserAccess"/>
+  		</sequence>
+  	</complexType>
+  	<element name="createAccessResponse">
+  		<complexType>
+  			<sequence>
+  				<element maxOccurs="unbounded" name="createAccessReturn" type="tns1:WSRequest"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="fault" type="tns2:WSLoginServiceException"/>
+  	<element name="fault1" type="tns2:WSApplicationException"/>
+  	<element name="getAccesses">
+  		<complexType>
+  			<sequence>
+  				<element name="session" type="tns1:WSSession"/>
+  				<element name="personDN" type="xsd:string"/>
+                <element name="accessId" type="string"/>
+             </sequence>
+  		</complexType>
+  	</element>
+  	<element name="getAccessesResponse">
+  		<complexType>
+  			<sequence>
+  				<element maxOccurs="unbounded" name="getAccessesReturn" type="tns1:WSUserAccess"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="removeAccess">
+  		<complexType>
+  			<sequence>
+  				<element name="session" type="tns1:WSSession"/>  				<element name="wsUserAccess" type="tns1:WSUserAccess"/>
+  				<element name="date" type="xsd:dateTime"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="removeAccessResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="removeAccessReturn" type="tns1:WSRequest"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="searchAvailableAccessEntitlements">
+  		<complexType>
+  			<sequence>
+  				<element name="session" type="tns1:WSSession"/>
+  				<element name="containerDN" type="xsd:string"/>
+  				<element name="personDN" type="xsd:string"/>
+  				<element name="accessType" type="xsd:string"/>
+  				<element name="accessInfo" type="xsd:string"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="searchAvailableAccessEntitlementsResponse">
+  		<complexType>
+  			<sequence>
+  				<element maxOccurs="unbounded" name="searchAvailableAccessEntitlementsReturn" type="tns1:WSAccessEntitlement"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAccessEntitlement">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+      	<element name="accessId" nillable="true" type="xsd:string"/>
+      	<element name="serviceDN" nillable="true" type="xsd:string"/>
+      	<element name="accessType" nillable="true" type="xsd:string"/>
+      	<element name="accessDescription" nillable="true" type="xsd:string"/>
+      	<element name="profileName" nillable="true" type="xsd:string"/>
+      	<element name="serviceName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSRequest">
+    <sequence>
+     <element name="timeCompleted" nillable="true" type="xsd:dateTime"/>
+     <element name="subjectProfile" nillable="true" type="xsd:string"/>
+     <element name="result" nillable="true" type="xsd:string"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="processTypeString" nillable="true" type="xsd:string"/>
+     <element name="title" nillable="true" type="xsd:string"/>
+     <element name="owner" nillable="true" type="xsd:string"/>
+     <element name="processStateString" nillable="true" type="xsd:string"/>
+     <element name="status" type="xsd:int"/>
+     <element name="requestee" nillable="true" type="xsd:string"/>
+     <element name="timeSubmitted" nillable="true" type="xsd:dateTime"/>
+     <element name="subject" nillable="true" type="xsd:string"/>
+     <element name="requestId" type="xsd:long"/>
+     <element name="processType" nillable="true" type="xsd:string"/>
+     <element name="subjectService" nillable="true" type="xsd:string"/>
+     <element name="statusString" nillable="true" type="xsd:string"/>
+     <element name="processState" nillable="true" type="xsd:string"/>
+     <element name="timeScheduled" nillable="true" type="xsd:dateTime"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSUserAccess">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="accessId" nillable="true" type="xsd:string"/>
+       <element name="serviceDN" nillable="true" type="xsd:string"/>
+       <element name="accessType" nillable="true" type="xsd:string"/>
+       <element name="ownerName" nillable="true" type="xsd:string"/>
+       <element name="ownerDN" nillable="true" type="xsd:string"/>
+       <element name="accessDescription" nillable="true" type="xsd:string"/>
+       <element name="accountDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="accessName" nillable="true" type="xsd:string"/>
+       <element name="userId" nillable="true" type="xsd:string"/>
+       <element name="serviceName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSNewUserAccess">
+      <sequence>
+       <element name="ownerDN" nillable="true" type="xsd:string"/>
+       <element name="accountDN" nillable="true" type="xsd:string"/>
+       <element name="userId" nillable="true" type="xsd:string"/>
+       <element name="password" nillable="true" type="xsd:string"/>
+      </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="createAccessResponse">
+
+      <wsdl:part element="intf:createAccessResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeAccessRequest">
+
+      <wsdl:part element="intf:removeAccess" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccessesRequest">
+
+   	<wsdl:part element="intf:getAccesses" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchAvailableAccessEntitlementsRequest">
+
+      <wsdl:part element="intf:searchAvailableAccessEntitlements" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeAccessResponse">
+
+      <wsdl:part element="intf:removeAccessResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccessesResponse">
+
+      <wsdl:part element="intf:getAccessesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createAccessRequest">
+
+   	<wsdl:part element="intf:createAccess" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchAvailableAccessEntitlementsResponse">
+
+      <wsdl:part element="intf:searchAvailableAccessEntitlementsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+
+   <wsdl:portType name="WSAccessService">
+
+      <wsdl:operation name="createAccess">
+
+         <wsdl:input message="intf:createAccessRequest" name="createAccessRequest"/>
+
+         <wsdl:output message="intf:createAccessResponse" name="createAccessResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+
+      </wsdl:operation>
+
+
+      <wsdl:operation name="getAccesses">
+
+         <wsdl:input message="intf:getAccessesRequest" name="getAccessesRequest"/>
+
+         <wsdl:output message="intf:getAccessesResponse" name="getAccessesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+
+      </wsdl:operation>
+
+
+
+      <wsdl:operation name="removeAccess">
+
+         <wsdl:input message="intf:removeAccessRequest" name="removeAccessRequest"/>
+
+         <wsdl:output message="intf:removeAccessResponse" name="removeAccessResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchAvailableAccessEntitlements">
+
+         <wsdl:input message="intf:searchAvailableAccessEntitlementsRequest" name="searchAvailableAccessEntitlementsRequest"/>
+
+         <wsdl:output message="intf:searchAvailableAccessEntitlementsResponse" name="searchAvailableAccessEntitlementsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSAccessServiceSoapBinding" type="intf:WSAccessService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createAccess">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createAccessRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createAccessResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccesses">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAccessesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAccessesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeAccess">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeAccessRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeAccessResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchAvailableAccessEntitlements">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchAvailableAccessEntitlementsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchAvailableAccessEntitlementsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSAccessServiceService">
+
+      <wsdl:port binding="intf:WSAccessServiceSoapBinding" name="WSAccessService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSAccessServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

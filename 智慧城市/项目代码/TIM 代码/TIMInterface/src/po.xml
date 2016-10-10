@@ -1,0 +1,19 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--  po.xml用于将java中的对象对应数据库表-->
+<hibernate-mapping package="ldap.bean" default-lazy="false"> 
+	 
+	<class name="User" table="LDAP_User">
+		<id name="id" column="cid">
+			<generator class="native"></generator>
+		</id>
+		<property name="name"></property>
+		<property name="description"></property> 
+	</class> 
+	 
+	
+	 
+	
+</hibernate-mapping>

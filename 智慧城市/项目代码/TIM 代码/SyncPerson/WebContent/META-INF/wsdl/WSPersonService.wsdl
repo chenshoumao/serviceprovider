@@ -1,0 +1,2002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="addRole">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="roleDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addRoleResponse">
+    <complexType>
+     <sequence>
+      <element name="addRoleReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault" type="tns2:WSLoginServiceException"/>
+   <element name="fault1" type="tns2:WSApplicationException"/>
+   <element name="addRolesToPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="roleDNs" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addRolesToPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="addRolesToPersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="wsPerson" type="tns1:WSPerson"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSOrganizationalContainer">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSOrganizationalContainer"/>
+    </sequence>
+   </complexType>
+   <element name="createPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="createPersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deletePerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deletePersonResponse">
+    <complexType>
+     <sequence>
+      <element name="deletePersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAccountsByOwner">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAccountsByOwnerResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAccountsByOwnerReturn" type="tns1:WSAccount"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAuthorizedPersonProfilesForCreate">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAuthorizedPersonProfilesForCreateResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAuthorizedPersonProfilesForCreateReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAuthorizedServices">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAuthorizedServicesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAuthorizedServicesReturn" type="tns1:WSService"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getFilteredAccountsByOwner">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="filterAttribute" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getFilteredAccountsByOwnerResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getFilteredAccountsByOwnerReturn" type="tns1:WSAccount"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getFilteredAuthorizedServices">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="filterAttribute" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getFilteredAuthorizedServicesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getFilteredAuthorizedServicesReturn" type="tns1:WSService"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPersonRoles">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPersonRolesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getPersonRolesReturn" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPrincipalPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPrincipalPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="getPrincipalPersonReturn" type="tns1:WSPerson"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault2" type="tns2:WSInvalidSessionException"/>
+   <element name="isCreatePersonAllowed">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isCreatePersonAllowedResponse">
+    <complexType>
+     <sequence>
+      <element name="isCreatePersonAllowedReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault3" type="tns2:WSUnsupportedVersionException"/>
+   <element name="isMemberOfRole">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="roleDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isMemberOfRoleResponse">
+    <complexType>
+     <sequence>
+      <element name="isMemberOfRoleReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupPersonReturn" type="tns1:WSPerson"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="wsAttrs" type="tns1:WSAttribute"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="modifyPersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeRole">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="roleDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeRoleResponse">
+    <complexType>
+     <sequence>
+      <element name="removeRoleReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeRolesFromPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="roleDNs" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeRolesFromPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="removeRolesFromPersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="restorePerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="restoreAccounts" type="xsd:boolean"/>
+      <element name="password" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="restorePersonResponse">
+    <complexType>
+     <sequence>
+      <element name="restorePersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchPersonsFromRoot">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="filter" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="attrList" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchPersonsFromRootResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchPersonsFromRootReturn" type="tns1:WSPerson"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchPersonsWithITIMAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="filter" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="attrList" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchPersonsWithITIMAccountResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchPersonsWithITIMAccountReturn" type="tns1:WSPerson"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="selfRegister">
+    <complexType>
+     <sequence>
+      <element name="wsPerson" type="tns1:WSPerson"/>
+      <element name="tenantId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="selfRegisterResponse">
+    <complexType/>
+   </element>
+   <element name="suspendPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="suspendPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="suspendPersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="suspendPersonAdvanced">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="includeAccounts" type="xsd:boolean"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="suspendPersonAdvancedResponse">
+    <complexType>
+     <sequence>
+      <element name="suspendPersonAdvancedReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="synchGeneratedPassword">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="synchGeneratedPasswordResponse">
+    <complexType>
+     <sequence>
+      <element name="synchGeneratedPasswordReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="synchPasswords">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+      <element name="notifyByMail" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="synchPasswordsResponse">
+    <complexType>
+     <sequence>
+      <element name="synchPasswordsReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="transferPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element name="targetContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="transferPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="transferPersonReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSRequest">
+    <sequence>
+     <element name="timeCompleted" nillable="true" type="xsd:dateTime"/>
+     <element name="subjectProfile" nillable="true" type="xsd:string"/>
+     <element name="result" nillable="true" type="xsd:string"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="processTypeString" nillable="true" type="xsd:string"/>
+     <element name="title" nillable="true" type="xsd:string"/>
+     <element name="owner" nillable="true" type="xsd:string"/>
+     <element name="processStateString" nillable="true" type="xsd:string"/>
+     <element name="status" type="xsd:int"/>
+     <element name="requestee" nillable="true" type="xsd:string"/>
+     <element name="timeSubmitted" nillable="true" type="xsd:dateTime"/>
+     <element name="subject" nillable="true" type="xsd:string"/>
+     <element name="requestId" type="xsd:long"/>
+     <element name="processType" nillable="true" type="xsd:string"/>
+     <element name="subjectService" nillable="true" type="xsd:string"/>
+     <element name="statusString" nillable="true" type="xsd:string"/>
+     <element name="processState" nillable="true" type="xsd:string"/>
+     <element name="timeScheduled" nillable="true" type="xsd:dateTime"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="operation" type="xsd:int" />
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSOrganizationalContainer">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="children" nillable="true" type="impl:ArrayOf_tns1_WSOrganizationalContainer"/>
+       <element name="parentDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="supervisorDN" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSPerson">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSAccount">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="serviceDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="serviceName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSService">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="enrole" type="xsd:boolean"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSRole">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="description" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSInvalidSessionException">
+    <complexContent>
+     <extension base="tns2:WSLoginServiceException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSUnsupportedVersionException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addRolesToPersonRequest">
+
+      <wsdl:part element="intf:addRolesToPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="transferPersonResponse">
+
+      <wsdl:part element="intf:transferPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountsByOwnerResponse">
+
+      <wsdl:part element="intf:getAccountsByOwnerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthorizedServicesRequest">
+
+      <wsdl:part element="intf:getAuthorizedServices" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="selfRegisterRequest">
+
+      <wsdl:part element="intf:selfRegister" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="synchPasswordsRequest">
+
+      <wsdl:part element="intf:synchPasswords" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deletePersonRequest">
+
+      <wsdl:part element="intf:deletePerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="restorePersonRequest">
+
+      <wsdl:part element="intf:restorePerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPersonRolesResponse">
+
+      <wsdl:part element="intf:getPersonRolesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="suspendPersonResponse">
+
+      <wsdl:part element="intf:suspendPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyPersonResponse">
+
+      <wsdl:part element="intf:modifyPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthorizedPersonProfilesForCreateResponse">
+
+      <wsdl:part element="intf:getAuthorizedPersonProfilesForCreateResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeRoleRequest">
+
+      <wsdl:part element="intf:removeRole" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthorizedPersonProfilesForCreateRequest">
+
+      <wsdl:part element="intf:getAuthorizedPersonProfilesForCreate" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addRoleResponse">
+
+      <wsdl:part element="intf:addRoleResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="suspendPersonRequest">
+
+      <wsdl:part element="intf:suspendPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="suspendPersonAdvancedRequest">
+
+      <wsdl:part element="intf:suspendPersonAdvanced" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchPersonsFromRootResponse">
+
+      <wsdl:part element="intf:searchPersonsFromRootResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchPersonsWithITIMAccountResponse">
+
+      <wsdl:part element="intf:searchPersonsWithITIMAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupPersonRequest">
+
+      <wsdl:part element="intf:lookupPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFilteredAuthorizedServicesRequest">
+
+      <wsdl:part element="intf:getFilteredAuthorizedServices" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="synchGeneratedPasswordRequest">
+
+      <wsdl:part element="intf:synchGeneratedPassword" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSUnsupportedVersionException">
+
+      <wsdl:part element="intf:fault3" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deletePersonResponse">
+
+      <wsdl:part element="intf:deletePersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFilteredAccountsByOwnerRequest">
+
+      <wsdl:part element="intf:getFilteredAccountsByOwner" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="transferPersonRequest">
+
+      <wsdl:part element="intf:transferPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountsByOwnerRequest">
+
+      <wsdl:part element="intf:getAccountsByOwner" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPrincipalPersonResponse">
+
+      <wsdl:part element="intf:getPrincipalPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isCreatePersonAllowedResponse">
+
+      <wsdl:part element="intf:isCreatePersonAllowedResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addRolesToPersonResponse">
+
+      <wsdl:part element="intf:addRolesToPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createPersonResponse">
+
+      <wsdl:part element="intf:createPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isMemberOfRoleResponse">
+
+      <wsdl:part element="intf:isMemberOfRoleResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupPersonResponse">
+
+      <wsdl:part element="intf:lookupPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeRolesFromPersonRequest">
+
+      <wsdl:part element="intf:removeRolesFromPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="suspendPersonAdvancedResponse">
+
+      <wsdl:part element="intf:suspendPersonAdvancedResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addRoleRequest">
+
+      <wsdl:part element="intf:addRole" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createPersonRequest">
+
+      <wsdl:part element="intf:createPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isMemberOfRoleRequest">
+
+      <wsdl:part element="intf:isMemberOfRole" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPrincipalPersonRequest">
+
+      <wsdl:part element="intf:getPrincipalPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isCreatePersonAllowedRequest">
+
+      <wsdl:part element="intf:isCreatePersonAllowed" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyPersonRequest">
+
+      <wsdl:part element="intf:modifyPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFilteredAuthorizedServicesResponse">
+
+      <wsdl:part element="intf:getFilteredAuthorizedServicesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="restorePersonResponse">
+
+      <wsdl:part element="intf:restorePersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFilteredAccountsByOwnerResponse">
+
+      <wsdl:part element="intf:getFilteredAccountsByOwnerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchPersonsFromRootRequest">
+
+      <wsdl:part element="intf:searchPersonsFromRoot" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchPersonsWithITIMAccountRequest">
+
+      <wsdl:part element="intf:searchPersonsWithITIMAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="synchPasswordsResponse">
+
+      <wsdl:part element="intf:synchPasswordsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAuthorizedServicesResponse">
+
+      <wsdl:part element="intf:getAuthorizedServicesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="selfRegisterResponse">
+
+      <wsdl:part element="intf:selfRegisterResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSInvalidSessionException">
+
+      <wsdl:part element="intf:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeRoleResponse">
+
+      <wsdl:part element="intf:removeRoleResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeRolesFromPersonResponse">
+
+      <wsdl:part element="intf:removeRolesFromPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="synchGeneratedPasswordResponse">
+
+      <wsdl:part element="intf:synchGeneratedPasswordResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPersonRolesRequest">
+
+      <wsdl:part element="intf:getPersonRoles" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSPersonService">
+
+      <wsdl:operation name="addRole">
+
+         <wsdl:input message="intf:addRoleRequest" name="addRoleRequest"/>
+
+         <wsdl:output message="intf:addRoleResponse" name="addRoleResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addRolesToPerson">
+
+         <wsdl:input message="intf:addRolesToPersonRequest" name="addRolesToPersonRequest"/>
+
+         <wsdl:output message="intf:addRolesToPersonResponse" name="addRolesToPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createPerson">
+
+         <wsdl:input message="intf:createPersonRequest" name="createPersonRequest"/>
+
+         <wsdl:output message="intf:createPersonResponse" name="createPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deletePerson">
+
+         <wsdl:input message="intf:deletePersonRequest" name="deletePersonRequest"/>
+
+         <wsdl:output message="intf:deletePersonResponse" name="deletePersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountsByOwner">
+
+         <wsdl:input message="intf:getAccountsByOwnerRequest" name="getAccountsByOwnerRequest"/>
+
+         <wsdl:output message="intf:getAccountsByOwnerResponse" name="getAccountsByOwnerResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthorizedPersonProfilesForCreate">
+
+         <wsdl:input message="intf:getAuthorizedPersonProfilesForCreateRequest" name="getAuthorizedPersonProfilesForCreateRequest"/>
+
+         <wsdl:output message="intf:getAuthorizedPersonProfilesForCreateResponse" name="getAuthorizedPersonProfilesForCreateResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthorizedServices">
+
+         <wsdl:input message="intf:getAuthorizedServicesRequest" name="getAuthorizedServicesRequest"/>
+
+         <wsdl:output message="intf:getAuthorizedServicesResponse" name="getAuthorizedServicesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFilteredAccountsByOwner">
+
+         <wsdl:input message="intf:getFilteredAccountsByOwnerRequest" name="getFilteredAccountsByOwnerRequest"/>
+
+         <wsdl:output message="intf:getFilteredAccountsByOwnerResponse" name="getFilteredAccountsByOwnerResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFilteredAuthorizedServices">
+
+         <wsdl:input message="intf:getFilteredAuthorizedServicesRequest" name="getFilteredAuthorizedServicesRequest"/>
+
+         <wsdl:output message="intf:getFilteredAuthorizedServicesResponse" name="getFilteredAuthorizedServicesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPersonRoles">
+
+         <wsdl:input message="intf:getPersonRolesRequest" name="getPersonRolesRequest"/>
+
+         <wsdl:output message="intf:getPersonRolesResponse" name="getPersonRolesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrincipalPerson">
+
+         <wsdl:input message="intf:getPrincipalPersonRequest" name="getPrincipalPersonRequest"/>
+
+         <wsdl:output message="intf:getPrincipalPersonResponse" name="getPrincipalPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSInvalidSessionException" name="WSInvalidSessionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isCreatePersonAllowed">
+
+         <wsdl:input message="intf:isCreatePersonAllowedRequest" name="isCreatePersonAllowedRequest"/>
+
+         <wsdl:output message="intf:isCreatePersonAllowedResponse" name="isCreatePersonAllowedResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isMemberOfRole">
+
+         <wsdl:input message="intf:isMemberOfRoleRequest" name="isMemberOfRoleRequest"/>
+
+         <wsdl:output message="intf:isMemberOfRoleResponse" name="isMemberOfRoleResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupPerson">
+
+         <wsdl:input message="intf:lookupPersonRequest" name="lookupPersonRequest"/>
+
+         <wsdl:output message="intf:lookupPersonResponse" name="lookupPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSInvalidSessionException" name="WSInvalidSessionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyPerson">
+
+         <wsdl:input message="intf:modifyPersonRequest" name="modifyPersonRequest"/>
+
+         <wsdl:output message="intf:modifyPersonResponse" name="modifyPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeRole">
+
+         <wsdl:input message="intf:removeRoleRequest" name="removeRoleRequest"/>
+
+         <wsdl:output message="intf:removeRoleResponse" name="removeRoleResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeRolesFromPerson">
+
+         <wsdl:input message="intf:removeRolesFromPersonRequest" name="removeRolesFromPersonRequest"/>
+
+         <wsdl:output message="intf:removeRolesFromPersonResponse" name="removeRolesFromPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="restorePerson">
+
+         <wsdl:input message="intf:restorePersonRequest" name="restorePersonRequest"/>
+
+         <wsdl:output message="intf:restorePersonResponse" name="restorePersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSInvalidSessionException" name="WSInvalidSessionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsFromRoot">
+
+         <wsdl:input message="intf:searchPersonsFromRootRequest" name="searchPersonsFromRootRequest"/>
+
+         <wsdl:output message="intf:searchPersonsFromRootResponse" name="searchPersonsFromRootResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsWithITIMAccount">
+
+         <wsdl:input message="intf:searchPersonsWithITIMAccountRequest" name="searchPersonsWithITIMAccountRequest"/>
+
+         <wsdl:output message="intf:searchPersonsWithITIMAccountResponse" name="searchPersonsWithITIMAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selfRegister">
+
+         <wsdl:input message="intf:selfRegisterRequest" name="selfRegisterRequest"/>
+
+         <wsdl:output message="intf:selfRegisterResponse" name="selfRegisterResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="suspendPerson">
+
+         <wsdl:input message="intf:suspendPersonRequest" name="suspendPersonRequest"/>
+
+         <wsdl:output message="intf:suspendPersonResponse" name="suspendPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="suspendPersonAdvanced">
+
+         <wsdl:input message="intf:suspendPersonAdvancedRequest" name="suspendPersonAdvancedRequest"/>
+
+         <wsdl:output message="intf:suspendPersonAdvancedResponse" name="suspendPersonAdvancedResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="synchGeneratedPassword">
+
+         <wsdl:input message="intf:synchGeneratedPasswordRequest" name="synchGeneratedPasswordRequest"/>
+
+         <wsdl:output message="intf:synchGeneratedPasswordResponse" name="synchGeneratedPasswordResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="synchPasswords">
+
+         <wsdl:input message="intf:synchPasswordsRequest" name="synchPasswordsRequest"/>
+
+         <wsdl:output message="intf:synchPasswordsResponse" name="synchPasswordsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="transferPerson">
+
+         <wsdl:input message="intf:transferPersonRequest" name="transferPersonRequest"/>
+
+         <wsdl:output message="intf:transferPersonResponse" name="transferPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSPersonServiceSoapBinding" type="intf:WSPersonService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="addRole">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addRoleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addRoleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addRolesToPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addRolesToPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addRolesToPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deletePerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deletePersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deletePersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountsByOwner">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAccountsByOwnerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAccountsByOwnerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthorizedPersonProfilesForCreate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAuthorizedPersonProfilesForCreateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAuthorizedPersonProfilesForCreateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAuthorizedServices">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAuthorizedServicesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAuthorizedServicesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFilteredAccountsByOwner">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFilteredAccountsByOwnerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFilteredAccountsByOwnerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFilteredAuthorizedServices">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFilteredAuthorizedServicesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFilteredAuthorizedServicesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPersonRoles">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPersonRolesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPersonRolesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrincipalPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPrincipalPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPrincipalPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidSessionException">
+
+            <wsdlsoap:fault name="WSInvalidSessionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isCreatePersonAllowed">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isCreatePersonAllowedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isCreatePersonAllowedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isMemberOfRole">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isMemberOfRoleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isMemberOfRoleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidSessionException">
+
+            <wsdlsoap:fault name="WSInvalidSessionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeRole">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeRoleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeRoleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeRolesFromPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeRolesFromPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeRolesFromPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="restorePerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="restorePersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="restorePersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidSessionException">
+
+            <wsdlsoap:fault name="WSInvalidSessionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsFromRoot">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchPersonsFromRootRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchPersonsFromRootResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsWithITIMAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchPersonsWithITIMAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchPersonsWithITIMAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="selfRegister">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="selfRegisterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="selfRegisterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="suspendPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="suspendPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="suspendPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="suspendPersonAdvanced">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="suspendPersonAdvancedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="suspendPersonAdvancedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="synchGeneratedPassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="synchGeneratedPasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="synchGeneratedPasswordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="synchPasswords">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="synchPasswordsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="synchPasswordsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="transferPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="transferPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="transferPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSPersonServiceService">
+
+      <wsdl:port binding="intf:WSPersonServiceSoapBinding" name="WSPersonService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSPersonServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Connector Event Notification API Example</title>
+
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+
+  <meta name="author" content="Alexander Amies">
+
+  <link href="../../examples.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td align="left">  <img border="0" src="../../ibm_banner.gif"></td>
+      <td align="right">  <img src="../../tivolilogo.gif"></td>
+    </tr>
+
+  </tbody>
+</table>
+<h1>Connector Event Notification API Example</h1>
+<br>
+The file
+<a href="../src/examples/serviceprovider/eventNotification/EventNotifier.java">EventNotifier.java</a>
+illustrates
+how to use the connector event notification API &nbsp;<br>
+<br>
+<b>Building and Deploying the Example</b><p>Add the examples.jar file created by the build process to the
+application server's classpath by following the instructions given in <a
+	href="../../Classpath.html">Adding examples.jar to Classpath</a>.</p>
+<p>To build the examples follow the instructions given in <a
+	href="../../Building.html">Building the Examples</a>.</p><p>Copy the JSP and CSS files in the webfiles directory to 
+	<dfn><code>WAS_HOME/profiles/[profile]/installedApps/[cell]/ITIM.ear/itim_console.war/.</code></dfn><br>
+<br>
+<b>Running the Example</b></p><p>This example will only work with older DAML services like the WinLocal service.</p>
+<p>The example is a web application that displays a html user
+interface to enter test data. &nbsp;Use a web browser to request the url
+http://host:port/itim/console/eventtest1of3.jsp. &nbsp;<br>
+<br>
+If you have difficulty with JSP compilation, run the utility
+JspBatchCompiler.bat from the WAS bin directory to precompile the JSP
+pages.<br>
+<br>
+Enter appropiate values for tenant, service filter, principal, and
+password and submit. &nbsp;That step will locate the service instance.
+&nbsp;Next select an operation from the dropdown. &nbsp;The modify
+operation test is hard-coded to suspend the account specified.
+&nbsp;Navigate to the TIM user interface and check that the accounts
+were added, changed, or deleted.<br>
+<br>
+<b>Description of the Code</b><br>
+The event notification API's are a subset of the connector API's used
+for the implementation of communication protocols to endpoints.
+&nbsp;The API's include classes InitialPlatformContext, PlatformContext,
+and UnsolicitedEventProcessor in package
+com.ibm.itim.remoteservices.provider.<br>
+&nbsp;<br>
+The code containing the calls the the event notificaiton API are in
+class <a
+	href="../src/examples/serviceprovider/eventNotification/AccountEventListener.java">AccountEventListener</a>.
+&nbsp;The other classes are for displaying a web interface and
+responding to user events.<br>
+<br>
+Method getInitialPlatformContext in class AccountEventListener
+demonstrates how to authenticate the the server and get an instance of
+InitialPlatformContext. &nbsp;Method testLookupService() demonstrates
+how to lookup a service. &nbsp;Method processTestEvent() demonstrates
+methods to process add, delete, and modify events.<br>
+</p>
+</body>
+</html>

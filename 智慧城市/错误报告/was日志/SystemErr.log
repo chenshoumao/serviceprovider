@@ -1,0 +1,51 @@
+[16-8-11 0:46:28:740 CST] 0000002f SystemErr     R 	at java.io.FileOutputStream.write(FileOutputStream.java:266)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at java.util.zip.DeflaterOutputStream.deflate(DeflaterOutputStream.java:172)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at java.util.zip.DeflaterOutputStream.write(DeflaterOutputStream.java:129)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at java.util.zip.ZipOutputStream.write(ZipOutputStream.java:283)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.util.ArchiveUtil.copy(ArchiveUtil.java:181)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.strategy.ZipStreamSaveStrategyImpl.save(ZipStreamSaveStrategyImpl.java:287)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.strategy.SaveStrategyImpl.save(SaveStrategyImpl.java:553)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.strategy.SaveStrategyImpl.saveFiles(SaveStrategyImpl.java:505)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.strategy.SaveStrategyImpl.save(SaveStrategyImpl.java:235)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.impl.ArchiveImpl.save(ArchiveImpl.java:2800)
+[16-8-11 0:46:29:626 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.impl.ModuleFileImpl.save(ModuleFileImpl.java:507)
+[16-8-11 0:46:29:627 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.impl.ArchiveImpl.saveAsNoReopen(ArchiveImpl.java:3020)
+[16-8-11 0:46:29:627 CST] 0000002f SystemErr     R 	at org.eclipse.jst.j2ee.commonarchivecore.internal.impl.ArchiveImpl.saveAs(ArchiveImpl.java:2840)
+[16-8-11 0:46:29:627 CST] 0000002f SystemErr     R 	at com.ibm.ws.management.application.task.BackupAppTask.install(BackupAppTask.java:168)
+[16-8-11 0:46:29:627 CST] 0000002f SystemErr     R 	at com.ibm.ws.management.application.task.BackupAppTask.performTask(BackupAppTask.java:92)
+[16-8-11 0:46:29:627 CST] 0000002f SystemErr     R 	at com.ibm.ws.management.application.SchedulerImpl.run(SchedulerImpl.java:294)
+[16-8-11 0:46:29:627 CST] 0000002f SystemErr     R 	at java.lang.Thread.run(Thread.java:735)
+************ Start Display Current Environment ************
+Log file started at: [16-8-11 0:52:37:368 CST]
+************* End Display Current Environment *************
+[16-8-11 0:53:11:120 CST] 00000010 SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 0:53:11:143 CST] 00000010 SystemErr     R log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+[16-8-11 0:53:11:143 CST] 00000010 SystemErr     R log4j:WARN Please initialize the log4j system properly.
+[16-8-11 1:09:05:346 CST] 00000010 SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 1:09:05:372 CST] 00000010 SystemErr     R log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+[16-8-11 1:09:05:372 CST] 00000010 SystemErr     R log4j:WARN Please initialize the log4j system properly.
+[16-8-11 1:15:03:117 CST] 0000000f SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 1:15:03:141 CST] 0000000f SystemErr     R log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+[16-8-11 1:15:03:176 CST] 0000000f SystemErr     R log4j:WARN Please initialize the log4j system properly.
+[16-8-11 1:19:16:676 CST] 00000020 SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 1:24:30:341 CST] 0000001b SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 11:34:34:474 CST] 00000011 SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 11:34:34:497 CST] 00000011 SystemErr     R log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+[16-8-11 11:34:34:498 CST] 00000011 SystemErr     R log4j:WARN Please initialize the log4j system properly.
+[16-8-11 11:34:57:904 CST] 0000000f SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 11:39:52:213 CST] 00000010 SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 11:39:52:325 CST] 00000010 SystemErr     R log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+[16-8-11 11:39:52:325 CST] 00000010 SystemErr     R log4j:WARN Please initialize the log4j system properly.
+[16-8-11 11:40:17:024 CST] 0000000f SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 12:01:29:254 CST] 00000006 SystemErr     R java.lang.Throwable
+[16-8-11 12:01:29:254 CST] 00000006 SystemErr     R 	at java.lang.Thread.dumpStack(Thread.java:417)
+[16-8-11 12:01:29:254 CST] 00000006 SystemErr     R 	at com.ibm.ws.hamanager.runtime.RuntimeProviderImpl.panicJVM(RuntimeProviderImpl.java:91)
+[16-8-11 12:01:29:254 CST] 00000006 SystemErr     R 	at com.ibm.ws.hamanager.coordinator.impl.JVMControllerImpl.panicJVM(JVMControllerImpl.java:56)
+[16-8-11 12:01:29:254 CST] 00000006 SystemErr     R 	at com.ibm.ws.hamanager.impl.HAGroupImpl.doIsAlive(HAGroupImpl.java:882)
+[16-8-11 12:01:29:254 CST] 00000006 SystemErr     R 	at com.ibm.ws.hamanager.impl.HAGroupImpl$HAGroupUserCallback.doCallback(HAGroupImpl.java:1388)
+[16-8-11 12:01:29:255 CST] 00000006 SystemErr     R 	at com.ibm.ws.hamanager.impl.Worker.run(Worker.java:64)
+[16-8-11 12:01:29:255 CST] 00000006 SystemErr     R 	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1662)
+[16-8-11 12:05:13:872 CST] 00000010 SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version
+[16-8-11 12:05:13:896 CST] 00000010 SystemErr     R log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+[16-8-11 12:05:13:896 CST] 00000010 SystemErr     R log4j:WARN Please initialize the log4j system properly.
+[16-8-11 12:05:26:846 CST] 00000012 SystemErr     R SLF4J: This version of SLF4J requires log4j version 1.2.12 or later. See also http://www.slf4j.org/codes.html#log4j_version

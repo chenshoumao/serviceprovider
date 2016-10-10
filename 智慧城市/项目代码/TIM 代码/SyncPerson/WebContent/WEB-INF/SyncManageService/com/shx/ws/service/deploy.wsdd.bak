@@ -1,0 +1,29 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from SyncManageService WSDL service -->
+
+  <service name="SyncManage" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.ws.shx.com"/>
+      <parameter name="wsdlServiceElement" value="SyncManageService"/>
+      <parameter name="schemaQualified" value="http://service.ws.shx.com"/>
+      <parameter name="wsdlServicePort" value="SyncManage"/>
+      <parameter name="className" value="com.shx.ws.service.SyncManageSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="SyncManage"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="syncPerson" qname="operNS:syncPerson" xmlns:operNS="http://service.ws.shx.com" returnQName="retNS:syncPersonReturn" xmlns:retNS="http://service.ws.shx.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:ixml" xmlns:pns="http://service.ws.shx.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="syncPerson"/>
+
+  </service>
+</deployment>

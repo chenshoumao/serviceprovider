@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="approveOrReject">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element maxOccurs="unbounded" name="assignmentIds" type="xsd:long"/>
+      <element name="activityResultStatus" type="xsd:string"/>
+      <element name="explanation" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="approveOrRejectResponse">
+    <complexType/>
+   </element>
+   <element name="fault" type="tns2:WSLoginServiceException"/>
+   <element name="fault1" type="tns2:WSApplicationException"/>
+   <element name="approveOrRejectGroups">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element maxOccurs="unbounded" name="wsAssignGrps" type="tns1:WSAssignmentGroup"/>
+      <element name="activityResultStatus" type="xsd:string"/>
+      <element name="comment" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="approveOrRejectGroupsResponse">
+    <complexType/>
+   </element>
+   <element name="getEntityDetail">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="assignmentId" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEntityDetailResponse">
+    <complexType>
+     <sequence>
+      <element name="getEntityDetailReturn" type="tns1:WSEntityWrapper"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="getAssignmentGroups">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAssignmentGroupsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAssignmentGroupsReturn" type="tns1:WSAssignmentGroup"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAssignments">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAssignmentsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAssignmentsReturn" type="tns1:WSAssignment"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getItemsInAssignmentGroup">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsAssignGrp" type="tns1:WSAssignmentGroup"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getItemsInAssignmentGroupResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getItemsInAssignmentGroupReturn" type="tns1:WSAssignment"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRFI">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="assignmentId" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRFIResponse">
+    <complexType>
+     <sequence>
+      <element name="getRFIReturn" type="tns1:WSRFIWrapper"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <element name="submitRFI">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="rfiWrapper" type="tns1:WSRFIWrapper"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="submitRFIResponse">
+    <complexType/>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAssignmentGroup">
+    <sequence>
+     <element name="nodeId" nillable="true" type="xsd:string"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="requester" nillable="true" type="xsd:string"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="activityName" nillable="true" type="xsd:string"/>
+     <element name="rootProcessTypeString" nillable="true" type="xsd:string"/>
+     <element name="assignedToDN" nillable="true" type="xsd:string"/>
+     <element name="requestee" nillable="true" type="xsd:string"/>
+     <element name="activityDescription" nillable="true" type="xsd:string"/>
+     <element name="subject" nillable="true" type="xsd:string"/>
+     <element name="activityNameString" nillable="true" type="xsd:string"/>
+     <element name="processId" type="xsd:long"/>
+     <element name="activityType" nillable="true" type="xsd:string"/>
+     <element name="subjectService" nillable="true" type="xsd:string"/>
+     <element name="activityDesignId" nillable="true" type="xsd:string"/>
+     <element name="rootProcessId" type="xsd:long"/>
+     <element name="timeDue" nillable="true" type="xsd:dateTime"/>
+     <element name="assignmentType" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:long"/>
+     <element name="target" nillable="true" type="xsd:string"/>
+     <element name="count" type="xsd:int"/>
+     <element name="activitySubType" nillable="true" type="xsd:string"/>
+     <element name="lockOwner" nillable="true" type="xsd:string"/>
+     <element name="processDesignId" nillable="true" type="xsd:string"/>
+     <element name="rootProcessType" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAssignment">
+    <sequence>
+     <element name="nodeId" nillable="true" type="xsd:string"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="requester" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:long"/>
+     <element name="activityName" nillable="true" type="xsd:string"/>
+     <element name="rootProcessTypeString" nillable="true" type="xsd:string"/>
+     <element name="target" nillable="true" type="xsd:string"/>
+     <element name="requestee" nillable="true" type="xsd:string"/>
+     <element name="timeSubmitted" nillable="true" type="xsd:dateTime"/>
+     <element name="activityDescription" nillable="true" type="xsd:string"/>
+     <element name="subject" nillable="true" type="xsd:string"/>
+     <element name="activitySubType" nillable="true" type="xsd:string"/>
+     <element name="activityNameString" nillable="true" type="xsd:string"/>
+     <element name="processId" type="xsd:long"/>
+     <element name="activityType" nillable="true" type="xsd:string"/>
+     <element name="subjectService" nillable="true" type="xsd:string"/>
+     <element name="lockOwner" nillable="true" type="xsd:string"/>
+     <element name="rootProcessId" type="xsd:long"/>
+     <element name="timeDue" nillable="true" type="xsd:dateTime"/>
+     <element name="assignmentType" nillable="true" type="xsd:string"/>
+     <element name="rootProcessType" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSRFIWrapper">
+    <sequence>
+     <element name="wsAttrValues" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="objectProfile" nillable="true" type="xsd:string"/>
+     <element name="assignmentId" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSEntityWrapper">
+    <sequence>
+     <element name="wsAllAttrValues" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getRFIResponse">
+
+      <wsdl:part element="intf:getRFIResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="approveOrRejectRequest">
+
+      <wsdl:part element="intf:approveOrReject" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEntityDetailRequest">
+
+      <wsdl:part element="intf:getEntityDetail" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getItemsInAssignmentGroupResponse">
+
+      <wsdl:part element="intf:getItemsInAssignmentGroupResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="approveOrRejectGroupsResponse">
+
+      <wsdl:part element="intf:approveOrRejectGroupsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEntityDetailResponse">
+
+      <wsdl:part element="intf:getEntityDetailResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="approveOrRejectGroupsRequest">
+
+      <wsdl:part element="intf:approveOrRejectGroups" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getItemsInAssignmentGroupRequest">
+
+      <wsdl:part element="intf:getItemsInAssignmentGroup" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="submitRFIRequest">
+
+      <wsdl:part element="intf:submitRFI" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAssignmentsResponse">
+
+      <wsdl:part element="intf:getAssignmentsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRFIRequest">
+
+      <wsdl:part element="intf:getRFI" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="approveOrRejectResponse">
+
+      <wsdl:part element="intf:approveOrRejectResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAssignmentGroupsRequest">
+
+      <wsdl:part element="intf:getAssignmentGroups" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAssignmentGroupsResponse">
+
+      <wsdl:part element="intf:getAssignmentGroupsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAssignmentsRequest">
+
+      <wsdl:part element="intf:getAssignments" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="submitRFIResponse">
+
+      <wsdl:part element="intf:submitRFIResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSToDoService">
+
+      <wsdl:operation name="approveOrReject">
+
+         <wsdl:input message="intf:approveOrRejectRequest" name="approveOrRejectRequest"/>
+
+         <wsdl:output message="intf:approveOrRejectResponse" name="approveOrRejectResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="approveOrRejectGroups">
+
+         <wsdl:input message="intf:approveOrRejectGroupsRequest" name="approveOrRejectGroupsRequest"/>
+
+         <wsdl:output message="intf:approveOrRejectGroupsResponse" name="approveOrRejectGroupsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEntityDetail">
+
+         <wsdl:input message="intf:getEntityDetailRequest" name="getEntityDetailRequest"/>
+
+         <wsdl:output message="intf:getEntityDetailResponse" name="getEntityDetailResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAssignmentGroups">
+
+         <wsdl:input message="intf:getAssignmentGroupsRequest" name="getAssignmentGroupsRequest"/>
+
+         <wsdl:output message="intf:getAssignmentGroupsResponse" name="getAssignmentGroupsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAssignments">
+
+         <wsdl:input message="intf:getAssignmentsRequest" name="getAssignmentsRequest"/>
+
+         <wsdl:output message="intf:getAssignmentsResponse" name="getAssignmentsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItemsInAssignmentGroup">
+
+         <wsdl:input message="intf:getItemsInAssignmentGroupRequest" name="getItemsInAssignmentGroupRequest"/>
+
+         <wsdl:output message="intf:getItemsInAssignmentGroupResponse" name="getItemsInAssignmentGroupResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRFI">
+
+         <wsdl:input message="intf:getRFIRequest" name="getRFIRequest"/>
+
+         <wsdl:output message="intf:getRFIResponse" name="getRFIResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="submitRFI">
+
+         <wsdl:input message="intf:submitRFIRequest" name="submitRFIRequest"/>
+
+         <wsdl:output message="intf:submitRFIResponse" name="submitRFIResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSToDoServiceSoapBinding" type="intf:WSToDoService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="approveOrReject">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="approveOrRejectRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="approveOrRejectResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="approveOrRejectGroups">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="approveOrRejectGroupsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="approveOrRejectGroupsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEntityDetail">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEntityDetailRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEntityDetailResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAssignmentGroups">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAssignmentGroupsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAssignmentGroupsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAssignments">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAssignmentsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAssignmentsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItemsInAssignmentGroup">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getItemsInAssignmentGroupRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getItemsInAssignmentGroupResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRFI">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRFIRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRFIResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="submitRFI">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="submitRFIRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="submitRFIResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSToDoServiceService">
+
+      <wsdl:port binding="intf:WSToDoServiceSoapBinding" name="WSToDoService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSToDoServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

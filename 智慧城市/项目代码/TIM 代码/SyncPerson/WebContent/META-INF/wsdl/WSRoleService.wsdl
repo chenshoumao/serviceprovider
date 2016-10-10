@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="createStaticRole">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="wsRole" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSOrganizationalContainer">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSOrganizationalContainer"/>
+    </sequence>
+   </complexType>
+   <element name="createStaticRoleResponse">
+    <complexType>
+     <sequence>
+      <element name="createStaticRoleReturn" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault" type="tns2:WSApplicationException"/>
+   <element name="getMemberRoles">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="roleDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMemberRolesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getMemberRolesReturn" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault1" type="tns2:WSLoginServiceException"/>
+   <element name="fault2" type="tns2:WSUnsupportedVersionException"/>
+   <element name="lookupRole">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="roleDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupRoleResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupRoleReturn" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupSystemRole">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="roleDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupSystemRoleResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupSystemRoleReturn" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyStaticRole">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="roleDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="modifiedAttributes" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyStaticRoleResponse">
+    <complexType/>
+   </element>
+   <element name="searchForRolesInContainer">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="filter" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchForRolesInContainerResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchForRolesInContainerReturn" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchRoles">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="filter" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchRolesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchRolesReturn" type="tns1:WSRole"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateRoleHierarchy">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="roleDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="rolesAddedDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="rolesDeletedDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateRoleHierarchyResponse">
+    <complexType>
+     <sequence>
+      <element name="updateRoleHierarchyReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSOrganizationalContainer">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="children" nillable="true" type="impl:ArrayOf_tns1_WSOrganizationalContainer"/>
+       <element name="parentDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="supervisorDN" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSRole">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="description" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSRequest">
+    <sequence>
+     <element name="timeCompleted" nillable="true" type="xsd:dateTime"/>
+     <element name="subjectProfile" nillable="true" type="xsd:string"/>
+     <element name="result" nillable="true" type="xsd:string"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="processTypeString" nillable="true" type="xsd:string"/>
+     <element name="title" nillable="true" type="xsd:string"/>
+     <element name="owner" nillable="true" type="xsd:string"/>
+     <element name="processStateString" nillable="true" type="xsd:string"/>
+     <element name="status" type="xsd:int"/>
+     <element name="requestee" nillable="true" type="xsd:string"/>
+     <element name="timeSubmitted" nillable="true" type="xsd:dateTime"/>
+     <element name="subject" nillable="true" type="xsd:string"/>
+     <element name="requestId" type="xsd:long"/>
+     <element name="processType" nillable="true" type="xsd:string"/>
+     <element name="subjectService" nillable="true" type="xsd:string"/>
+     <element name="statusString" nillable="true" type="xsd:string"/>
+     <element name="processState" nillable="true" type="xsd:string"/>
+     <element name="timeScheduled" nillable="true" type="xsd:dateTime"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSUnsupportedVersionException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getMemberRolesRequest">
+
+      <wsdl:part element="intf:getMemberRoles" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchForRolesInContainerResponse">
+
+      <wsdl:part element="intf:searchForRolesInContainerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createStaticRoleResponse">
+
+      <wsdl:part element="intf:createStaticRoleResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupSystemRoleResponse">
+
+      <wsdl:part element="intf:lookupSystemRoleResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchForRolesInContainerRequest">
+
+      <wsdl:part element="intf:searchForRolesInContainer" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createStaticRoleRequest">
+
+      <wsdl:part element="intf:createStaticRole" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMemberRolesResponse">
+
+      <wsdl:part element="intf:getMemberRolesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupRoleResponse">
+
+      <wsdl:part element="intf:lookupRoleResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyStaticRoleRequest">
+
+      <wsdl:part element="intf:modifyStaticRole" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSUnsupportedVersionException">
+
+      <wsdl:part element="intf:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupSystemRoleRequest">
+
+      <wsdl:part element="intf:lookupSystemRole" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateRoleHierarchyResponse">
+
+      <wsdl:part element="intf:updateRoleHierarchyResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchRolesResponse">
+
+      <wsdl:part element="intf:searchRolesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchRolesRequest">
+
+      <wsdl:part element="intf:searchRoles" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateRoleHierarchyRequest">
+
+      <wsdl:part element="intf:updateRoleHierarchy" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupRoleRequest">
+
+      <wsdl:part element="intf:lookupRole" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyStaticRoleResponse">
+
+      <wsdl:part element="intf:modifyStaticRoleResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSRoleService">
+
+      <wsdl:operation name="createStaticRole">
+
+         <wsdl:input message="intf:createStaticRoleRequest" name="createStaticRoleRequest"/>
+
+         <wsdl:output message="intf:createStaticRoleResponse" name="createStaticRoleResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMemberRoles">
+
+         <wsdl:input message="intf:getMemberRolesRequest" name="getMemberRolesRequest"/>
+
+         <wsdl:output message="intf:getMemberRolesResponse" name="getMemberRolesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupRole">
+
+         <wsdl:input message="intf:lookupRoleRequest" name="lookupRoleRequest"/>
+
+         <wsdl:output message="intf:lookupRoleResponse" name="lookupRoleResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupSystemRole">
+
+         <wsdl:input message="intf:lookupSystemRoleRequest" name="lookupSystemRoleRequest"/>
+
+         <wsdl:output message="intf:lookupSystemRoleResponse" name="lookupSystemRoleResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyStaticRole">
+
+         <wsdl:input message="intf:modifyStaticRoleRequest" name="modifyStaticRoleRequest"/>
+
+         <wsdl:output message="intf:modifyStaticRoleResponse" name="modifyStaticRoleResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchForRolesInContainer">
+
+         <wsdl:input message="intf:searchForRolesInContainerRequest" name="searchForRolesInContainerRequest"/>
+
+         <wsdl:output message="intf:searchForRolesInContainerResponse" name="searchForRolesInContainerResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchRoles">
+
+         <wsdl:input message="intf:searchRolesRequest" name="searchRolesRequest"/>
+
+         <wsdl:output message="intf:searchRolesResponse" name="searchRolesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateRoleHierarchy">
+
+         <wsdl:input message="intf:updateRoleHierarchyRequest" name="updateRoleHierarchyRequest"/>
+
+         <wsdl:output message="intf:updateRoleHierarchyResponse" name="updateRoleHierarchyResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSRoleServiceSoapBinding" type="intf:WSRoleService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createStaticRole">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createStaticRoleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createStaticRoleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMemberRoles">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMemberRolesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMemberRolesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupRole">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupRoleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupRoleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupSystemRole">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupSystemRoleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupSystemRoleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyStaticRole">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyStaticRoleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyStaticRoleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchForRolesInContainer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchForRolesInContainerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchForRolesInContainerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchRoles">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchRolesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchRolesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateRoleHierarchy">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateRoleHierarchyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateRoleHierarchyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSRoleServiceService">
+
+      <wsdl:port binding="intf:WSRoleServiceSoapBinding" name="WSRoleService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSRoleServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

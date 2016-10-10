@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="zh" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<!-- rel=dynamic-content indicates an element that is replaced with the contents produced by the specified href. 
+	 dyn-cs:* URIs are resolved using the WP DynamicContentSpotMappings resource environment provider. These values can
+	 also be set using theme metadata if a theme is specified in the URI (e.g. @tl:oid:theme_unique_name). -->
+<link rel="dynamic-content" href="co:head">
+<link rel="dynamic-content" href="dyn-cs:id:85theme_head">
+<!-- rendering is delegated to the specified href for each locale -->
+<!-- zhengshuxin -->
+<link rel="stylesheet" href="css/MyCss/reset.css">
+<link rel="stylesheet" href="css/MyCss/index.css">
+<script src="js/MyJs/jquery1.8.3.min.js"></script>
+<script src="js/MyJs/HeaderFooter.js"></script>
+<script src="js/MyJs/responsiveslides.min.js"></script> <!-- banner导航条 -->
+
+</head>
+<body id="content" class="lotusui30dojo tundra locale_zh">	
+	
+	<div class="wpthemeFrame">
+		
+		<header role="banner" id="header">		
+			<!-- site toolbar -->
+			<!-- <a rel="dynamic-content" href="dyn-cs:id:85theme_toolbar"></a> -->
+			
+			<!--end main banner-->
+			
+			<div class="wpthemeBanner wpthemeBannerPrimaryNavigation">
+				<!-- <div class="wpthemeBannerInner">
+					<div class="wpthemeInner">
+						<a rel="dynamic-content" href="dyn-cs:id:85theme_primaryNav"></a>
+						<div class="wpthemeClear"></div>
+					</div>
+				</div> -->
+				
+			</div><!--end primary nav banner-->
+			
+			<div class="wpthemeSecondaryBanner">
+				<a rel="dynamic-content" href="dyn-cs:id:85theme_secondaryNav"></a>
+				<div class="wpthemeClear"></div>
+			</div><!--end secondary banner-->
+		</header>
+
+		<div class="wpthemeMainContent" role="main" aria-label="IBM WebSphere Portal">
+			<div id="banner"></div>
+			<div class="wpthemeInner">	
+				<!-- asa markup contributions for pages -->	
+				<a rel="dynamic-content" href="dyn-cs:id:wp_analytics_dynspot"></a>
+				<a rel="dynamic-content" href="dyn-cs:id:85theme_crumbTrail"></a>
+				<div class="wpthemeClear"></div>
+				<a rel="dynamic-content" href="dyn-cs:id:85theme_status"></a>
+			</div>		
+
+			<!-- required - do not remove -->
+			<a rel="dynamic-content" href="state.portlet:portlet?include=windowState&include=portletMode&mime-type=text/html"></a>
+			
+			<div id="layoutContainers" class="wpthemeLayoutContainers wpthemeLayoutContainersHidden" >	
+				<div class="wpthemeInner">
+					<div id="nav"></div>					
+					<a rel="dynamic-content" href="dyn-cs:id:85theme_layout"></a>
+					<div class="wpthemeClear"></div>
+				</div>
+			</div>
+		</div><!--end main content-->
+		
+		<footer id="footer" role="contentinfo"></footer><!-- page footer -->
+		
+	</div><!-- end frame -->
+		
+    <!-- This is responsible for bootstrapping the configuration for the javascript framework. 
+        This is located here instead of the head section to improve client performance. -->
+	<div class="wpthemeComplementaryContent" id="wpthemeComplementaryContent" role="region" aria-labelledby="wpthemeComplementaryContentText">
+		<!-- <span class="wpthemeAltText" id="wpthemeComplementaryContentText" >补充内容</span> -->
+		<a rel="dynamic-content" href="co:config"></a>
+	</div>
+</body>
+<script>
+	// 加载执行头部,尾部,banner,导航条,尾部等函数
+	$(function(){
+		Header(); getdates();Banner();Nav();Footer();
+	    // banner加载函数
+	    $("#slider").responsiveSlides({
+	        auto: true,
+	        nav: true,
+	        speed: 500,
+	        namespace: "callbacks",
+	        pager: true,
+	      });
+	})
+
+	// 待办切换
+	$(".tabPanel2 ul li").click(function(event) {
+		/* Act on the event */
+		$(this).addClass('hit').siblings().removeClass('hit');
+		var index = $(this).index();
+		$(".panes2>div").eq(index).show().siblings().hide();
+	});
+	// 通知公告
+	$(".tabPanel ul li").click(function(event) {
+		/* Act on the event */
+		$(this).addClass('hit').siblings().removeClass('hit');
+		var index = $(this).index();
+		$(".panes>div").eq(index).show().siblings().hide();
+	});
+	//鼠标经过图片，颜色变换
+	$(".aimg").hover(function() {
+		$(this).find('.ssimg').css({"background-position-y": "-71px"})
+	}, function() {
+		$(this).find('.ssimg').css({
+			"background-position-y": "0px"
+		})
+	});
+	// 个人信息
+	$(".Greetings").mouseover(function(event) {
+		$(this).slideUp();
+		$(".Message").slideDown();
+	});
+	$(".Message").mouseleave(function(event) {
+		$(this).slideUp();
+		$(".Greetings").slideDown();
+	});
+		// 人事招聘
+	$(".flet_four>ul>li").click(function(event) {
+		/* Act on the event */
+		$(this).addClass('hit').siblings().removeClass('hit');
+		var index = $(this).index();
+		$(".JobList>div").eq(index).show().siblings().hide();
+	});
+
+</script>
+</script>
+</html>

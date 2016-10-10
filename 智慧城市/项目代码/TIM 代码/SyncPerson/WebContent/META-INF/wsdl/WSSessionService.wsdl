@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+  	<import namespace="http://exceptions.ws.itim.ibm.com"/>
+  	<import namespace="http://model.ws.itim.ibm.com"/>
+  	<element name="getChallengeQuestions">
+  		<complexType>
+  			<sequence>
+  				<element name="principle" type="xsd:string"/>
+  				<element name="wsLocale" type="tns1:WSLocale"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="getChallengeQuestionsResponse">
+  		<complexType>
+  			<sequence>
+  				<element maxOccurs="unbounded" name="getChallengeQuestionsReturn" type="xsd:string"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="fault" type="tns2:WSApplicationException"/>
+  	<element name="getItimFixpackLevel">
+  		<complexType/>
+  	</element>
+  	<element name="getItimFixpackLevelResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="getItimFixpackLevelReturn" type="xsd:int"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="getItimVersion">
+  		<complexType/>
+  	</element>
+  	<element name="getItimVersionResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="getItimVersionReturn" type="xsd:float"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="getItimVersionInfo">
+  		<complexType/>
+  	</element>
+  	<element name="getItimVersionInfoResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="getItimVersionInfoReturn" type="tns1:WSVersionInfo"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="fault1" type="tns2:WSUnsupportedVersionException"/>
+  	<element name="getWebServicesBuildNumber">
+  		<complexType/>
+  	</element>
+  	<element name="getWebServicesBuildNumberResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="getWebServicesBuildNumberReturn" type="xsd:int"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="getWebServicesTargetType">
+  		<complexType/>
+  	</element>
+  	<element name="getWebServicesTargetTypeResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="getWebServicesTargetTypeReturn" type="xsd:string"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="getWebServicesVersion">
+  		<complexType/>
+  	</element>
+  	<element name="getWebServicesVersionResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="getWebServicesVersionReturn" type="xsd:float"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="isPasswordEditingAllowed">
+  		<complexType>
+  			<sequence>
+  				<element name="session" type="tns1:WSSession"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="isPasswordEditingAllowedResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="isPasswordEditingAllowedReturn" type="xsd:boolean"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="fault2" type="tns2:WSInvalidSessionException"/>
+  	<element name="login">
+  		<complexType>
+  			<sequence>
+  				<element name="principal" type="xsd:string"/>
+  				<element name="credential" type="xsd:string"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="loginResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="loginReturn" type="tns1:WSSession"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="fault3" type="tns2:WSLoginServiceException"/>
+  	<element name="fault4" type="tns2:WSInvalidLoginException"/>
+  	<element name="lostPasswordLoginDirectEntry">
+  		<complexType>
+  			<sequence>
+  				<element name="principle" type="xsd:string"/>
+  				<element maxOccurs="unbounded" name="challengeInfo" type="tns1:WSChallengeResponseInfo"/>
+                        <element name="newPassword" type="string"/>
+                        <element name="wsLocale" type="tns1:WSLocale"/>
+
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="lostPasswordLoginDirectEntryResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="lostPasswordLoginDirectEntryReturn" type="tns1:WSSession"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="lostPasswordLoginResetPassword">
+  		<complexType>
+  			<sequence>
+  				<element name="principle" type="xsd:string"/>
+  				<element maxOccurs="unbounded" name="challengeInfo" type="tns1:WSChallengeResponseInfo"/>
+  				<element name="wsLocale" type="tns1:WSLocale"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="lostPasswordLoginResetPasswordResponse">
+  		<complexType>
+  			<sequence>
+  				<element name="lostPasswordLoginResetPasswordReturn" type="xsd:string"/>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="logout">
+  		<complexType>
+  			<sequence>
+  				<element name="session" type="tns1:WSSession"></element>
+  			</sequence>
+  		</complexType>
+  	</element>
+  	<element name="logoutResponse">
+  		<complexType>
+  			<sequence>
+  			</sequence>
+  		</complexType>
+  	</element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSVersionInfo">
+    <sequence>
+     <element name="buildNumber" nillable="true" type="xsd:string"/>
+     <element name="fixPackLevel" nillable="true" type="xsd:string"/>
+     <element name="buildDate" nillable="true" type="xsd:string"/>
+     <element name="buildTime" nillable="true" type="xsd:string"/>
+     <element name="version" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSChallengeResponseInfo">
+    <sequence>
+     <element name="question" nillable="true" type="xsd:string"/>
+     <element name="answer" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSUnsupportedVersionException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSInvalidSessionException">
+    <complexContent>
+     <extension base="tns2:WSLoginServiceException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSInvalidLoginException">
+    <complexContent>
+     <extension base="tns2:WSLoginServiceException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getItimVersionInfoResponse">
+
+      <wsdl:part element="intf:getItimVersionInfoResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lostPasswordLoginResetPasswordResponse">
+
+      <wsdl:part element="intf:lostPasswordLoginResetPasswordResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getChallengeQuestionsResponse">
+
+      <wsdl:part element="intf:getChallengeQuestionsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSInvalidLoginException">
+
+      <wsdl:part element="intf:fault4" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lostPasswordLoginDirectEntryResponse">
+
+      <wsdl:part element="intf:lostPasswordLoginDirectEntryResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loginResponse">
+
+      <wsdl:part element="intf:loginResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWebServicesTargetTypeResponse">
+
+      <wsdl:part element="intf:getWebServicesTargetTypeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lostPasswordLoginResetPasswordRequest">
+
+      <wsdl:part element="intf:lostPasswordLoginResetPassword" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getChallengeQuestionsRequest">
+
+      <wsdl:part element="intf:getChallengeQuestions" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWebServicesVersionRequest">
+
+      <wsdl:part element="intf:getWebServicesVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isPasswordEditingAllowedResponse">
+
+      <wsdl:part element="intf:isPasswordEditingAllowedResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isPasswordEditingAllowedRequest">
+
+      <wsdl:part element="intf:isPasswordEditingAllowed" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault3" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loginRequest">
+
+      <wsdl:part element="intf:login" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWebServicesTargetTypeRequest">
+
+      <wsdl:part element="intf:getWebServicesTargetType" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getItimVersionInfoRequest">
+
+      <wsdl:part element="intf:getItimVersionInfo" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSUnsupportedVersionException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lostPasswordLoginDirectEntryRequest">
+
+   	<wsdl:part element="intf:lostPasswordLoginDirectEntry" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWebServicesBuildNumberRequest">
+
+      <wsdl:part element="intf:getWebServicesBuildNumber" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getItimVersionResponse">
+
+      <wsdl:part element="intf:getItimVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getItimFixpackLevelRequest">
+
+      <wsdl:part element="intf:getItimFixpackLevel" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSInvalidSessionException">
+
+      <wsdl:part element="intf:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWebServicesVersionResponse">
+
+      <wsdl:part element="intf:getWebServicesVersionResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWebServicesBuildNumberResponse">
+
+      <wsdl:part element="intf:getWebServicesBuildNumberResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getItimVersionRequest">
+
+      <wsdl:part element="intf:getItimVersion" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getItimFixpackLevelResponse">
+
+      <wsdl:part element="intf:getItimFixpackLevelResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="logoutRequest">
+   	<wsdl:part name="parameters" element="intf:logout"></wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="logoutResponse">
+   	<wsdl:part name="parameters" element="intf:logoutResponse"></wsdl:part>
+   </wsdl:message>
+  
+   <wsdl:portType name="WSSessionService">
+
+      <wsdl:operation name="getChallengeQuestions">
+
+         <wsdl:input message="intf:getChallengeQuestionsRequest" name="getChallengeQuestionsRequest"/>
+
+         <wsdl:output message="intf:getChallengeQuestionsResponse" name="getChallengeQuestionsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItimFixpackLevel">
+
+         <wsdl:input message="intf:getItimFixpackLevelRequest" name="getItimFixpackLevelRequest"/>
+
+         <wsdl:output message="intf:getItimFixpackLevelResponse" name="getItimFixpackLevelResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItimVersion">
+
+         <wsdl:input message="intf:getItimVersionRequest" name="getItimVersionRequest"/>
+
+         <wsdl:output message="intf:getItimVersionResponse" name="getItimVersionResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItimVersionInfo">
+
+         <wsdl:input message="intf:getItimVersionInfoRequest" name="getItimVersionInfoRequest"/>
+
+         <wsdl:output message="intf:getItimVersionInfoResponse" name="getItimVersionInfoResponse"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWebServicesBuildNumber">
+
+         <wsdl:input message="intf:getWebServicesBuildNumberRequest" name="getWebServicesBuildNumberRequest"/>
+
+         <wsdl:output message="intf:getWebServicesBuildNumberResponse" name="getWebServicesBuildNumberResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWebServicesTargetType">
+
+         <wsdl:input message="intf:getWebServicesTargetTypeRequest" name="getWebServicesTargetTypeRequest"/>
+
+         <wsdl:output message="intf:getWebServicesTargetTypeResponse" name="getWebServicesTargetTypeResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWebServicesVersion">
+
+         <wsdl:input message="intf:getWebServicesVersionRequest" name="getWebServicesVersionRequest"/>
+
+         <wsdl:output message="intf:getWebServicesVersionResponse" name="getWebServicesVersionResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isPasswordEditingAllowed">
+
+         <wsdl:input message="intf:isPasswordEditingAllowedRequest" name="isPasswordEditingAllowedRequest"/>
+
+         <wsdl:output message="intf:isPasswordEditingAllowedResponse" name="isPasswordEditingAllowedResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSInvalidSessionException" name="WSInvalidSessionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="login">
+
+         <wsdl:input message="intf:loginRequest" name="loginRequest"/>
+
+         <wsdl:output message="intf:loginResponse" name="loginResponse"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSInvalidLoginException" name="WSInvalidLoginException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lostPasswordLoginDirectEntry">
+
+         <wsdl:input message="intf:lostPasswordLoginDirectEntryRequest" name="lostPasswordLoginDirectEntryRequest"/>
+
+         <wsdl:output message="intf:lostPasswordLoginDirectEntryResponse" name="lostPasswordLoginDirectEntryResponse"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lostPasswordLoginResetPassword">
+
+         <wsdl:input message="intf:lostPasswordLoginResetPasswordRequest" name="lostPasswordLoginResetPasswordRequest"/>
+
+         <wsdl:output message="intf:lostPasswordLoginResetPasswordResponse" name="lostPasswordLoginResetPasswordResponse"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="logout">
+      	<wsdl:input message="intf:logoutRequest"></wsdl:input>
+      	<wsdl:output message="intf:logoutResponse"></wsdl:output>
+            <wsdl:fault name="WSLoginServiceException" message="intf:WSLoginServiceException"></wsdl:fault>
+        </wsdl:operation>
+   </wsdl:portType>
+
+   <wsdl:binding name="WSSessionServiceSoapBinding"
+   	type="impl:WSSessionService">
+
+
+   	<wsdlsoap:binding style="document"
+   		transport="http://schemas.xmlsoap.org/soap/http" />
+ <wsdl:operation name="getChallengeQuestions">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getChallengeQuestionsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getChallengeQuestionsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItimFixpackLevel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getItimFixpackLevelRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getItimFixpackLevelResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItimVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getItimVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getItimVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getItimVersionInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getItimVersionInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getItimVersionInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWebServicesBuildNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWebServicesBuildNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWebServicesBuildNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWebServicesTargetType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWebServicesTargetTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWebServicesTargetTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWebServicesVersion">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWebServicesVersionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWebServicesVersionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isPasswordEditingAllowed">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isPasswordEditingAllowedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isPasswordEditingAllowedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidSessionException">
+
+            <wsdlsoap:fault name="WSInvalidSessionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="login">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loginRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidLoginException">
+
+            <wsdlsoap:fault name="WSInvalidLoginException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lostPasswordLoginDirectEntry">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lostPasswordLoginDirectEntryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lostPasswordLoginDirectEntryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lostPasswordLoginResetPassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lostPasswordLoginResetPasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lostPasswordLoginResetPasswordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+ 
+
+   	<wsdl:operation name="logout">
+   		<wsdlsoap:operation
+   			soapAction="" />
+   		<wsdl:input>
+   			<wsdlsoap:body use="literal" />
+   		</wsdl:input>
+   		<wsdl:output>
+   			<wsdlsoap:body use="literal" />
+   		</wsdl:output>
+   		<wsdl:fault name="WSLoginServiceException">
+   			<wsdlsoap:fault use="literal"
+   				name="WSLoginServiceException" />
+   		</wsdl:fault>
+   	</wsdl:operation>
+   </wsdl:binding>
+
+   <wsdl:service name="WSSessionService">
+
+      <wsdl:port binding="intf:WSSessionServiceSoapBinding" name="WSSessionServicePort">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSSessionService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

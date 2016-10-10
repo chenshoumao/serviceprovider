@@ -1,0 +1,77 @@
+@charset "utf-8";
+*{font-family: "Microsoft YaHei" ! important;color: #666;}
+/* CSS Document reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+/*    vertical-align: baseline;*/
+    font-size: 14px;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+a{text-decoration: none; cursor: pointer; color: #666; }
+a:hover{color: #005bc1;}
+
+/*页面定义样式*/
+.container{width: 1100px; margin: 0 auto; min-height: 600px; }
+/*header public Css*/
+#header {height:30px;background-color:#eeeeee;line-height: 30px;}
+#header .header_top {width:1100px;margin:0 auto;height:30px;}
+#date {float:left;}
+#header .loginbar {float:right;}
+#header .loginbar span {margin-right:10px;}
+#header .loginbar a {margin-right:10px;margin-left:10px;}
+#header .loginbar a:hover {color:#005bc1;}
+.slider {position:relative;}
+/*banner*/
+#banner .rslides {position: relative; list-style: none; overflow: hidden; width: 100%; padding: 0; margin: 0; }
+#banner .rslides li:first-child {position: relative; display: block; float: left; }
+#banner .rslides li {-webkit-backface-visibility: hidden; position: absolute; display: none; width: 100%; left: 0; top: 0; }
+#banner .rslides img {display: block; height: auto; float: left; width: 100%; border: 0; height: 300px; }
+.callbacks_tabs{display: none;}
+.callbacks_nav {position: absolute; -webkit-tap-highlight-color: rgba(0,0,0,0); top: 50%; left: 0; opacity: 0.7; z-index: 3; text-indent: -9999px; overflow: hidden; text-decoration: none; height: 45px; width: 50px; margin-top: -25px; background-image: url(../images/arrows.png); background-repeat: no-repeat; background-position: left top; }
+.callbacks_nav.next {left: auto; background-position: right top; right: 0; }
+.callbacks_tabs a {visibility: hidden; }
+
+/*nav*/
+#nav{margin:20px auto;margin-left:auto;width:1100px;height:40px;background-color:#005bc1}
+#nav ul a li{float:left;width:150px;line-height:40px;color:#fff;text-align:center;font-size:15px;text-indent: 34px;}
+#nav ul a:nth-child(1) li{background: url(../images/1.png) no-repeat 32px 8px;}
+#nav ul a:nth-child(2) li{background: url(../images/2.png) no-repeat 32px 8px;}
+#nav ul a:nth-child(3) li{background: url(../images/3.png) no-repeat 32px 8px;}
+#nav ul a:nth-child(4) li{background: url(../images/4.png) no-repeat 32px 8px;}
+#nav ul a:nth-child(5) li{background: url(../images/5.png) no-repeat 32px 8px;}
+#nav ul a:nth-child(6) li{background: url(../images/6.png) no-repeat 32px 8px;}
+#nav ul a li:hover,.NavSelect{background-color:#003e6a!important;}
+
+/*footer*/
+#footer{height: 100px; background-color: #eeeeee; margin-top: 30px; }
+#footer .footer_logo{float: left; width: 270px; border-right: 2px solid #929292; margin-left: 152px; margin-top: 22px; }
+#footer .footer_word{width: 690px; margin-left: 470px; padding-top: 12px; }
+#footer .footer_word span{margin-right: 16px; line-height: 25px; color: #929292; font-size: 13px; }
+#footer .footer_word  .footer_left{float: left;}
+#footer .footer_word  .footer_right{float: right;}

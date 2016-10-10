@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta name="GENERATOR"
+ content="IBM WebSphere Homepage Builder V5.0.1 for Windows">
+  <title>File Service Provider Example</title>
+  <link href="../../examples.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td align="left"> <img alt="Banner"
+ style="border: 0px solid ; width: 283px; height: 58px;"
+ src="../../ibm_banner.gif"></td>
+      <td align="right"> <img style="width: 170px; height: 58px;"
+ alt="Logo" src="../../tivolilogo.gif"></td>
+    </tr>
+  </tbody>
+</table>
+<h1>File Service Provider Example</h1>
+<p>This example demonstrates use of the ServiceProvider API to build a
+connector to a flat file database.&nbsp; It is perhaps the simplest
+possible example ServiceProvider.&nbsp; It may be useful in learning to
+use the ServiceProvider API and, in addition, to protype provisioning
+policies and workflow designs without needing to be connected to a real
+agent. <br>
+</p>
+<h2>Service Provider Installation</h2>
+<p>The service provider is the component that facilitates communication
+betweeen TIM and the file database.&nbsp; </p>
+<p>To build the examples follow the instructions given in <a
+	href="../../Building.html">Building the Examples</a>.</p>
+<p>Add the <dfn>examples.jar</dfn> file created by the build process to the application server's classpath
+  by following the instructions given in <a href="../../Classpath.html">Adding
+<dfn>examples.jar</dfn> to Classpath</a>.
+</p>
+<h2>Service Profile Installation</h2>
+<p>To install the example, run the build file (build.bat for windows and build.sh for unix) found in the serviceprovider directory. The build file will create a fileserviceprofile.jar file in the same directory. (You will need to set the ANT_HOME_LIB variable first.)</p>
+<p>Now log in to ITIM as ITIM Manager and select Configure System &gt; Manage Service Types. Press the Import button and select fileserviceprofile.jar. fileserviceprofile.jar is a simple jar file that contains a directory called fileserviceprofile and the following files:</p>
+<table style="text-align: left; width: 100%;" border="1" cellspacing="2"
+ cellpadding="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">File
+Name</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Description</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="fileserviceprofile/schema.dsml"><code>schema.dsml</code></a><br>
+      </td>
+      <td style="vertical-align: top;">This defines the schema for
+accounts, services, and groups for the service type.&nbsp; <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="fileserviceprofile/resource.def"><code>resource.def</code></a><br>
+      </td>
+      <td style="vertical-align: top;">This file describes service
+profile configuration information, including which connector properties
+and service parameters should be sent to the ServiceProvider
+implementation.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="fileserviceprofile/CustomLabels.properties"><code>CustomLabels.properties</code></a><br>
+      </td>
+      <td style="vertical-align: top;">Human understandable labels for
+the schema entries.&nbsp; These will be displayed in the TIM user
+inteface.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="fileserviceprofile/erFileUserAccount.xml"><code>erUserAccount.xml</code></a><br>
+      </td>
+      <td style="vertical-align: top;">An optional file containing the
+account form.&nbsp; This will be imported during profile install so
+that the form will not have to be designed in the form design
+utility.&nbsp; It was created by using the form designer and copying
+the data from the LDAP server into a file with the account class name
+and an 'xml' postfix.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="fileserviceprofile/erFileService.xml"><code>erFileService.xml</code></a><br>
+      </td>
+      <td style="vertical-align: top;">An optional file containing the
+service form.&nbsp; This will be imported
+during profile install so that the form will not have to be designed in
+the form design utility.&nbsp; It was created in the same way as the
+account form. </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>Also in the jar file are a few files and directories created by the jar program.
+</p>
+<h2>Service Setup</h2>
+<div style="text-align: center;">
+<div style="text-align: left;">After installing the profile add a
+service instance of File Service Type and establish a provisioning
+policy allowing users to own accounts.<br>
+<span style="font-weight: bold;"></span></div>
+</div>
+<h2>Testing</h2>
+<p>The service provider may be tested by doing provisioning, deleting,
+and other account operations but not reconciliation.&nbsp; When the
+account requests are processed entries will be written to the file <code>fileprovider.log</code>.</p>
+<p><br>
+</p>
+</body>
+</html>

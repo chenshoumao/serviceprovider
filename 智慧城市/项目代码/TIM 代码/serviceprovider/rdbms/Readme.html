@@ -1,0 +1,551 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder V6.0.2 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+  <title>Relational Database Service Provider Example</title>
+  <link href="../../examples.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td align="left"> <img alt="Banner"
+ style="border: 0px solid ; width: 283px; height: 58px;"
+ src="../../ibm_banner.gif"></td>
+      <td align="right"> <img style="width: 170px; height: 58px;"
+ alt="Logo" src="../../tivolilogo.gif"></td>
+    </tr>
+  </tbody>
+</table>
+<h1>Relational Database Service Provider Example</h1>
+<p>This example demonstrates use of the ServiceProvider API to build a
+connector to a relational database.&nbsp; It is more complete than the
+JNDI example ServiceProvider in that it manages group data and it
+handles suspending and restoring accounts.&nbsp; However, this comes at
+the cost of additional complexity in code and set up.<br>
+<BR>
+The ServiceProvider implementation does not make assumptions about
+the schema, except that there is only one type of supporting data
+allowed.&nbsp; This is referred to as group data or supporting data,
+however, it may correspond to role or some other type on the remote
+database.&nbsp; In addition, it does make&nbsp; assumptions about the
+service schema, in particular the presence of the attributes described
+below.&nbsp; Therefore, the same ServiceProvider implementation can be
+used for other schemas, provided that certain conventions are used in
+the definition of the service schema and resource definition file.</p>
+<h2>Service Provider Installation</h2>
+<p>The service provider is the component that facilitates communication betweeen TIM and the remote database. </p>
+<p>To build the examples follow the instructions given in <a
+	href="../../Building.html">Building the Examples</a>.</p>
+<p>Add the examples.jar file created by the build process to the
+application server's classpath by following the instructions given in
+<a href="../../Classpath.html">Adding examples.jar to Classpath</a>.</p>
+<p>An example service profile suited to the relational database
+table described below is also included.&nbsp;</p>
+<p>To install the example, run the build file (build.bat for windows
+and build.sh for unix) found in the serviceprovider directory. The build
+file will create a rdbmsservice.jar file in the same directory. (You
+will need to set the ANT_HOME_LIB variable first.)</p>
+<p>Now log in to ITIM as ITIM Manager and select Configure System >
+Manage Service Types. Press the Import button and select
+rdbmsservice.jar. rdbmsservice.jar is a simple jar file that contains a
+directory called fileserviceprofile and the following files:</p>
+<table style="text-align: left; width: 100%;" border="1" cellspacing="2"
+	cellpadding="2">
+	<caption>Files for Service Profile</caption>
+	<tbody>
+		<tr>
+			<td style="vertical-align: top;" align="center"><span
+				style="font-weight: bold;">File Name</span></td>
+			<td style="vertical-align: top;" align="center"><span
+				style="font-weight: bold;">Description</span></td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a
+				href="rdbmsservice/schema.dsml"><code>schema.dsml</code></a></td>
+			<td style="vertical-align: top;">This defines the schema for
+			accounts, services, and groups for the new relational database
+			service.&nbsp; The account class, erRDBMSAccount, represents an
+			account entry in the database.&nbsp; The service class,
+			erRDBMSService, describes the information needed to communicate to
+			the database and interpret the results back.&nbsp; The group class,
+			erRDBMSService, corresponds the ROLE table in the database.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a
+				href="rdbmsservice/resource.def"><code>resource.def</code></a></td>
+			<td style="vertical-align: top;">This file describes service
+			profile configuration information, including which connector
+			properties and service parameters should be sent to the
+			ServiceProvider implementation.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a
+				href="rdbmsservice/CustomLabels.properties"><code>CustomLabels.properties</code></a></td>
+			<td style="vertical-align: top;">Human understandable labels for
+			the schema entries.&nbsp; These will be displayed in the TIM user
+			inteface.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a
+				href="rdbmsservice/erRDBMSAccount.xml"><code>erRDBMSAccount.xml</code></a></td>
+			<td style="vertical-align: top;">An optional file containing the
+			account form.&nbsp; This will be imported during profile install so
+			that the form will not have to be designed in the form design
+			utility.&nbsp; It was created by using the form designer and copying
+			the data from the LDAP server into a file with the account class name
+			and an 'xml' postfix.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><a
+				href="rdbmsservice/erRDBMSService.xml"><code>erRDBMSService.xml</code></a></td>
+			<td style="vertical-align: top;">An optional file containing the
+			service form.&nbsp; This will be imported during profile install so
+			that the form will not have to be designed in the form design
+			utility.&nbsp; It was created in the same way as the account form.</td>
+		</tr>
+	</tbody>
+</table>
+<p>After installing the service profile, restart the application
+server.</p>
+<h2>Database setup</h2>
+<p>The example uses a database table for accounts and another for
+roles.&nbsp; These tables are described in the table below.</p>
+<table style="text-align: left; width: 100%;" border="1" cellspacing="2"
+ cellpadding="2">
+  <caption>Description of Accounts Table</caption> <tbody>
+    <tr>
+      <td style="vertical-align: top;" align="center"><span style="font-weight: bold;"><b>Field</b></span></td>
+      <td style="vertical-align: top;" align="center"><span style="font-weight: bold;"><b>Description</b></span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">HRID</td>
+      <td style="vertical-align: top;">Human resources
+identifier.&nbsp; May not be null.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">LOGIN</td>
+      <td style="vertical-align: top;">The user id used to log into the
+customer database application.&nbsp; This is the primary key.&nbsp; May
+not be null. </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">PASSWORD</td>
+      <td style="vertical-align: top;">The password used to log into
+the customer database application. </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">FIRST_NAME</td>
+      <td style="vertical-align: top;">The user's given name.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">MIDDLE_NAME</td>
+      <td style="vertical-align: top;">The user's middle name. </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">LAST_NAME</td>
+      <td style="vertical-align: top;">The user's surname. </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">TITLE</td>
+      <td style="vertical-align: top;">Professional title.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ROLE</td>
+      <td style="vertical-align: top;">Membership in a role.&nbsp; This
+has a foreign key constraint to ROLE_NAME in the Roles table.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">EMAIL</td>
+      <td style="vertical-align: top;">Internet email address.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">STATUS</td>
+      <td style="vertical-align: top;">Status of the account.&nbsp;
+Possible values are active and inactive.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="text-align: left; width: 100%;" border="1" cellspacing="2"
+ cellpadding="2">
+  <caption>Description of Roles Table</caption> <tbody>
+    <tr>
+      <td style="vertical-align: top;" align="center"><span style="font-weight: bold;"><b>Field</b></span></td>
+      <td style="vertical-align: top;" align="center"><span style="font-weight: bold;"><b>Description</b></span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ROLE_NAME</td>
+      <td style="vertical-align: top;">The name of the role.&nbsp; May
+not be null. </td>
+    </tr>
+  </tbody>
+</table>
+<p>SQL scripts are included that
+will create the tables and add a small amount of sample data.&nbsp; Run
+the script in file
+<a href="accounts.ddl"><code>accounts.ddl</code></a>
+(DB2),
+<a href="accounts_oracle.ddl"><code>accounts_oracle.ddl</code></a>
+(Oracle) or
+<a href="accounts_sqlserver.ddl"><code>accounts_sqlserver.ddl</code></a>
+(Microsoft SQL Server)
+using the native database command tools.
+<br>
+<BR>
+Check the database to make sure that the tables have been created.<BR>
+<BR>
+The service provider connects to the database via an application server
+data source. For the same database as ITIM uses there is no additional
+setup to do on the application server. However, to provision to another
+database, a data source must be set up on the application server.&nbsp;
+These are the steps for Microsoft SQL Server on WebSphere.&nbsp;Other combinations
+of database vendor and application server are similar, however, you must
+use an XA driver to enable it to act in a distributed transaction.</p>
+<ol>
+  <li>Log into the WebSphere 6.1 console.</li>
+  <li>Expand <font face="Monospace">Resources</font> in the navigation tree, then expand<font
+		face="Monospace"> JDBC</font>, finally select <font face="Monospace">JDBC Providers</font>.&nbsp;
+</li>
+	<li>From the drop-down combo box select the correct scope. The scope should be the same as the provider named  <font
+		face="Monospace">ITIM XA DB2 JDBC Provider</font> (The ITIM provider is defined by the ITIM installer).</li>
+	<li>Click the New button.&nbsp; </li>
+	<li>Use the values in the following table to fill out the form:<br>
+	<table border="1" cellpadding="1">
+		<tbody>
+			<tr>
+				<td align="center"><b>Name</b></td>
+				<td align="center"><b>Value</b></td>
+			</tr>
+			<tr>
+				<td>Database type</td>
+				<td>User-defined</td>
+			</tr>
+			<tr>
+				<td>Implementation class name  </td>
+				<td>com.microsoft.sqlserver.jdbc.SQLServerXADataSource</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>JNetDirect</td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td>JNetDirect MSSQLServer Driver (XA)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>Click the Next button.
+	</li>
+	<li>In the Class path text field, enter the absolute path to the sqljdbc.jar file. This is usually <font
+		face="Monospace">$ITIM_HOME/lib/sqljdbc.jar</font>.<br>Click the Next button.</li>
+	<li>Review your choice to make sure they are correct, and press Finish.</li>
+	<li>Navigate to <font face="Monospace">Resources</font> &gt; <font
+		face="Monospace">JDBC</font> &gt; <font face="Monospace">Data sources (WebSphere Application Server V4)</font>.</li>
+	<li>Select the same scope as before, and click the New buton.</li>
+	<li>Use the values in the following table to fill out the form:<br>
+	<table border="1" cellpadding="1">
+		<tbody>
+			<tr>
+				<td align="center"><b>Name</b></td>
+				<td align="center"><b>Value</b></td>
+			</tr>
+			<tr>
+				<td>Provider</td>
+				<td>JNetDirect</td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>MSSQLServer</td>
+			</tr>
+			<tr>
+				<td>JNDI name</td>
+				<td>MSSQLServerDataSource</td>
+			</tr>
+		</tbody>
+	</table><br>Fill in your correct values for the <font face="Monospace">Database
+	name</font>, <font face="Monospace">Default user ID</font>, and <font
+		face="Monospace">Default password</font>. You can omit values for <font
+		face="Monospace">Description</font> and <font face="Monospace">Category</font>.</li>
+	<li>Click Apply.</li>
+	<li>Click on the <font face="Monospace">Custom properties</font> hyperlink at the top right of the page.</li>
+	<li>Create a new property named <font face="Monospace">serverName</font> with the value of the database hast name. The type of the property should be <font
+		face="Monospace">java.lang.String</font>.&nbsp;</li><li>Save the configuration and logout of the console.</li>
+</ol>
+More information on the JNetDirect driver can be found at <a
+ href="http://www.jnetdirect.com">www.jnetdirect.com</a>.<h2>Service Setup</h2>
+<p>Below are some sample values that may be entered when create a new Relational Database service.</p><h3>General</h3>
+<table border="1" cellpadding="1">
+	<tbody>
+		<tr>
+			<td align="center"><b>Service Attribute</b></td>
+			<td align="center"><b>Description</b></td>
+			<td align="center"><b>Example Value</b></td>
+		</tr>
+		<tr>
+			<td>Service Name</td>
+			<td>Used for display in the user interface.</td>
+			<td>DB2 Custom App</td>
+		</tr>
+		<tr>
+			<td>Data Source Name</td>
+			<td>The name of the JDBC resource in the application server.  To use a value other than the TIM database, a JDBC resource needs to be configured in the application server.</td>
+			<td><font face="Monospace">enroleDataSource</font></td>
+		</tr>
+		<tr>
+			<td>Reconciliation Transactional</td>
+			<td>Whether to execute reconciliation within a transaction.  Although account management operations, such as provision, change password, and so on are executed within transactions, reconciliation is not normally executed within a transaction.  However, some databases, in particular, Oracle, may require reconciliation to be executed within a transaction.</td>
+			<td>false (unchecked)</td>
+		</tr>
+	</tbody>
+</table>
+<h3>SQL</h3>
+<table border="1" cellpadding="1">
+	<tbody>
+		<tr>
+			<td align="center"><b>Service Attribute</b></td>
+			<td align="center"><b>Description</b></td>
+			<td align="center"><b>Example Value</b></td>
+		</tr>
+		<tr>
+			<td>Add Account SQL</td>
+			<td>An SQL statement to add an account. Macros have been added to make it easier to specify the attributes names and values since only the values entered by the user will be sent to the service provider.</td>
+			<td><font face="Monospace">INSERT INTO ACCOUNTS
+			(#all_attributes) VALUES (#all_values)</font></td>
+		</tr>
+		<tr>
+			<td>Change Password SQL</td>
+			<td>An SQL statement to change passwords.  A macro syntax with '#' followed by the name of the TIM attribute is used to substitute the value in </td>
+			<td><font face="Monospace">UPDATE ACCOUNTS SET
+			PASSWORD='#erpassword' WHERE LOGIN = '#eruid'</font></td>
+		</tr>
+		<tr>
+			<td>Delete SQL</td>
+			<td>An SQL statement to delete an account.</td>
+			<td><font face="Monospace">DELETE FROM ACCOUNTS WHERE LOGIN =
+			'#eruid'</font></td>
+		</tr>
+		<tr>
+			<td>Modify SQL</td>
+			<td>An SQL statement to modify an account.</td>
+			<td><font face="Monospace">UPDATE ACCOUNTS SET #all_changes
+			WHERE LOGIN = '#eruid'</font></td>
+		</tr>
+		<tr>
+			<td>Restore SQL</td>
+			<td>An SQL statement to restore an account.</td>
+			<td><font face="Monospace">UPDATE ACCOUNTS SET
+			STATUS='ENABLED' WHERE LOGIN = '#eruid'</font></td>
+		</tr>
+		<tr>
+			<td>Search SQL</td>
+			<td>An SQL statement to search for account data.</td>
+			<td><font face="Monospace">SELECT * FROM ACCOUNTS</font></td>
+		</tr>
+		<tr>
+			<td>Suspend SQL</td>
+			<td>An SQL statement to suspend an account.</td>
+			<td><font face="Monospace">UPDATE ACCOUNTS SET
+			STATUS='DISABLED' WHERE LOGIN = '#eruid'</font></td>
+		</tr>
+	</tbody>
+</table>
+<h3>Attribute Map</h3>
+<p>
+The attribute Attribute Map is used to map account and group data field names in 
+the database to names used within TIM.  The syntax is similar to a properties file:
+</p>
+<pre>
+eruid=LOGIN
+erpassword=PASSWORD
+erAccountStatus=STATUS
+mail=EMAIL
+erRDBMSHUID=HRID
+givenname=FIRST_NAME
+initials=MIDDLE_NAME
+sn=LAST_NAME
+erRDBMSGroupMembership=ROLE
+erRDBMSGroupName=ROLE_NAME
+</pre>
+<h3>Value Map</h3>
+<p>The value map is to map values on the database to values with an
+equivalent meaning in TIM. In this example, status is an attribute where
+this is needed because the relational database knows a value of ENABLED
+as active but TIM knows a value of 0 as active. The value map for this
+example is:</p>
+<pre>
+erAccountStatus.0=ENABLED
+erAccountStatus.1=DISABLED
+</pre>
+<h3>Group Data</h3>
+<table border="1" cellpadding="1">
+	<tbody>
+		<tr>
+			<td align="center"><b>Service Attribute</b></td>
+			<td align="center"><b>Description</b></td>
+			<td align="center"><b>Example Value</b></td>
+		</tr>
+		<tr>
+			<td>Group Search SQL</td>
+			<td>An SQL statement to search for group data.</td>
+			<td><font face="Monospace">SELECT * FROM ROLES</font></td>
+		</tr>
+		<tr>
+			<td>Group DN Attribute</td>
+			<td>The field in the group table that should be used to identify the group.  Usually, the primary key.</td>
+			<td><font face="Monospace">ROLE_NAME</font></td>
+		</tr>
+	</tbody>
+</table><div style="text-align: center;"><div style="text-align: left;"><br>
+<span style="font-weight: bold;"></span>The test button on the service
+form will return true if a connection can be established to the
+database.<span style="font-weight: bold;"></span></div>
+</div>
+<h2>Testing</h2>
+<p>The service provider may be tested by doing reconciliation,
+provisioning, deleting, and other account operations. However, the
+first thing
+to do should be to test connectivity to the database using the test
+button on the service form.
+</p>
+<p>After a reconciliation has been run the groups will be returned
+and may be viewed from the Manage Services &gt; Manage Groups drop down menu item.</p>
+<p><br>
+<img border="0" src="images/rdbms_manage_groups.gif" width="510"
+	height="219"></p>
+<p><br>
+<img border="0" src="images/rdbms_groups.gif" width="727" height="263">
+</p>
+<p>The service provider has been tested with:</p><ul>
+  <li>Standard SQL&nbsp;- Stored procedures have not been tried
+yet. </li>
+  <li>WebSphere 6.1</li>
+  <li>DB2</li>
+</ul>
+<h2>Features not Implemented</h2>
+<p>For a more complete implementation these functions would be
+included: </p>
+<ul>
+  <li>Event notification mechanism.&nbsp; There is no way in the
+current implentation to send back account and group changes to the
+server except via a reconciliation.</li>
+  <li>Section of existing data sources and creation of new data
+sources.&nbsp; In the present implementation the data source name is an
+application server JNDI name.&nbsp; Someone without access to the
+application server administrative console would not know the value to
+enter here or create a new data source to connect to their
+database.&nbsp; This information would have to be communicated
+specifically to them.&nbsp; To implement this the subform interface may
+be used and then JMX used to communicate to the application server to
+query and configure data sources.</li>
+  <li>Communication to databases is normally in plain text embedded
+within a binary protocol.&nbsp; A JDBC cryptographic should be able to
+be substituted, however, this has not been tried.<br>
+  </li>
+</ul>
+<h2>Reviewing the code</h2><p>The code is in the files shown below.<br>
+</p>
+<table style="text-align: left; width: 100%;" border="1" cellspacing="2"
+ cellpadding="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;" align="center"><span style="font-weight: bold;"><b>File</b></span></td>
+      <td style="vertical-align: top;" align="center"><span style="font-weight: bold;"><b>Description</b></span></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a href="../src/examples/serviceprovider/rdbms/RDBMSConnector.java">RDBMSConnector.java</a></td>
+      <td style="vertical-align: top;">The main class demonstrating
+connection from TIM to a database for management of&nbsp;
+accounts.&nbsp; TIM will call methods add, changePassword, delete,
+modify, restore, suspend, search, and test when driven by user actions
+within TIM.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/RDBMSConnectorFactory.java">RDBMSConnectorFactory.java</a></td>
+      <td style="vertical-align: top;">Factory class to create an
+instance of a RDBMSConnector class.&nbsp; TIM will call the method
+getServiceProvider every time it needs to communicate to the database
+for account management.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/CompositeSearchResults.java">CompositeSearchResults.java</a></td>
+      <td style="vertical-align: top;">Performs SQL search execution
+for multiple queries and construction of a composite result set.&nbsp;
+Adapts the results returned from the database to a form understandable
+by TIM.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a href="../src/examples/serviceprovider/rdbms/NoSearchResults.java">NoSearchResults.java</a></td>
+      <td style="vertical-align: top;">In case an error occurred
+executing a select statement for a reconciliation, this&nbsp; class
+encapsulates an empty set of results and the error that led to it.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a href="../src/examples/serviceprovider/rdbms/QueryMetaData.java">QueryMetaData.java</a></td>
+      <td style="vertical-align: top;">Encapsulates meta data about the
+SQL query and the rows in the associated data set.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/AccountQueryMetaDataFactory.java">AccountQueryMetaDataFactory.java</a></td>
+      <td style="vertical-align: top;">Gathers query metadata for
+searching for accounts.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/GroupQueryMetaDataFactory.java">GroupQueryMetaDataFactory.java</a></td>
+      <td style="vertical-align: top;">Gathers query metadata for
+searching for group data.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a href="../src/examples/serviceprovider/rdbms/RDBMSAttributeMap.java">RDBMSAttributeMap.java</a></td>
+      <td style="vertical-align: top;">Encapsulates the attribute map
+to translate from TIM attribute names to remote names and in the
+opposite direction.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a href="../src/examples/serviceprovider/rdbms/RDBMSSQLException.java">RDBMSSQLException.java</a></td>
+      <td style="vertical-align: top;">Encapsulates an exception
+generated because the SQL statement entered in the service form.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a href="../src/examples/serviceprovider/rdbms/SQLStatement.java">SQLStatement.java</a></td>
+      <td style="vertical-align: top;">Encapsulates an SQL statement
+entered by the service owner.&nbsp; It is parsed to determine the input
+parameters so at execution time the parameter values can be substituted
+in.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/parser/SQLSubstitutionLexer.java">SQLSubstitutionLexer.java</a></td>
+      <td style="vertical-align: top;">Lexer for SQL substitution
+language used in service forms.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/parser/sql_substitution.g">sql_substitution.g</a></td>
+      <td style="vertical-align: top;">Antlr grammar file for the lexer.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/parser/SQLSubstitutionLexerTokenTypes.java">SQLSubstitutionLexerTokenTypes.java</a></td>
+      <td style="vertical-align: top;">Tokens in the SQL substitution
+language.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><a
+ href="../src/examples/serviceprovider/rdbms/parser/SQLSubstitutionLexerTokenTypes.txt">SQLSubstitutionLexerTokenTypes.txt</a></td>
+      <td style="vertical-align: top;">Generated by Antlr.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Antlr is used to perform the macro scanning in the SQL substitution
+language.&nbsp; Details on the use of Antlr can be found at <a
+ href="http://www.antlr.org">www.antlr.org</a>.<br>
+</body>
+</html>

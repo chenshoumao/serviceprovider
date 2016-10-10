@@ -1,0 +1,17 @@
+body{width: 100%;background: url(../images/bg.png) repeat;background-size: cover;}
+.main{margin: 0 auto;width: 850px;height: 510px;position: absolute; left: 50%; top: 50%; margin-left: -425px; margin-top: -255px;}
+.main h1{font-size: 30px;color: #fff;text-align: center;}
+.center{width: 840px;height: 440px;background-color: #3566b1;border: 1px solid #91a3be;margin-top: 15px;border-radius: 10px;}
+.content{width: 825px;height: 420px;background-color: #e2eff7;margin: 0 auto;margin-top: 10px;border-radius: 5px;}
+.content_left{float: left;width: 407px;height: 381px;background: url(../images/ocean.jpg) no-repeat;margin-top: 20px;margin-left: 20px;}
+
+.content_right{float: left;width: 320px;height: 280px;margin-left: 50px;margin-top: 60px;}
+.person{width: 58px;height: 44px;float: left; background: url(../images/person.png)#f4f4f4 no-repeat 16px center;border: 1px solid #dddedf;}
+.suo{width: 58px;height: 44px;background-color: #f4f4f4; float: left;background: url(../images/suo.png)#f4f4f4 no-repeat 16px center;border: 1px solid #dddedf;}
+.content_right h2{font-size: 24px;color: #626262;}
+.content_right li{width: 320px;font-size: 16px;color: #666;margin-top: 20px;}
+.content_right input{height: 40px;}
+.content_right input[type="text"]{width:255px;border: 1px solid #dddedf;height: 42px;border-left: none;font-size: 16.5px;text-indent: 10px;}
+.content_right input[type="checkbox"]{vertical-align:middle; margin-top:7px;width: 20px;height: 20px;}
+.content_right input[type="submit"]{width:146px;color: #f4f4f4;font-size: 18px;background-color: #4592f0;border:1px solid #2c7fe6;margin-right: 25px;}
+.content_right input[type="reset"]{width:146px;color: #f4f4f4;font-size: 18px;background-color: #4592f0;border:1px solid #2c7fe6;}

@@ -1,0 +1,1202 @@
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 21:26:04:231 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 21:26:04:274 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 21:26:04:276 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 21:26:04:307 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 21:26:05:633 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 21:26:05:702 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 21:26:05:708 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 21:26:05:714 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 21:26:06:396 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 21:26:06:497 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 21:26:10:282 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 21:26:10:327 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 21:26:10:328 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 21:26:10:349 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 21:26:11:674 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 21:26:11:746 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 21:26:11:752 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 21:26:11:758 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 21:26:12:466 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 21:26:12:567 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 22:31:56:249 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 22:31:56:294 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 22:31:56:295 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 22:31:56:316 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 22:31:57:616 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 22:31:57:685 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 22:31:57:694 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 22:31:57:701 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:31:58:398 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:31:58:536 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 22:32:02:297 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 22:32:02:346 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 22:32:02:347 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 22:32:02:369 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 22:32:03:829 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 22:32:03:907 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 22:32:03:915 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 22:32:03:921 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:32:04:634 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:32:04:735 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 22:32:47:159 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 22:32:47:204 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 22:32:47:205 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 22:32:47:227 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 22:32:48:554 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 22:32:48:626 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 22:32:48:632 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 22:32:48:639 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:32:48:795 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/22/16 22:32:48:972 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/22/16 22:32:48:979 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/22/16 22:32:48:980 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/22/16 22:32:48:993 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:32:49:003 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/22/16 22:32:49:094 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 22:33:06:792 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 22:33:06:838 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 22:33:06:839 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 22:33:06:862 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 22:33:08:250 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 22:33:08:321 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 22:33:08:328 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 22:33:08:334 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:33:09:097 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:33:09:367 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 22:41:48:347 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 22:41:48:443 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 22:41:48:444 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 22:41:48:472 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 22:41:49:915 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 22:41:49:996 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 22:41:50:003 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 22:41:50:010 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:41:50:177 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/22/16 22:41:50:362 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/22/16 22:41:50:371 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/22/16 22:41:50:372 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/22/16 22:41:50:386 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:41:50:396 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/22/16 22:41:50:500 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/22/16 22:42:14:315 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/22/16 22:42:14:412 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/22/16 22:42:14:414 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/22/16 22:42:14:441 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/22/16 22:42:15:980 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/22/16 22:42:16:053 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/22/16 22:42:16:060 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/22/16 22:42:16:068 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:42:16:862 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/22/16 22:42:17:055 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 11:34:47:506 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 11:34:47:605 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 11:34:47:606 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 11:34:47:631 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 11:34:48:991 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 11:34:49:062 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 11:34:49:081 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 11:34:49:088 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 11:34:49:771 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 11:34:49:895 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 11:34:51:850 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 11:34:51:943 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 11:34:51:944 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 11:34:51:971 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 11:34:53:392 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 11:34:53:473 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 11:34:53:480 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 11:34:53:487 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 11:34:54:220 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 11:34:54:330 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:34:55:295 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:34:55:422 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:34:55:423 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:34:55:451 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:34:56:861 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:34:56:935 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:34:56:941 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:34:56:948 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:34:57:656 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:34:57:763 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:35:00:883 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:35:00:984 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:35:00:986 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:35:01:012 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:35:02:468 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:35:02:547 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:35:02:554 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:35:02:561 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:35:03:293 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:35:03:417 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:47:32:072 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:47:32:172 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:47:32:173 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:47:32:199 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:47:33:695 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:47:33:776 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:47:33:783 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:47:33:791 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:47:34:538 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:47:34:662 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:47:36:714 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:47:36:819 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:47:36:821 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:47:36:847 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:47:38:319 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:47:38:397 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:47:38:404 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:47:38:411 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:47:39:162 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:47:39:279 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:48:18:841 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:48:18:892 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:48:18:893 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:48:18:918 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:48:20:389 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:48:20:465 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:48:20:472 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:48:20:479 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:48:20:660 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/24/16 15:48:20:927 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/24/16 15:48:20:935 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/24/16 15:48:20:936 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/24/16 15:48:20:955 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:48:20:967 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/24/16 15:48:21:086 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:48:40:678 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:48:40:722 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:48:40:723 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:48:40:745 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:48:42:112 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:48:42:203 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:48:42:211 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:48:42:218 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:48:43:032 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:48:43:298 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:57:02:844 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:57:02:967 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:57:02:968 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:57:02:996 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:57:04:470 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:57:04:550 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:57:04:557 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:57:04:564 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:57:04:737 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/24/16 15:57:04:931 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/24/16 15:57:04:940 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/24/16 15:57:04:941 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/24/16 15:57:04:956 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:57:04:967 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/24/16 15:57:05:087 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/24/16 15:57:28:969 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/24/16 15:57:29:065 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/24/16 15:57:29:066 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/24/16 15:57:29:092 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/24/16 15:57:30:467 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/24/16 15:57:30:540 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/24/16 15:57:30:547 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/24/16 15:57:30:553 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:57:31:336 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/24/16 15:57:31:528 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 1:38:59:274 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 1:38:59:369 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 1:38:59:370 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 1:38:59:396 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 1:39:00:765 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 1:39:00:838 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 1:39:00:845 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 1:39:00:851 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 1:39:01:543 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 1:39:01:673 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 1:39:03:724 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 1:39:03:821 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 1:39:03:822 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 1:39:03:847 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 1:39:05:259 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 1:39:05:341 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 1:39:05:348 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 1:39:05:355 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 1:39:06:064 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 1:39:06:165 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 10:58:27:844 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 10:58:27:939 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 10:58:27:940 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 10:58:27:965 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 10:58:29:349 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 10:58:29:421 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 10:58:29:428 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 10:58:29:434 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 10:58:30:134 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 10:58:30:233 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 10:58:32:308 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 10:58:32:408 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 10:58:32:409 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 10:58:32:438 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 10:58:33:912 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 10:58:33:985 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 10:58:33:991 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 10:58:33:998 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 10:58:34:692 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 10:58:34:793 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:07:41:850 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:07:41:944 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:07:41:945 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:07:41:971 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:07:43:420 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:07:43:496 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:07:43:503 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:07:43:509 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:07:44:217 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:07:44:330 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:07:46:287 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:07:46:380 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:07:46:381 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:07:46:404 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:07:47:728 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:07:47:798 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:07:47:804 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:07:47:810 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:07:48:554 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:07:48:650 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:08:21:009 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:08:21:102 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:08:21:103 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:08:21:128 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:08:22:516 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:08:22:587 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:08:22:593 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:08:22:600 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:08:22:751 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/25/16 11:08:22:928 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/25/16 11:08:22:935 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/25/16 11:08:22:936 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/25/16 11:08:22:950 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:08:22:960 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/25/16 11:08:23:068 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:08:38:950 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:08:39:051 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:08:39:053 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:08:39:081 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:08:40:561 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:08:40:639 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:08:40:646 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:08:40:653 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:08:41:498 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:08:41:778 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:15:25:323 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:15:25:420 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:15:25:422 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:15:25:447 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:15:26:834 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:15:26:906 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:15:26:913 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:15:26:920 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:15:27:074 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/25/16 11:15:27:253 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/25/16 11:15:27:261 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/25/16 11:15:27:261 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/25/16 11:15:27:275 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:15:27:285 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/25/16 11:15:27:379 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:15:44:476 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:15:44:560 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:15:44:561 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:15:44:593 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:15:46:015 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:15:46:108 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:15:46:115 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:15:46:122 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:15:46:961 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:15:47:238 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:20:42:514 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:20:42:601 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:20:42:602 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:20:42:628 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:20:44:029 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:20:44:101 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:20:44:107 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:20:44:113 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:20:44:813 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:20:44:928 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:20:47:008 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:20:47:104 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:20:47:105 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:20:47:131 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:20:48:512 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:20:48:583 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:20:48:589 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:20:48:595 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:20:49:289 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:20:49:404 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:27:42:626 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:27:42:720 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:27:42:721 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:27:42:756 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:27:44:242 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:27:44:323 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:27:44:347 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:27:44:354 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:27:45:091 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:27:45:198 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:27:47:333 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:27:47:428 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:27:47:429 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:27:47:454 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:27:48:884 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:27:48:967 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:27:48:974 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:27:48:982 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:27:49:721 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:27:49:830 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:31:44:615 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:31:44:701 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:31:44:702 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:31:44:734 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:31:46:076 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:31:46:161 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:31:46:168 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:31:46:175 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:31:46:854 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:31:46:948 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:31:48:924 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:31:49:008 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:31:49:009 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:31:49:043 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:31:50:419 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:31:50:507 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:31:50:514 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:31:50:521 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:31:51:200 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:31:51:297 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:32:24:178 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:32:24:286 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:32:24:287 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:32:24:316 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:32:25:724 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:32:25:799 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:32:25:806 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:32:25:813 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:32:25:974 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/25/16 11:32:26:154 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/25/16 11:32:26:163 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/25/16 11:32:26:164 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/25/16 11:32:26:177 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:32:26:187 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/25/16 11:32:26:282 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:32:42:718 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:32:42:821 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:32:42:823 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:32:42:848 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:32:44:231 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:32:44:306 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:32:44:312 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:32:44:318 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:32:45:129 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:32:45:384 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:39:45:379 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:39:45:474 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:39:45:475 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:39:45:503 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:39:46:969 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:39:47:044 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:39:47:051 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:39:47:058 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:39:47:229 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[6/25/16 11:39:47:449 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[6/25/16 11:39:47:457 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[6/25/16 11:39:47:458 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[6/25/16 11:39:47:472 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:39:47:482 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[6/25/16 11:39:47:578 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[6/25/16 11:40:13:392 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[6/25/16 11:40:13:514 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[6/25/16 11:40:13:516 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[6/25/16 11:40:13:542 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[6/25/16 11:40:15:046 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC Provider Installed: com.ibm.ffdc.EmptyProvider(silent)
+[6/25/16 11:40:15:119 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[6/25/16 11:40:15:125 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[6/25/16 11:40:15:132 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:40:15:910 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[6/25/16 11:40:16:096 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 14:49:52:453 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 14:49:52:516 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 14:49:52:517 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 14:49:52:542 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 14:49:53:978 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 14:49:54:065 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 14:49:54:072 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 14:49:54:080 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 14:49:54:819 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 14:49:54:941 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 14:49:58:838 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 14:49:58:890 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 14:49:58:891 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 14:49:58:916 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 14:50:00:423 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 14:50:00:504 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 14:50:00:511 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 14:50:00:518 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 14:50:01:302 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 14:50:01:406 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:27:16:305 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:27:16:352 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:27:16:353 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:27:16:376 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:27:17:734 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:27:17:809 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:27:17:815 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:27:17:822 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:27:18:526 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:27:18:623 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:27:22:371 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:27:22:430 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:27:22:431 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:27:22:456 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:27:23:857 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:27:23:933 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:27:23:960 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:27:23:968 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:27:24:652 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:27:24:785 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:34:56:635 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:34:56:694 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:34:56:696 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:34:56:719 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:34:58:085 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:34:58:158 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:34:58:164 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:34:58:170 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:34:58:849 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:34:58:944 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:35:02:737 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:35:02:788 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:35:02:789 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:35:02:812 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:35:04:191 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:35:04:288 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:35:04:296 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:35:04:304 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:35:05:005 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:35:05:098 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:35:44:099 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:35:44:147 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:35:44:148 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:35:44:179 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:35:45:543 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:35:45:613 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:35:45:618 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:35:45:625 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:35:45:763 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[16-6-25 15:35:45:964 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[16-6-25 15:35:45:971 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[16-6-25 15:35:45:972 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[16-6-25 15:35:45:988 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:35:46:000 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[16-6-25 15:35:46:105 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:36:04:637 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:36:04:685 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:36:04:687 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:36:04:718 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:36:06:095 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:36:06:169 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:36:06:174 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:36:06:181 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:36:06:955 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:36:07:197 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:44:14:700 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:44:14:794 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:44:14:795 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:44:14:821 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:44:16:199 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:44:16:286 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:44:16:293 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:44:16:300 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:44:16:431 CST] 00000000 AlarmThreadPo I   UTLS0015I: Hung thread detection for alarm thread pools is enabled with a 40000 millisecond threshold.
+[16-6-25 15:44:16:633 CST] 00000000 SecurityConne A   JSAS0006I: Security connection interceptor initialized.
+[16-6-25 15:44:16:640 CST] 00000000 ServiceInit   A   JSAS0001I: Security configuration initialized.
+[16-6-25 15:44:16:641 CST] 00000000 ServiceInit   A   JSAS0003I: Authentication mechanism: BASICAUTH
+[16-6-25 15:44:16:655 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:44:16:665 CST] 00000000 CSIClientRI   A   JSAS0007I: Client request interceptor registered.
+[16-6-25 15:44:16:765 CST] 00000000 AdminTool     A   ADMU0509I: The Application Server "server1" cannot be reached. It appears to be stopped.
+************ Start Display Current Environment ************
+Host Operating System is Linux, version 2.6.32-358.el6.x86_64
+Java version = J2RE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460-20080816_22093 (JIT enabled, AOT enabled)
+J9VM - 20080816_022093_LHdSMr
+JIT  - r9_20080721_1330ifx2
+GC   - 20080724_AA, Java Compiler = j9jit24, Java VM name = IBM J9 VM
+was.install.root = /opt/IBM/WebSphere/AppServer
+user.install.root = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01
+Java Home = /opt/IBM/WebSphere/AppServer/java/jre
+ws.ext.dirs = /opt/IBM/WebSphere/AppServer/java/lib:/opt/IBM/WebSphere/AppServer/classes:/opt/IBM/WebSphere/AppServer/lib:/opt/IBM/WebSphere/AppServer/installedChannels:/opt/IBM/WebSphere/AppServer/lib/ext:/opt/IBM/WebSphere/AppServer/web/help:/opt/IBM/WebSphere/AppServer/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/properties:/opt/IBM/WebSphere/AppServer/properties:/opt/IBM/WebSphere/AppServer/lib/startup.jar:/opt/IBM/WebSphere/AppServer/lib/bootstrap.jar:/opt/IBM/WebSphere/AppServer/lib/lmproxy.jar:/opt/IBM/WebSphere/AppServer/lib/urlprotocols.jar:/opt/IBM/WebSphere/AppServer/java/lib/tools.jar
+Java Library path = /opt/IBM/WebSphere/AppServer/java/jre/lib/amd64/default:/opt/IBM/WebSphere/AppServer/java/jre/lib/amd64:/opt/IBM/WebSphere/AppServer/bin::/usr/lib
+Current trace specification = *=info
+************* End Display Current Environment *************
+[16-6-25 15:44:39:886 CST] 00000000 ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[16-6-25 15:44:39:982 CST] 00000000 AdminTool     A   ADMU0128I: Starting tool with the AppSrv01 profile
+[16-6-25 15:44:39:983 CST] 00000000 AdminTool     A   ADMU0500I: Retrieving server status for server1
+[16-6-25 15:44:40:010 CST] 00000000 ModelMgr      I   WSVR0801I: Initializing all server configuration models
+[16-6-25 15:44:41:405 CST] 00000000 ProviderTrack I com.ibm.ffdc.osgi.ProviderTracker AddingService FFDC1007I: FFDC 提供程序安装：com.ibm.ffdc.EmptyProvider(silent)
+[16-6-25 15:44:41:494 CST] 00000000 SSLConfig     W   CWPKI0041W: One or more key stores are using the default password.
+[16-6-25 15:44:41:501 CST] 00000000 SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[16-6-25 15:44:41:508 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:44:42:288 CST] 00000000 SecurityObjec I   Client code attempting to load security configuration
+[16-6-25 15:44:42:503 CST] 00000000 AdminTool     A   ADMU0508I: The Application Server "server1" is STARTED

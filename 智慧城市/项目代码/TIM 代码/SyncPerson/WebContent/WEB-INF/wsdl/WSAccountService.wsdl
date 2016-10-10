@@ -1,0 +1,1181 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="adoptAccounts">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="personDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="wsAccounts" type="tns1:WSAccount"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <element name="adoptAccountsResponse">
+    <complexType/>
+   </element>
+   <element name="fault" type="tns2:WSLoginServiceException"/>
+   <element name="fault1" type="tns2:WSApplicationException"/>
+   <element name="adoptSingleAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+      <element name="ownerDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="adoptSingleAccountResponse">
+    <complexType/>
+   </element>
+   <element name="createAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="wsAttrs" type="tns1:WSAttribute"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="createAccountReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deprovisionAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deprovisionAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="deprovisionAccountReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAccountAttributes">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAccountAttributesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAccountAttributesReturn" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault2" type="tns2:WSInvalidSessionException"/>
+   <element name="getAccountProfileForService">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAccountProfileForServiceResponse">
+    <complexType>
+     <sequence>
+      <element name="getAccountProfileForServiceReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDefaultAccountAttributes">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDefaultAccountAttributesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getDefaultAccountAttributesReturn" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDefaultAccountAttributesByPerson">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+      <element name="personDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDefaultAccountAttributesByPersonResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getDefaultAccountAttributesByPersonReturn" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="wsAttrs" type="tns1:WSAttribute"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="modifyAccountReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="orphanAccounts">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="systemUserDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="wsAccounts" type="tns1:WSAccount"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="orphanAccountsResponse">
+    <complexType/>
+   </element>
+   <element name="orphanSingleAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="orphanSingleAccountResponse">
+    <complexType/>
+   </element>
+   <element name="restoreAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+      <element name="newPassword" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="restoreAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="restoreAccountReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchAccounts">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="searchArgs" type="tns1:WSSearchArguments"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchAccountsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchAccountsReturn" type="tns1:WSAccount"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="suspendAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="suspendAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="suspendAccountReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="wsAttrs" type="tns1:WSAttribute"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="updateAccountReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="operation" type="xsd:int"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAccount">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="serviceDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="serviceName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSRequest">
+    <sequence>
+     <element name="timeCompleted" nillable="true" type="xsd:dateTime"/>
+     <element name="subjectProfile" nillable="true" type="xsd:string"/>
+     <element name="result" nillable="true" type="xsd:string"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="processTypeString" nillable="true" type="xsd:string"/>
+     <element name="title" nillable="true" type="xsd:string"/>
+     <element name="owner" nillable="true" type="xsd:string"/>
+     <element name="processStateString" nillable="true" type="xsd:string"/>
+     <element name="status" type="xsd:int"/>
+     <element name="requestee" nillable="true" type="xsd:string"/>
+     <element name="timeSubmitted" nillable="true" type="xsd:dateTime"/>
+     <element name="subject" nillable="true" type="xsd:string"/>
+     <element name="requestId" type="xsd:long"/>
+     <element name="processType" nillable="true" type="xsd:string"/>
+     <element name="subjectService" nillable="true" type="xsd:string"/>
+     <element name="statusString" nillable="true" type="xsd:string"/>
+     <element name="processState" nillable="true" type="xsd:string"/>
+     <element name="timeScheduled" nillable="true" type="xsd:dateTime"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSearchArguments">
+    <sequence>
+     <element name="category" nillable="true" type="xsd:string"/>
+     <element name="profile" nillable="true" type="xsd:string"/>
+     <element name="objectclass" nillable="true" type="xsd:string"/>
+     <element name="contextDN" nillable="true" type="xsd:string"/>
+     <element name="returnedAttributeName" nillable="true" type="xsd:string"/>
+     <element name="filter" nillable="true" type="xsd:string"/>
+     <element name="base" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSInvalidSessionException">
+    <complexContent>
+     <extension base="tns2:WSLoginServiceException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="searchAccountsRequest">
+
+      <wsdl:part element="intf:searchAccounts" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountAttributesRequest">
+
+      <wsdl:part element="intf:getAccountAttributes" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateAccountResponse">
+
+      <wsdl:part element="intf:updateAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateAccountRequest">
+
+      <wsdl:part element="intf:updateAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDefaultAccountAttributesByPersonRequest">
+
+      <wsdl:part element="intf:getDefaultAccountAttributesByPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchAccountsResponse">
+
+      <wsdl:part element="intf:searchAccountsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountAttributesResponse">
+
+      <wsdl:part element="intf:getAccountAttributesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="restoreAccountRequest">
+
+      <wsdl:part element="intf:restoreAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="adoptAccountsResponse">
+
+      <wsdl:part element="intf:adoptAccountsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="adoptSingleAccountResponse">
+
+      <wsdl:part element="intf:adoptSingleAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="adoptSingleAccountRequest">
+
+      <wsdl:part element="intf:adoptSingleAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountProfileForServiceResponse">
+
+      <wsdl:part element="intf:getAccountProfileForServiceResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="orphanAccountsRequest">
+
+      <wsdl:part element="intf:orphanAccounts" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="restoreAccountResponse">
+
+      <wsdl:part element="intf:restoreAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDefaultAccountAttributesByPersonResponse">
+
+      <wsdl:part element="intf:getDefaultAccountAttributesByPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="orphanAccountsResponse">
+
+      <wsdl:part element="intf:orphanAccountsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="suspendAccountResponse">
+
+      <wsdl:part element="intf:suspendAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createAccountResponse">
+
+      <wsdl:part element="intf:createAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="orphanSingleAccountRequest">
+
+      <wsdl:part element="intf:orphanSingleAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountProfileForServiceRequest">
+
+      <wsdl:part element="intf:getAccountProfileForService" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deprovisionAccountRequest">
+
+      <wsdl:part element="intf:deprovisionAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDefaultAccountAttributesRequest">
+
+      <wsdl:part element="intf:getDefaultAccountAttributes" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSInvalidSessionException">
+
+      <wsdl:part element="intf:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyAccountResponse">
+
+      <wsdl:part element="intf:modifyAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deprovisionAccountResponse">
+
+      <wsdl:part element="intf:deprovisionAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDefaultAccountAttributesResponse">
+
+      <wsdl:part element="intf:getDefaultAccountAttributesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="adoptAccountsRequest">
+
+      <wsdl:part element="intf:adoptAccounts" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="suspendAccountRequest">
+
+      <wsdl:part element="intf:suspendAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createAccountRequest">
+
+      <wsdl:part element="intf:createAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="orphanSingleAccountResponse">
+
+      <wsdl:part element="intf:orphanSingleAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyAccountRequest">
+
+      <wsdl:part element="intf:modifyAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSAccountService">
+
+      <wsdl:operation name="adoptAccounts">
+
+         <wsdl:input message="intf:adoptAccountsRequest" name="adoptAccountsRequest"/>
+
+         <wsdl:output message="intf:adoptAccountsResponse" name="adoptAccountsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="adoptSingleAccount">
+
+         <wsdl:input message="intf:adoptSingleAccountRequest" name="adoptSingleAccountRequest"/>
+
+         <wsdl:output message="intf:adoptSingleAccountResponse" name="adoptSingleAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createAccount">
+
+         <wsdl:input message="intf:createAccountRequest" name="createAccountRequest"/>
+
+         <wsdl:output message="intf:createAccountResponse" name="createAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deprovisionAccount">
+
+         <wsdl:input message="intf:deprovisionAccountRequest" name="deprovisionAccountRequest"/>
+
+         <wsdl:output message="intf:deprovisionAccountResponse" name="deprovisionAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountAttributes">
+
+         <wsdl:input message="intf:getAccountAttributesRequest" name="getAccountAttributesRequest"/>
+
+         <wsdl:output message="intf:getAccountAttributesResponse" name="getAccountAttributesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSInvalidSessionException" name="WSInvalidSessionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountProfileForService">
+
+         <wsdl:input message="intf:getAccountProfileForServiceRequest" name="getAccountProfileForServiceRequest"/>
+
+         <wsdl:output message="intf:getAccountProfileForServiceResponse" name="getAccountProfileForServiceResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDefaultAccountAttributes">
+
+         <wsdl:input message="intf:getDefaultAccountAttributesRequest" name="getDefaultAccountAttributesRequest"/>
+
+         <wsdl:output message="intf:getDefaultAccountAttributesResponse" name="getDefaultAccountAttributesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDefaultAccountAttributesByPerson">
+
+         <wsdl:input message="intf:getDefaultAccountAttributesByPersonRequest" name="getDefaultAccountAttributesByPersonRequest"/>
+
+         <wsdl:output message="intf:getDefaultAccountAttributesByPersonResponse" name="getDefaultAccountAttributesByPersonResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyAccount">
+
+         <wsdl:input message="intf:modifyAccountRequest" name="modifyAccountRequest"/>
+
+         <wsdl:output message="intf:modifyAccountResponse" name="modifyAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="orphanAccounts">
+
+         <wsdl:input message="intf:orphanAccountsRequest" name="orphanAccountsRequest"/>
+
+         <wsdl:output message="intf:orphanAccountsResponse" name="orphanAccountsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="orphanSingleAccount">
+
+         <wsdl:input message="intf:orphanSingleAccountRequest" name="orphanSingleAccountRequest"/>
+
+         <wsdl:output message="intf:orphanSingleAccountResponse" name="orphanSingleAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="restoreAccount">
+
+         <wsdl:input message="intf:restoreAccountRequest" name="restoreAccountRequest"/>
+
+         <wsdl:output message="intf:restoreAccountResponse" name="restoreAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchAccounts">
+
+         <wsdl:input message="intf:searchAccountsRequest" name="searchAccountsRequest"/>
+
+         <wsdl:output message="intf:searchAccountsResponse" name="searchAccountsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="suspendAccount">
+
+         <wsdl:input message="intf:suspendAccountRequest" name="suspendAccountRequest"/>
+
+         <wsdl:output message="intf:suspendAccountResponse" name="suspendAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAccount">
+
+         <wsdl:input message="intf:updateAccountRequest" name="updateAccountRequest"/>
+
+         <wsdl:output message="intf:updateAccountResponse" name="updateAccountResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSAccountServiceSoapBinding" type="intf:WSAccountService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="adoptAccounts">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="adoptAccountsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="adoptAccountsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="adoptSingleAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="adoptSingleAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="adoptSingleAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deprovisionAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deprovisionAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deprovisionAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountAttributes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAccountAttributesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAccountAttributesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidSessionException">
+
+            <wsdlsoap:fault name="WSInvalidSessionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountProfileForService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAccountProfileForServiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAccountProfileForServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDefaultAccountAttributes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDefaultAccountAttributesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDefaultAccountAttributesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDefaultAccountAttributesByPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDefaultAccountAttributesByPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDefaultAccountAttributesByPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="orphanAccounts">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="orphanAccountsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="orphanAccountsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="orphanSingleAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="orphanSingleAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="orphanSingleAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="restoreAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="restoreAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="restoreAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchAccounts">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchAccountsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchAccountsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="suspendAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="suspendAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="suspendAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSAccountServiceService">
+
+      <wsdl:port binding="intf:WSAccountServiceSoapBinding" name="WSAccountService">
+
+         <wsdlsoap:address location="http://localhost:9081/itim/services/WSAccountServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

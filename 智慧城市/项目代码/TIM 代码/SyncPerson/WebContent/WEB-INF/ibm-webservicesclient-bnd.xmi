@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1393300975878">
+  <serviceRefs xmi:id="ServiceRef_1393300975879" serviceRefLink="service/WSSessionService">
+    <portQnameBindings xmi:id="PortQnameBinding_1393300975879" portQnameNamespaceLink="http://services.ws.itim.ibm.com" portQnameLocalNameLink="WSSessionServicePort" overriddenEndpointURI="http://localhost:9081/itim/services/WSSessionService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1393301090155" serviceRefLink="service/WSPersonServiceService">
+    <portQnameBindings xmi:id="PortQnameBinding_1393301090155" portQnameNamespaceLink="http://services.ws.itim.ibm.com" portQnameLocalNameLink="WSPersonService" overriddenEndpointURI="http://localhost:9081/itim/services/WSPersonServiceService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1393301128963" serviceRefLink="service/WSOrganizationalContainerServiceService">
+    <portQnameBindings xmi:id="PortQnameBinding_1393301128963" portQnameNamespaceLink="http://services.ws.itim.ibm.com" portQnameLocalNameLink="WSOrganizationalContainerService" overriddenEndpointURI="http://localhost:9081/itim/services/WSOrganizationalContainerServiceService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1403433901318" serviceRefLink="service/WSServiceServiceService">
+    <portQnameBindings xmi:id="PortQnameBinding_1403433901318" portQnameNamespaceLink="http://services.ws.itim.ibm.com" portQnameLocalNameLink="WSServiceService" overriddenEndpointURI="http://localhost:9081/itim/services/WSServiceServiceService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1403434016464" serviceRefLink="service/WSAccountServiceService">
+    <portQnameBindings xmi:id="PortQnameBinding_1403434016464" portQnameNamespaceLink="http://services.ws.itim.ibm.com" portQnameLocalNameLink="WSAccountService" overriddenEndpointURI="http://localhost:9081/itim/services/WSAccountServiceService"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>

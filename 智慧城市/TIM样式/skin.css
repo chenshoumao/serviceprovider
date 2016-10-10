@@ -1,0 +1,1438 @@
+.tbtn7 {
+font-size:90%;
+background-image:url(/itim/console/ps/wcl/images/tungsten/b4.gif);
+background-color:#CED7E7;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#333 #FFF #FFF #333;
+border-style:solid;
+border-width:1px;
+padding:0;
+}
+
+.tbtn6 {
+font-size:90%;
+border:1px solid #000;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#FFF;
+color:#039;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.tbtn5 {
+font-size:90%;
+background-image:url(/itim/console/ps/wcl/images/tungsten/b1.gif);
+border:1px solid #000;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#E6E6E6;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.tbtn4 {
+font-size:90%;
+background-color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#333 #FFF #FFF #333;
+border-style:solid;
+border-width:1px;
+padding:1px;
+}
+
+.tbtn3 {
+font-size:90%;
+background-color:#A6A6A6;
+color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#333 #FFF #FFF #333;
+border-style:solid;
+border-width:1px;
+padding:1px;
+}
+
+.tbtn2 {
+font-size:90%;
+background-color:transparent;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#FFF #A2A2A2 #A2A2A2 #FFF;
+border-style:solid;
+border-width:1px;
+padding:1px;
+}
+
+.tbtn1 {
+font-size:90%;
+background-color:transparent;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#E6E6E6;
+border-style:solid;
+border-width:1px;
+padding:1px;
+}
+
+.tbtn8 {
+font-size:90%;
+border:1px solid;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#FFF;
+color:#039;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#333 #FFF #FFF #333;
+padding:0;
+}
+
+.por2 {
+font-size:83.300003%;
+font-weight:700;
+color:#323A5D;
+font-family:Arial, Helvetica, sans-serif;
+text-decoration:none;
+}
+
+.por1 {
+background-image:url(/itim/console/html/images/portfolio_background.gif);
+color:#474747;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.por3 {
+font-size:83.300003%;
+color:#000;
+}
+
+.b2 {
+font-size:smaller;
+background-image:url(/itim/console/ps/wcl/images/tungsten/b2.gif);
+border:1px solid #000;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#FFF;
+color:#039;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.b1 {
+font-size:smaller;
+background-image:url(/itim/console/ps/wcl/images/tungsten/b1.gif);
+border:1px solid #000;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#E8E8E8;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.inp2 {
+font-size:smaller;
+background-color:#F0F0F0;
+color:#999;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#ABABAB #DEDEDE #DEDEDE #ABABAB;
+border-style:solid;
+border-width:1px;
+padding:1px;
+}
+
+.tc2 {
+background-color:#EFEFEF;
+border-color:#FFF #C8C8C8 #737373 #FFF;
+border-style:solid;
+border-width:1px 0 0;
+padding:2px 4px 12px;
+}
+
+.tc1 {
+font-size:75%;
+font-weight:400;
+background-color:#B7B7B7;
+color:#000;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#FFF #C8C8C8 #737373 #FFF;
+border-style:solid;
+border-width:1px 0;
+padding:12px 4px 0;
+}
+
+.pop3 {
+background-color:#185898;
+}
+
+.pop2 {
+border-bottom:1px solid #787878;
+border-right:1px solid #787878;
+border-left:1px solid #5A5A5A;
+border-top:1px solid #5A5A5A;
+}
+
+.pop1 {
+border-bottom:1px solid #282828;
+border-right:1px solid #282828;
+border-left:1px solid #FFF;
+background-color:#E0E0E0;
+border-top:1px solid #FFF;
+}
+
+.lyt6 {
+font-size:smaller;
+padding-top:3px;
+color:#000;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.lyt5 {
+background-color:#505878;
+}
+
+.lyt4 {
+font-size:smaller;
+font-weight:700;
+color:#505878;
+font-family:Arial, Helvetica, sans-serif;
+padding:2px 2px 1px;
+}
+
+.lyt3 {
+font-weight:700;
+color:#505878;
+font-family:Arial, Helvetica, sans-serif;
+padding:2px 2px 1px;
+}
+
+.lyt8 {
+margin-right:10px;
+}
+
+.lyt7 {
+margin-left:10px;
+}
+
+.cct3 {
+background-color:#DEDEE2;
+color:#000;
+border-color:#FFF #DEDEE2 #718FB8;
+border-style:solid;
+border-width:1px;
+}
+
+.IMG_SIGN_OUT_BUTTON {
+height:29px;
+width:40px;
+padding-right:6px;
+}
+
+.cel2 {
+background-image:url(/itim/console/html/images/table_cell_selected.gif);
+background-repeat:repeat-x;
+background-position:left top;
+background-color:#B9D1E6;
+text-overflow:ellipsis;
+overflow:hidden;
+border-color:#B9D1E6 #82b9e4 #4388BD #acd7f8;
+border-style:solid;
+border-width:0;
+padding:0;
+}
+
+.cel1 {
+color:#000;
+}
+
+.wiz9 {
+font-size:smaller;
+color:#505878;
+}
+
+.wiz8 {
+height:2px;
+width:95%;
+background-color:#505878;
+}
+
+.wiz7 {
+font-weight:700;
+color:#505878;
+}
+
+.wiz5 {
+font-size:90%;
+vertical-align:middle;
+color:#FFF;
+padding:2px;
+}
+
+.wiz15 {
+background-color:#d8d8d8;
+line-height:0;
+}
+
+.wiz4 {
+font-size:90%;
+vertical-align:middle;
+color:#323A5D;
+padding:2px;
+}
+
+.wiz14 {
+background-color:#f0f0f0;
+line-height:0;
+}
+
+.wiz3 {
+font-size:90%;
+vertical-align:middle;
+background-image:url(/itim/console/html/images/wizard_selected.gif);
+border-bottom:1px solid #2aa6f9;
+background-repeat:repeat-x;
+background-position:top;
+border-top:1px solid #2aa6f9;
+background-color:#B9D1E6;
+color:#323A5D;
+padding:2px;
+}
+
+.wiz13 {
+background-color:silver;
+line-height:0;
+}
+
+.wiz2 {
+vertical-align:top;
+border-right:solid;
+border-right-width:1px;
+background-image:url(/itim/console/html/images/wizard_background.gif);
+color:#039;
+border-color:#000;
+}
+
+.wiz12 {
+background-color:#5298da;
+color:#5298da;
+border-width:0;
+}
+
+.wiz11 {
+padding:0 15px 30px;
+}
+
+.wiz10 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/wiz5.gif);
+background-repeat:repeat-x;
+background-position:left top;
+background-color:#d8d8d8;
+border-color:#000;
+border-style:solid;
+border-width:1px 0 0;
+padding:15px;
+}
+
+.tre9 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre18.gif);
+background-repeat:no-repeat;
+background-position:right top;
+left:auto;
+top:auto;
+}
+
+.tre8 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre17.gif);
+background-repeat:repeat-y;
+background-position:right top;
+left:auto;
+top:auto;
+}
+
+.tre7 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre16.gif);
+background-repeat:repeat-y;
+background-position:right top;
+left:auto;
+top:auto;
+}
+
+.tre6 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre10.gif);
+background-repeat:repeat;
+background-position:left top;
+left:auto;
+top:auto;
+}
+
+.tre5 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre9.gif);
+background-repeat:repeat;
+background-position:left top;
+left:auto;
+top:auto;
+}
+
+.tre4 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre8.gif);
+background-repeat:repeat-y;
+background-position:left top;
+left:auto;
+top:auto;
+}
+
+.tre3 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre7.gif);
+background-repeat:no-repeat;
+background-position:left top;
+left:auto;
+top:auto;
+}
+
+.tre2 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre6.gif);
+background-repeat:repeat-y;
+background-position:left top;
+left:auto;
+top:auto;
+}
+
+.tre1 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre5.gif);
+background-repeat:repeat-y;
+background-position:left top;
+left:auto;
+top:auto;
+}
+
+.tre12 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre21.gif);
+background-repeat:repeat;
+background-position:right top;
+left:auto;
+top:auto;
+}
+
+.tre11 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre20.gif);
+background-repeat:repeat;
+background-position:right top;
+left:auto;
+top:auto;
+}
+
+.tre10 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tre19.gif);
+background-repeat:repeat-y;
+background-position:right top;
+left:auto;
+top:auto;
+}
+
+.mq3 {
+border-top:solid #FFF 1px;
+background-color:#e0e0e0;
+}
+
+.mq2 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/mq1.gif);
+background-repeat:no-repeat;
+background-position:left top;
+}
+
+.mq1 {
+border-bottom:solid #989898 1px;
+position:relative;
+}
+
+.mq6 {
+position:relative;
+left:0;
+width:0;
+top:0;
+color:#f8c830;
+}
+
+.mq5 {
+border-bottom:solid #d0d0c8 1px;
+border-right:solid #d0d0c8 1px;
+position:relative;
+border-left:solid gray 1px;
+border-top:solid gray 1px;
+background-color:#000;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.mq4 {
+position:relative;
+padding:3px;
+}
+
+.tbu6 {
+background-image:url(/itim/console/html/images/bg-light-1.gif);
+background-repeat:repeat-x;
+vertical-align:middle;
+background-position:left top;
+text-align:right;
+border-color:#D1D9E8 #718FB8 #D1D9E8 #D1D9E8;
+border-style:solid;
+border-width:0;
+padding:3px 6px;
+}
+
+.tbu5 {
+background-image:url(/itim/console/html/images/bg-light-1.gif);
+background-repeat:repeat-x;
+vertical-align:middle;
+background-position:left top;
+text-align:left;
+border-style:solid;
+border-width:0;
+padding:3px 6px;
+}
+
+.tbu4 {
+font-size:smaller;
+background-image:url(/itim/console/html/images/bg-dark-1.gif);
+background-repeat:repeat-x;
+vertical-align:middle;
+background-position:left top;
+text-align:right;
+font-family:Arial, Helvetica, sans-serif;
+border-style:solid;
+border-width:0;
+padding:3px 6px;
+}
+
+.tsk8 {
+height:32px;
+}
+
+.tbu3 {
+font-size:smaller;
+background-image:url(/itim/console/html/images/bg-dark-1.gif);
+background-repeat:repeat-x;
+vertical-align:middle;
+background-position:left top;
+text-align:left;
+font-family:Arial, Helvetica, sans-serif;
+color:#FFF;
+border-style:solid;
+border-width:0;
+padding:3px 6px;
+}
+
+.tsk7 {
+position:absolute;
+height:32px;
+left:0;
+width:100%;
+top:0;
+}
+
+.tbu1 {
+border:0;
+text-align:justify;
+padding-left:6px;
+padding-right:6px;
+}
+
+.tsk4 {
+background-image:url(/itim/console/html/images/overall-bg-1.gif);
+background-repeat:repeat-x;
+background-color:#999;
+margin:0;
+}
+
+.cav1 {
+border-color:#999;
+}
+
+.ib3 {
+font-size:smaller;
+background-color:transparent;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#FFF #A2A2A2 #A2A2A2 #FFF;
+border-style:solid;
+border-width:1px;
+}
+
+.ib2 {
+font-size:smaller;
+background-color:transparent;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#E6E6E6;
+border-style:solid;
+border-width:1px;
+}
+
+.tcm4 {
+font-size:smaller;
+font-weight:700;
+background-color:#b7b7b7;
+color:#000;
+}
+
+.tcm3 {
+font-size:smaller;
+font-weight:400;
+background-color:#dfe5ef;
+color:#000;
+text-overflow:ellipsis;
+overflow:hidden;
+border-color:#fafafa #6e6e6e #6e6e6e #fafafa;
+border-style:solid;
+border-width:1px;
+}
+
+.tcm2 {
+font-size:smaller;
+font-weight:700;
+background-color:#eaeadb;
+color:#000;
+text-overflow:ellipsis;
+overflow:hidden;
+border-color:#eaeadb #6e6e6e #eaeadb #eaeadb;
+border-style:solid;
+border-width:1px;
+}
+
+.tcm1 {
+font-weight:700;
+background-color:#b7b7b7;
+color:#000;
+text-overflow:ellipsis;
+overflow:hidden;
+border-color:#fafafa #6e6e6e #6e6e6e #fafafa;
+border-style:solid;
+border-width:1px;
+}
+
+.vp27 {
+z-index:98;
+border:0;
+position:relative;
+left:0;
+top:0;
+}
+
+.vp26 {
+z-index:100;
+position:absolute;
+left:0;
+top:0;
+overflow:hidden;
+}
+
+.vp25 {
+z-index:99;
+position:relative;
+left:0;
+height:100%;
+width:100%;
+top:0;
+overflow:hidden;
+}
+
+.vp24 {
+z-index:99;
+overflow:hidden;
+}
+
+.vp23 {
+z-index:100;
+border:0;
+position:relative;
+height:20px;
+left:0;
+width:20px;
+cursor:se-resize;
+top:0;
+visibility:hidden;
+}
+
+.vp0 {
+vertical-align:middle;
+text-align:center;
+}
+
+.vp23a {
+z-index:100;
+border:0;
+position:relative;
+height:20px;
+left:0;
+width:20px;
+cursor:ne-resize;
+top:0;
+visibility:hidden;
+}
+
+.vp19 {
+height:5px;
+width:5px;
+display:block;
+}
+
+.vp18 {
+width:5px;
+background-color:#FFF;
+white-space:nowrap;
+}
+
+.vp28 {
+vertical-align:middle;
+border:1px solid #ABA;
+text-align:center;
+padding:2px;
+}
+
+.vp17 {
+height:5px;
+background-color:#FFF;
+}
+
+.ua2 {
+font-size:83.300003%;
+background-color:#FFF;
+margin:1px 2px;
+}
+
+.ua1 {
+background-color:#f7f7f7;
+margin:1px 2px;
+}
+
+.seclyt1 {
+font-weight:700;
+padding-left:3px;
+font-family:Arial, Helvetica, sans-serif;
+padding-right:3px;
+}
+
+.io01 {
+z-index:100;
+border:solid 2px #5f90b7;
+position:absolute;
+height:1px;
+left:0;
+width:1px;
+cursor:move;
+top:0;
+visibility:hidden;
+}
+
+.btnm2 {
+font-size:90%;
+background-image:url(/itim/console/ps/wcl/images/tungsten/b2.gif);
+border:1px solid #000;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#FFF;
+color:#039;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.btnm1 {
+font-size:90%;
+background-image:url(/itim/console/ps/wcl/images/tungsten/b1.gif);
+border:1px solid #000;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#E8E8E8;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.fda2 {
+width:150px;
+font-weight:700;
+}
+
+.fda1 {
+width:150px;
+padding-left:10px;
+padding-right:10px;
+}
+
+.fda5 {
+font-size:10pt;
+background-image:url(/itim/console/ps/wcl/images/tungsten/fda3.gif);
+background-repeat:no-repeat;
+background-position:right top;
+width:150px;
+color:#191951;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+}
+
+.fda4 {
+font-size:10pt;
+background-image:url(/itim/console/ps/wcl/images/tungsten/fda2.gif);
+background-repeat:no-repeat;
+background-position:left top;
+width:150px;
+color:#191951;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+}
+
+.fda3 {
+width:150px;
+}
+
+.tbr3 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tbl22.gif);
+background-repeat:no-repeat;
+background-position:right top;
+}
+
+.tbr2 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/tbl20.gif);
+background-repeat:no-repeat;
+background-position:left top;
+}
+
+.tbr1 {
+font-size:90%;
+background-image:url(/itim/console/ps/wcl/images/tungsten/tbl21.gif);
+background-repeat:repeat-x;
+background-position:left top;
+background-color:#E6E6E6;
+}
+
+.tbr6 {
+font-size:90%;
+background-color:#E6E6E6;
+border-color:#6E6E71;
+border-style:solid;
+border-width:1px 0 0 1px;
+}
+
+.dc9 {
+border-bottom:2px solid #E6E6E6;
+border-right:2px solid #E6E6E6;
+border-left:2px solid #E6E6E6;
+background-color:#E6E6E6;
+}
+
+.dc8 {
+border:2px solid #E6E6E6;
+background-color:#E6E6E6;
+}
+
+.dc6 {
+font-size:66.599998%;
+background-image:url(/itim/console/ps/wcl/images/tungsten/cel1.gif);
+border:1px solid #1C5E9D;
+background-color:#9FD0F7;
+color:#000;
+font-family:Arial, Helvetica, sans-serif;
+padding:0 0 0 2px;
+}
+
+.dc5 {
+font-size:66.599998%;
+border:1px solid #FFF;
+background-color:#DEDEDE;
+color:#999;
+font-family:Arial, Helvetica, sans-serif;
+padding:0 0 0 1px;
+}
+
+.dc2 {
+font-size:66.599998%;
+border:1px solid #FFF;
+background-color:#EFEFEF;
+color:#999;
+font-family:Arial, Helvetica, sans-serif;
+padding:0 0 0 1px;
+}
+
+.dc1 {
+font-size:66.599998%;
+font-weight:400;
+background-color:#B7B7B7;
+color:#000;
+font-family:Arial, Helvetica, sans-serif;
+border-color:#FFF #C8C8C8 #737373 #FFF;
+border-style:solid;
+border-width:1px 0;
+padding:0 2px;
+}
+
+.vc3 {
+border:1px solid #000;
+padding:2px;
+}
+
+.vc2 {
+font-size:smaller;
+border-collapse:collapse;
+font-weight:700;
+background-color:#E9E8E9;
+color:#000;
+border-spacing:0;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.vc1 {
+background-color:#E9E8E9;
+}
+
+.bh5 {
+font-size:smaller;
+background-color:#F8FFC3;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+}
+
+.bh4 {
+vertical-align:top;
+background-image:url(/itim/console/ps/wcl/images/tungsten/bh4.gif);
+background-repeat:repeat-y;
+}
+
+.bh3 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/bh1.gif);
+background-repeat:repeat-x;
+text-align:right;
+}
+
+.bh9 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/bh6.gif);
+background-repeat:repeat-x;
+text-align:right;
+}
+
+.bh6 {
+vertical-align:top;
+background-image:url(/itim/console/ps/wcl/images/tungsten/bh5.gif);
+background-repeat:repeat-y;
+}
+
+.page1 {
+margin-left:10px;
+margin-top:5px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.tlt10 {
+height:23px;
+width:16px;
+background-color:#CAD4E6;
+color:#285078;
+border-color:#FFF;
+border-style:solid;
+border-width:1px 0 0;
+}
+
+.tlt5 {
+background-image:url(/itim/console/html/images/titlebar_middle.gif);
+height:23px;
+width:20px;
+padding-left:2px;
+padding-right:2px;
+}
+
+.mb4 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/mb5.gif);
+background-repeat:repeat-x;
+background-position:right top;
+padding-bottom:10px;
+background-color:#F5F5F5;
+}
+
+.mb3 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/mb1.gif);
+background-repeat:repeat-x;
+background-position:left top;
+padding-bottom:10px;
+background-color:#F5F5F5;
+}
+
+.mb2 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/mb1.gif);
+background-repeat:repeat-x;
+background-position:left top;
+width:80%;
+background-color:#F5F5F5;
+border-color:#FFF #C8C8C8 #C8C8C8 #FFF;
+border-style:outset;
+border-width:2px;
+}
+
+.mb5 {
+padding-top:3px;
+padding-bottom:3px;
+font-weight:700;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.tbl12 {
+font-size:smaller;
+background-color:#E6E6E6;
+color:#000;
+}
+
+.tbls3 {
+font-size:smaller;
+background-image:url(/itim/console/html/images/table_cell_selected.gif);
+background-repeat:repeat-x;
+background-position:left top;
+background-color:#B9D1E6;
+text-overflow:ellipsis;
+overflow:hidden;
+border-width:0;
+margin:5px;
+padding:2px;
+}
+
+.tbls2 {
+background-image:url(/itim/console/html/images/table_cell_selected.gif);
+background-repeat:repeat-x;
+background-position:left top;
+background-color:#B9D1E6;
+text-overflow:ellipsis;
+overflow:hidden;
+border-color:#B9D1E6 #82b9e4 #4388BD #acd7f8;
+border-style:solid;
+border-width:1px;
+padding:2px;
+}
+
+.tbl10 {
+font-size:smaller;
+border-color:#FAFAFA #6E6E6E #6E6E6E #FAFAFA;
+border-style:solid;
+border-width:1px;
+}
+
+.tbl9 {
+font-size:smaller;
+border-color:#E6E6E6;
+border-style:solid;
+border-width:1px;
+}
+
+.tbl8 {
+font-size:smaller;
+font-weight:400;
+border-color:#6E6E71;
+border-style:solid;
+border-width:0 0 1px;
+padding:15px;
+}
+
+.tbl7 {
+font-size:smaller;
+background-color:#E6E6E6;
+color:#000;
+border-color:#FFF #E6E6E6 #E6E6E6 #FFF;
+border-style:solid;
+border-width:1px;
+}
+
+.tbl3 {
+font-size:smaller;
+background-color:#FFF;
+text-overflow:ellipsis;
+overflow:hidden;
+border-width:0;
+margin:5px;
+padding:2px;
+}
+
+.tbl2 {
+background-color:#FFF;
+text-overflow:ellipsis;
+overflow:hidden;
+border-color:#FFF #CCC #CCC #FFF;
+border-style:solid;
+border-width:1px;
+padding:2px;
+}
+
+.tbl1 {
+background-color:#FFF;
+border-color:#6E6E71;
+border-style:solid;
+border-width:1px;
+}
+
+.tbl16 {
+font-size:90%;
+font-weight:400;
+}
+
+.tbl15 {
+font-size:smaller;
+background-color:#E6E6E6;
+color:#000;
+border-color:#FFF #E6E6E6 #6E6E71 #FFF;
+border-style:solid;
+border-width:1px;
+}
+
+.tbl14 {
+font-size:smaller;
+font-weight:700;
+text-align:center;
+background-color:#B7B7B7;
+color:#000;
+border-color:#FAFAFA #6E6E6E #6E6E6E #FAFAFA;
+border-style:solid;
+border-width:1px;
+padding:0 3px;
+}
+
+.nb3 {
+background-image:url(/itim/console/html/images/notebook_tab_selected.gif);
+background-repeat:repeat-x;
+background-position:top;
+background-color:#B9D1E6;
+color:#FFF;
+border-color:#2AA6F9 #1C5E9D #1C5E9D #2AA6F9;
+border-style:solid;
+border-width:1px;
+padding:4px;
+}
+
+.nb2 {
+vertical-align:top;
+background-color:#CCC;
+color:#000;
+border-color:#000;
+border-style:solid;
+border-width:0 1px;
+}
+
+.nb7 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/nb1.gif);
+background-repeat:repeat-x;
+background-position:left top;
+background-color:#D8D8D8;
+border-color:#000;
+border-style:solid;
+border-width:1px 0 0;
+padding:4px;
+}
+
+.nb5 {
+background-color:#F5F5F5;
+color:#069;
+border-color:#FFF #787878 #787878 #FFF;
+border-style:solid;
+border-width:1px;
+padding:4px;
+}
+
+.b3 {
+font-size:smaller;
+background-image:url(/itim/console/ps/wcl/images/tungsten/b3.gif);
+border:1px solid #A6A6A6;
+background-repeat:repeat-x;
+background-position:top;
+background-color:#A6A6A6;
+color:#A6A6A6;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.vc0 {
+border:1px solid #000;
+margin:0;
+padding:3px;
+}
+
+.cb1,.inp1,.sb1,.ib1,.chk1,.txt,.rbg1 {
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+}
+
+.cb2,.sb2,.chk2{
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+background-color:#F8F8C8;
+}
+
+.inp3,.mb1 {
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+padding-bottom:3px;
+padding-top:3px;
+}
+
+.tc6,.tc3 {
+background-color:#E6E6E6;
+border:1px solid #E6E6E6;
+padding:2px;
+}
+
+.tc5,.tc4,.dc11,.dc10 {
+border:1px solid #737373;
+}
+
+.te6,.ta6 {
+background-color:#F0F0F0;
+color:#606060;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+border-style:none;
+}
+
+.te5,.ta5 {
+background-color:#F8F8C8;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+border-color:#CC9 #CC9 #BABABA #BABABA;
+border-style:groove;
+border-width:2px 2px 1px 1px;
+padding:1px;
+}
+
+.te4,.ta4 {
+background-color:#FFF;
+color:#922200;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+border-color:#922200;
+border-style:solid;
+border-width:2px 2px 1px 1px;
+padding:1px;
+}
+
+.te3,.ta3 {
+background-color:#F8F8C8;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+border-color:#CC9 #BABABA #BABABA #CC9;
+border-style:groove;
+border-width:2px 1px 1px 2px;
+padding:1px;
+}
+
+.te2,.ta2 {
+background-color:#FFF;
+color:#922200;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+border-color:#922200;
+border-style:solid;
+border-width:2px 1px 1px 2px;
+padding:1px;
+}
+
+.te1,.ta1 {
+background-color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+border-color:#CCC #BABABA #BABABA #CCC;
+border-style:groove;
+border-width:2px 1px 1px 2px;
+padding:1px;
+}
+
+.pop7,.pop7:link,.pop7:hover,.pop7:visited {
+background-color:#E0E0E0;
+color:#999;
+cursor:default;
+font-family:Arial, Helvetica, sans-serif;
+font-size:90%;
+font-weight:400;
+text-decoration:none;
+}
+
+.pop6,.pop6:link,.pop6:hover,.pop6:visited {
+background-color:#B9D1E6;
+color:#000;
+cursor:pointer;
+font-family:Arial, Helvetica, sans-serif;
+font-size:90%;
+font-weight:400;
+text-decoration:none;
+}
+
+.pop5,.pop5:link,.pop5:hover,.pop5:visited {
+background-color:#E0E0E0;
+color:#000;
+cursor:pointer;
+font-family:Arial, Helvetica, sans-serif;
+font-size:90%;
+font-weight:400;
+text-decoration:none;
+}
+
+.pop4,.dc7 {
+background-color:#FFF;
+}
+
+.cont1,.comp1,.lbl1,.lyt2,.frm1 {
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.cct2,.cct1 {
+background-color:#999;
+}
+
+.wiz18,.wiz18:link,.wiz18:hover,.wiz18:visited,.wiz17,.wiz17:link,.wiz17:hover,.wiz17:visited {
+color:#FFF;
+font-weight:400;
+}
+
+.wiz16,.wiz16:link,.wiz16:hover,.wiz16:visited {
+color:#000;
+font-weight:700;
+}
+
+.wiz1,.nb1 {
+background-color:#FFF;
+color:#000;
+border-color:#000;
+border-style:solid;
+border-width:1px;
+}
+
+.tbu9,.tbu7,.tbu13,.tbu11 {
+height:32px;
+vertical-align:top;
+width:5px;
+}
+
+.tsk9,.lnk1,.lnk1:link,.lnk1:hover,.lnk1:visited {
+color:#000;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+}
+
+.tsk6,.tsk5 {
+background-color:#999;
+background-image:url(/itim/console/html/images/overall-bg-1.gif);
+background-repeat:repeat-x;
+margin:0;
+}
+
+.IMG_CANVAS_FDA_BUTTON,.IMG_CANVAS_TA_BUTTON,.IMG_CANVAS_CLOSE_BUTTON {
+height:17px;
+width:20px;
+}
+
+.vp9,.vp12 {
+background-color:#FFF;
+background-image:url(/itim/console/ps/wcl/images/tungsten/iv023.gif);
+background-repeat:repeat-x;
+border:0;
+text-align:center;
+white-space:nowrap;
+}
+
+.vp16,.vp15 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/iv024.gif);
+background-repeat:repeat-y;
+border:0;
+vertical-align:middle;
+white-space:nowrap;
+}
+
+.vp8,.vp7 {
+background-color:#FFF;
+background-image:url(/itim/console/ps/wcl/images/tungsten/iv022.gif);
+background-repeat:repeat-y;
+border:0;
+vertical-align:middle;
+white-space:nowrap;
+}
+
+.vp22,.vp21 {
+border:solid 2px #5f90b7;
+}
+
+.vp4,.vp1 {
+background-color:#FFF;
+background-image:url(/itim/console/ps/wcl/images/tungsten/iv021.gif);
+background-repeat:repeat-x;
+border:0;
+text-align:center;
+white-space:nowrap;
+}
+
+.seclyt3,.seclyt2 {
+padding:5px;
+}
+
+.dc4,.dc4:link,.dc4:hover,.dc4:visited {
+color:#000;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:700;
+text-decoration:none;
+}
+
+.dc3,.dc3:link,.dc3:hover,.dc3:visited {
+color:#333;
+font-family:Arial, Helvetica, sans-serif;
+text-decoration:none;
+}
+
+.bh2,.bh1 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/bh1.gif);
+background-repeat:repeat-x;
+}
+
+.bh8,.bh7 {
+background-image:url(/itim/console/ps/wcl/images/tungsten/bh6.gif);
+background-repeat:repeat-x;
+text-align:left;
+}
+
+.tlt9,.tlt4 {
+background-image:url(/itim/console/html/images/titlebar_middle.gif);
+height:23px;
+width:5px;
+}
+
+.tlt8,.tlt3 {
+background-image:url(/itim/console/html/images/titlebar_middle.gif);
+color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+font-weight:700;
+height:23px;
+text-align:right;
+width:100%;
+padding:0 0 0 5px;
+}
+
+.tlt7,.tlt2 {
+background-image:url(/itim/console/html/images/titlebar_middle.gif);
+color:#FFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:smaller;
+font-weight:700;
+height:23px;
+text-align:left;
+width:100%;
+padding:0 0 0 5px;
+}
+
+.tlt6,.tlt1 {
+background-image:url(/itim/console/html/images/titlebar_middle.gif);
+height:23px;
+width:10px;
+}
+
+.IMG_ALL_TASKS_SELECTED_BUTTON,.IMG_ALL_TASKS_UNSELECTED_BUTTON {
+height:32px;
+padding-left:3px;
+padding-right:3px;
+width:38px;
+}
+
+.tbl11,.tbl13 {
+background-color:#E6E6E6;
+}
+
+.nb6,.nb6:link,.nb6:hover,.nb6:visited {
+color:#323A5D;
+font-size:smaller;
+font-weight:400;
+padding:2px;
+}
+
+.nb4,.nb4:link,.nb4:hover,.nb4:visited {
+background-color:transparent;
+color:#323A5D;
+font-size:smaller;
+font-weight:700;
+padding:2px;
+}

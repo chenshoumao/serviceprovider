@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Connector Event Notification API Example</title>
+
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+
+  <meta name="author" content="Alexander Amies">
+
+  <link href="../../examples.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td align="left">  <img border="0" src="../../ibm_banner.gif"></td>
+      <td align="right">  <img src="../../tivolilogo.gif"></td>
+    </tr>
+
+  </tbody>
+</table>
+<h1>Directory Service Markup Language Version 2 JNDI Provider Example</h1>
+<br>
+The program <a href="../src/examples/serviceprovider/dsml2/DSML2DirContextTest.java">DSML2DirContextTest.java</a>
+illustrates how to communicate with TIM using the Directory Service Markup
+Language Version 2 (DSMLv2) Java Naming and Directory Interface (JNDI) provider.
+&nbsp; Comments within the program describe it's logic and a description of
+how to set up the supporting data files and run it is provided here.<br>
+<br>
+<b>Building the Example</b><p>Build the examples by following the instructions given in <a
+	href="../../Building.html">Building the Examples</a>.</p>
+The build script will create the jar file ${TIM_HOME}/extensions/{RELEASE_VERSION}/lib/examples.jar.
+&nbsp;This  contains the class file for Java classes for this example.<br>
+<br>
+The example is a stand-alone program so there are no changes required to the
+application server to enable it to work.<br>
+<br>
+<b>Running the Example</b><br>
+<br>
+Within the TIM user interface, add a service instance of type 'IDI Data Feed'.
+&nbsp;This service type uses the DSMLv2 protocol to send and receive requests.
+&nbsp;It is not actually necessary to use IBM Directory Integrator (IDI)
+with it. &nbsp;<br>
+<br>
+Enter the values for the service shown in Table 1.<br>
+<br>
+<div align="center"><b>Table 1 Parameters for TIM Server Instance</b><br>
+</div>
+<br>
+<table cellpadding="2" cellspacing="2" border="1" width="90%"
+ align="center">
+  <tbody>
+    <tr>
+      <td valign="top"><b>Name</b><br>
+      </td>
+      <td valign="top"><b>Value</b><br>
+      </td>
+      <td valign="top"><b>Description</b></td>
+    </tr>
+    <tr>
+      <td valign="top">Service Name<br>
+      </td>
+      <td valign="top">&lt;pick a name&gt;<br>
+      </td>
+      <td valign="top">This name is purely descriptive and is for use in
+the user interface.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">URL<br>
+      </td>
+      <td valign="top">&lt;arbitrary&gt;<br>
+      </td>
+      <td valign="top">Although not used in this example, a non-null value
+is required to conform with the schema. &nbsp;A value is required because
+of the more common usage of service definitions to communicate outwardly from
+TIM to a remote agent.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">User ID<br>
+      </td>
+      <td valign="top">agent<br>
+      </td>
+      <td valign="top">This is the value for the principal used for authentication
+of incoming requests.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">Password<br>
+      </td>
+      <td valign="top">agent<br>
+      </td>
+      <td valign="top">This is the value for the password used for authentication
+of incoming requests.</td>
+    </tr>
+    <tr>
+      <td valign="top">Naming Context<br>
+      </td>
+      <td valign="top"><nobr>namingContexts=DSML2 Test</nobr><br>
+      </td>
+      <td valign="top">This is used to identify the service to associate imported
+data with. &nbsp;The value, including the single space between 'DSML2' and
+'Test', must be a case-sensitive match to the value sent by the JNDI client<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">Use Workflow<br>
+      </td>
+      <td valign="top">Off (False)<br>
+      </td>
+      <td valign="top">This can be either on or off but it simpler to have
+it off.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">Name Attribute<br>
+      </td>
+      <td valign="top">uid<br>
+      </td>
+      <td valign="top">This is the attribute that will be used to do lookups
+on. &nbsp;This should be unique for all people within TIM. &nbsp;If there
+are multiple people found with the same value then an error will be returned.<br>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+An example screen shot is shown in Figure 1.<br>
+<br>
+<div align="center"><img src="images/service.gif"
+ alt="Screen shot of service detail form." width="749" height="458"><br>
+</div><div align="center"><b>Figure 1 Screen Shot of Service Detail Form<br>
+</b></div>
+<br>
+<br>
+Edit the file <a href="runJNDITest.cmd">runJNDITest.cmd</a> (<a
+ href="runJNDITest.sh">runJNDITest.sh</a> on unix) to set your java interpreter
+and classpath correctly.<br>
+<br>
+In the file <a href="data/test.properties">test.properties</a>, enter the
+values shown in Table 2 to connect to the TIM server.<br>
+<br>
+<div align="center"><b>Table 2 Parameters for Connection to TIM Server</b><br>
+<br>
+</div>
+<table cellpadding="2" cellspacing="2" border="1" width="90%"
+ align="center">
+  <tbody>
+    <tr>
+      <td valign="top"><b>Name</b><br>
+      </td>
+      <td valign="top"><b>Value</b><br>
+      </td>
+      <td valign="top"><b>Description</b><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">java.naming.factory.initial<br>
+      </td>
+      <td valign="top">com.ibm.dsml2.jndi.DSML2InitialContextFactory<br>
+      </td>
+      <td valign="top">The factory class for the DSMLv2 JNDI implementation
+provided with TIM.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">java.naming.provider.url<br>
+      </td>
+      <td valign="top">http://&lt;host&gt;:&lt;port&gt;/itim/console/dsml2_event_handler<br>
+      <br>
+For example,<br>
+      <br>
+http://localhost:9080/itim/console/dsml2_event_handler<br>
+      </td>
+      <td valign="top">We will start with http and then try https later in
+the example. &nbsp;The host is either the dns name or ip address of the machine.
+&nbsp;The port is the port that the application server is listening on. &nbsp;The
+path part of the url identities the web application and servlet.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">java.naming.security.principal<br>
+      </td>
+      <td valign="top">agent<br>
+      </td>
+      <td valign="top">The user id entered in the service form definition.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">java.naming.security.credentials<br>
+      </td>
+      <td valign="top">agent</td>
+      <td valign="top">The user id entered in the service form definition.</td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<br>
+The value for the JNDI factory class com.ibm.dsml2.jndi.DSML2InitialContextFactory
+leads to the instantiation of the DSMLv2 provider by the JNDI framework. &nbsp;This
+provider transports DSMLv2 text directly over a HTTP or HTTPS transport.<br>
+<br>
+Appropiate values for data are given in the file <a
+ href="data/test_data.properties">test_data.properties</a>. &nbsp;This file
+does not need to be modified but you should look at it to compare it to the
+variables in the example code and the values inserted into the TIM data store
+by the program.<br>
+<br>
+To run the program use the command line parameters shown in Table 3.<br>
+<br>
+Table 3 Command Line Parameters to run the example program. &nbsp;The description
+column provides help to verify that the effect of the command within the TIM
+user interface.<br>
+<br>
+<div align="center"><b>Table 3 &nbsp;Command Line Parameters to Run the Example
+Program</b><br>
+<br>
+</div>
+<table cellpadding="2" cellspacing="2" border="1" width="90%"
+ align="center">
+  <tbody>
+    <tr>
+      <td valign="top"><b>Command Line</b><br>
+      </td>
+      <td valign="top"><b>Description</b><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><nobr><tt>runJNDITest -op add</tt></nobr><br>
+      </td>
+      <td valign="top">Adds person with cn 'wilma flintstone' to TIM. &nbsp;Go
+to My Organization | Manage People to check that Wilma was added successfully.</td>
+    </tr>
+    <tr>
+      <td valign="top"><nobr><tt>runJNDITest -op lookup</tt></nobr><br>
+      </td>
+      <td valign="top">Looks up the person just added in the directory. &nbsp;Check
+standard out from the client program to see whether the person was found and
+the information is correct. &nbsp;There are other output print statements
+present that can be ignored or used to better understand the program.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><nobr><tt>runJNDITest -op </tt></nobr>mod<br>
+      </td>
+      <td valign="top">Change the value of Wilma's cn to 'wilma d flinstone'.
+&nbsp;Go to Wilma's personal information to verify that the new cn (Full Name)
+is correct.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><nobr><tt>runJNDITest -op&nbsp;</tt></nobr><tt>del</tt></td>
+      <td valign="top">Delete Wilma from the TIM data store. &nbsp;Wilma should
+no longer appear in the list of people in My Organization.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><nobr><tt>runJNDITest -op DSE</tt></nobr><br>
+      </td>
+      <td valign="top">Does a root DSE Search as defined in <a
+ href="http://www.faqs.org/rfcs/rfc2251.html">RFC 2251</a>, which provides
+information about the server. &nbsp;Check for the information printed to standard
+out.<br>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<br>
+<b>Description of the Code</b><br>
+The only imports required for communication with TIM are the JNDI interfaces:
+<br>
+<br>
+<tt><font color="#ff0055"><font color="#990000">import</font> </font>javax.naming.NamingException;<br>
+<font color="#990000">import</font> javax.naming.NamingEnumeration;<br>
+<font color="#990000">import</font> javax.naming.directory.*;</tt><br>
+<br>
+A connection is made in the method <tt>getDirContext()</tt> by reading the
+properties in the file test.properties into a <tt>Properties </tt>object and
+constructing an <tt>InitialDirContext </tt>object that represents the connection.<br>
+<br>
+<tt><font color="#990000">private </font>DirContext getDirContext() throws
+NamingException,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IOException
+{<br>
+&nbsp;&nbsp;&nbsp; Properties connectorProps = new Properties();<br>
+&nbsp;&nbsp;&nbsp; InputStream is = new FileInputStream(PROPS);<br>
+&nbsp;&nbsp;&nbsp; connectorProps.load(is);<br>
+&nbsp;&nbsp;&nbsp; <font color="#990000">return </font>new InitialDirContext(connectorProps);<br>
+}</tt><br>
+<br>
+There is no need to reference any DSMLv2 implementation specific classes in
+the code. &nbsp;In that way, properties for connection using another provider,
+such as DAML or LDAP, can be used without changes to the code.<br>
+<br>
+The method testCreateSubcontext() creates a person with the following lines
+of code:<br>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; String dn = name + "," + namingContext;<br>
+&nbsp;&nbsp;&nbsp; context.createSubcontext(dn, attributes);<br>
+</tt><br>
+The distinguished name used is a combination of the entity name and a naming
+context identifying the service. &nbsp;The attributes are read from the data
+file.<br>
+<br>
+The DSMLv2 implementation supports lookup of entities, whereas the DAML provider
+does not. &nbsp;The method testLookup() looks up the entry previously inserted
+in the directory and prints out the attribute values:<br>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; Attributes attributes = ((DirContext)context.lookup(dn)).getAttributes("");<br>
+&nbsp;&nbsp;&nbsp; assertTrue("attributes == null", attributes != null);<br>
+&nbsp;&nbsp;&nbsp; NamingEnumeration enum = attributes.getAll();<br>
+&nbsp;&nbsp;&nbsp; while (enum.hasMore()) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attribute attribute = (Attribute)enum.next();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println("id: " + attribute.getID()
++ ", values: ");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NamingEnumeration values = attribute.getAll();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while (values.hasMore()) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println("\t"
++ values.next());<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; }<br>
+</tt><br>
+Searches returning more than a single result are not supported by the DSMLv2
+implementation.<br>
+<br>
+Also the DSMLv2 provider supports a root DSE search, whereas the DAML provider
+did not. &nbsp;This is useful for a ping facility or to find out the version
+of the server. &nbsp;The method <tt>testSearchRootDSE() </tt>demonstrates
+this.<br>
+<br>
+The methods <tt>testModifyPerson()</tt> and <tt>testDestroySubcontext()</tt>
+demonstrate modifying and deleting a person, respectivly.<br>
+<br>
+<b>Running the Example with a Secure Protocol</b><br>
+This section describes how to run the example with HTTP over a secure socket
+connection (ie with HTTPS). &nbsp;<br>
+<br>
+The DSMLv2 JNDI implementation uses the standard Java Secure Sockets Extension
+(JSSE) mechanism in conjuction with the Java URL protocol handling mechanism.
+&nbsp;This means that the secure protocol details are handled by an implementation
+of a standard interface in a pluggable way. Implementations are provided,
+among others, by Sun and IBM. &nbsp;Details need not be understood beyond
+the basic concepts of certificate management and knowing the appropriate
+system properties to set. &nbsp;However, the details can be found at the
+<a href="http://java.sun.com/products/jsse/">Sun JSSE page</a>.<br>
+<br>
+In the file test.properties, change the protocol to https for the java.naming.provider.url
+property and change the port to the appropriate value (default is 9443 for
+WAS and 7002 for Weblogic).<br>
+<br>
+<tt>java.naming.provider.url=https://localhost:9443/enrole/dsml2_event_handler</tt><br>
+<br>
+You must use a Java virtual machine (JVM) with a&nbsp;JSSE implementation
+installed. &nbsp;This is provided out of the box with Websphere so the easiest
+path is to set the JAVA variable in the runJNDITest script to use that JVM.
+&nbsp;If using a machine with a standard java implementation, you can install
+JSSE from Sun's site at <a href="http://java.sun.com/products/jsse/">java.sun.com/products/jsse</a>.
+&nbsp;However, with the JDK 1.4 it is provided out of the box so it is not
+necessary to do anything special when using a JDK1.4 based client.<br>
+<br>
+There are several properties that must be set to enable use of HTTPS. &nbsp;These
+are described in Table 4. &nbsp;They should be specified in the command line
+as written in the runJNDITest scripts. &nbsp;The settings provided in the
+example script files may be adequate for many test environments.<br>
+<br>
+<div align="center"><b>Table 4 HTTPS System Properties</b><br>
+<br>
+</div>
+<table cellpadding="2" cellspacing="2" border="1" width="90%"
+ align="center">
+  <tbody>
+    <tr>
+      <td valign="top"><b>Property</b><br>
+      </td>
+      <td valign="top"><b>Value</b><br>
+      </td>
+      <td valign="top"><b>Description</b><br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">java.protocol.handler.pkgs<br>
+      </td>
+      <td valign="top">com.ibm.net.ssl.internal.www.protocol<br>
+      </td>
+      <td valign="top">This value is the IBM implementation shipped with Websphere.
+&nbsp;Not required if using JDK 1.4.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">javax.net.ssl.trustStore<br>
+      </td>
+      <td valign="top">${WAS_HOME}/etc/DummyServerTrustFile.jks<br>
+      </td>
+      <td valign="top">This is the default trust file shipped with Websphere.
+&nbsp;It is not recommended for production.<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">javax.net.ssl.trustStorePassword<br>
+      </td>
+      <td valign="top">WebAS<br>
+      </td>
+      <td valign="top">This is the default for the trust file shipped with
+Websphere. &nbsp;It is not recommended for production.</td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+<br>
+<b>Troubleshooting</b><br>
+Hostname is Wrong<br>
+If using a dummy certificate you may receive an error with the message 'Hostname
+is Wrong'. &nbsp;To avoid this obtain a proper certificate appropriate for
+the machine housing your application server. &nbsp;For testing purposes, however,
+you may add an entry to the hosts file matching the IP of the host to the
+name in the certificate and then use this as if it were a DNS name. &nbsp;For
+example, by adding the following entry to /etc/hosts:<br>
+<br>
+<tt>9.168.6.100 &nbsp; &nbsp; &nbsp; &nbsp;jserver</tt><br>
+<br>
+where 'jserver' is the name of the host in the trust certificate.<br>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="createService">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="containerDN" type="xsd:string"/>
+      <element name="profileName" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="serviceAttributes" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="createServiceResponse">
+    <complexType>
+     <sequence>
+      <element name="createServiceReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault" type="tns2:WSLoginServiceException"/>
+   <element name="fault1" type="tns2:WSApplicationException"/>
+   <element name="getAccountsForService">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+      <element name="accountID" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAccountsForServiceResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAccountsForServiceReturn" type="tns1:WSAccount"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <element name="fault2" type="tns2:WSInvalidSessionException"/>
+   <element name="getServiceForAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="accountDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceForAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceForAccountReturn" type="tns1:WSService"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServices">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServicesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getServicesReturn" type="tns1:WSService"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportingData">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+      <element name="searchFilter" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="attrs" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportingDataResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportingDataReturn" type="tns1:WSObject"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportingDataEntries">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+      <element name="searchFilter" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupportingDataEntriesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSupportingDataEntriesReturn" type="tns1:WSObject"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isPasswordRequired">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isPasswordRequiredResponse">
+    <complexType>
+     <sequence>
+      <element name="isPasswordRequiredReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupService">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupServiceResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupServiceReturn" type="tns1:WSService"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyService">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="wsAttrs" type="tns1:WSAttribute"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyServiceResponse">
+    <complexType/>
+   </element>
+   <element name="searchServices">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wscontainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="filter" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_tns1_WSOrganizationalContainer">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSOrganizationalContainer"/>
+    </sequence>
+   </complexType>
+   <element name="searchServicesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchServicesReturn" type="tns1:WSService"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="testCommunications">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="serviceDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="testCommunicationsResponse">
+    <complexType>
+     <sequence>
+      <element name="testCommunicationsReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="operation" type="xsd:int"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAccount">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="serviceDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="serviceName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSService">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="enrole" type="xsd:boolean"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSOrganizationalContainer">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="children" nillable="true" type="impl:ArrayOf_tns1_WSOrganizationalContainer"/>
+       <element name="parentDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="supervisorDN" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSInvalidSessionException">
+    <complexContent>
+     <extension base="tns2:WSLoginServiceException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="testCommunicationsRequest">
+
+      <wsdl:part element="intf:testCommunications" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountsForServiceRequest">
+
+      <wsdl:part element="intf:getAccountsForService" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchServicesResponse">
+
+      <wsdl:part element="intf:searchServicesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isPasswordRequiredResponse">
+
+      <wsdl:part element="intf:isPasswordRequiredResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="isPasswordRequiredRequest">
+
+      <wsdl:part element="intf:isPasswordRequired" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountsForServiceResponse">
+
+      <wsdl:part element="intf:getAccountsForServiceResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchServicesRequest">
+
+      <wsdl:part element="intf:searchServices" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceForAccountRequest">
+
+      <wsdl:part element="intf:getServiceForAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportingDataResponse">
+
+      <wsdl:part element="intf:getSupportingDataResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServicesRequest">
+
+      <wsdl:part element="intf:getServices" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportingDataRequest">
+
+      <wsdl:part element="intf:getSupportingData" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceForAccountResponse">
+
+      <wsdl:part element="intf:getServiceForAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportingDataEntriesRequest">
+
+      <wsdl:part element="intf:getSupportingDataEntries" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="testCommunicationsResponse">
+
+      <wsdl:part element="intf:testCommunicationsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createServiceRequest">
+
+      <wsdl:part element="intf:createService" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServicesResponse">
+
+      <wsdl:part element="intf:getServicesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSInvalidSessionException">
+
+      <wsdl:part element="intf:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupServiceRequest">
+
+      <wsdl:part element="intf:lookupService" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyServiceRequest">
+
+      <wsdl:part element="intf:modifyService" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createServiceResponse">
+
+      <wsdl:part element="intf:createServiceResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSupportingDataEntriesResponse">
+
+      <wsdl:part element="intf:getSupportingDataEntriesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupServiceResponse">
+
+      <wsdl:part element="intf:lookupServiceResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyServiceResponse">
+
+      <wsdl:part element="intf:modifyServiceResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSServiceService">
+
+      <wsdl:operation name="createService">
+
+         <wsdl:input message="intf:createServiceRequest" name="createServiceRequest"/>
+
+         <wsdl:output message="intf:createServiceResponse" name="createServiceResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountsForService">
+
+         <wsdl:input message="intf:getAccountsForServiceRequest" name="getAccountsForServiceRequest"/>
+
+         <wsdl:output message="intf:getAccountsForServiceResponse" name="getAccountsForServiceResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSInvalidSessionException" name="WSInvalidSessionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceForAccount">
+
+         <wsdl:input message="intf:getServiceForAccountRequest" name="getServiceForAccountRequest"/>
+
+         <wsdl:output message="intf:getServiceForAccountResponse" name="getServiceForAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServices">
+
+         <wsdl:input message="intf:getServicesRequest" name="getServicesRequest"/>
+
+         <wsdl:output message="intf:getServicesResponse" name="getServicesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportingData">
+
+         <wsdl:input message="intf:getSupportingDataRequest" name="getSupportingDataRequest"/>
+
+         <wsdl:output message="intf:getSupportingDataResponse" name="getSupportingDataResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportingDataEntries">
+
+         <wsdl:input message="intf:getSupportingDataEntriesRequest" name="getSupportingDataEntriesRequest"/>
+
+         <wsdl:output message="intf:getSupportingDataEntriesResponse" name="getSupportingDataEntriesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isPasswordRequired">
+
+         <wsdl:input message="intf:isPasswordRequiredRequest" name="isPasswordRequiredRequest"/>
+
+         <wsdl:output message="intf:isPasswordRequiredResponse" name="isPasswordRequiredResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupService">
+
+         <wsdl:input message="intf:lookupServiceRequest" name="lookupServiceRequest"/>
+
+         <wsdl:output message="intf:lookupServiceResponse" name="lookupServiceResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSInvalidSessionException" name="WSInvalidSessionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyService">
+
+         <wsdl:input message="intf:modifyServiceRequest" name="modifyServiceRequest"/>
+
+         <wsdl:output message="intf:modifyServiceResponse" name="modifyServiceResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchServices">
+
+         <wsdl:input message="intf:searchServicesRequest" name="searchServicesRequest"/>
+
+         <wsdl:output message="intf:searchServicesResponse" name="searchServicesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="testCommunications">
+
+         <wsdl:input message="intf:testCommunicationsRequest" name="testCommunicationsRequest"/>
+
+         <wsdl:output message="intf:testCommunicationsResponse" name="testCommunicationsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSServiceServiceSoapBinding" type="intf:WSServiceService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createServiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccountsForService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAccountsForServiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAccountsForServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidSessionException">
+
+            <wsdlsoap:fault name="WSInvalidSessionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceForAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceForAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceForAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServices">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServicesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServicesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportingData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportingDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportingDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSupportingDataEntries">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupportingDataEntriesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupportingDataEntriesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isPasswordRequired">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isPasswordRequiredRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isPasswordRequiredResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupServiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSInvalidSessionException">
+
+            <wsdlsoap:fault name="WSInvalidSessionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyServiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchServices">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchServicesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchServicesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="testCommunications">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="testCommunicationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="testCommunicationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSServiceServiceService">
+
+      <wsdl:port binding="intf:WSServiceServiceSoapBinding" name="WSServiceService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSServiceServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

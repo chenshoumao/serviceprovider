@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="createPolicy">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="policy" type="tns1:WSProvisioningPolicy"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSOrganizationalContainer">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSOrganizationalContainer"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_xsd_int">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSServiceAttributeParameter">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSServiceAttributeParameter"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSProvisioningPolicyEntitlement">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSProvisioningPolicyEntitlement"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSProvisioningPolicyMembership">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSProvisioningPolicyMembership"/>
+    </sequence>
+   </complexType>
+   <element name="createPolicyResponse">
+    <complexType>
+     <sequence>
+      <element name="createPolicyReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault" type="tns2:WSLoginServiceException"/>
+   <element name="fault1" type="tns2:WSApplicationException"/>
+   <element name="fault2" type="tns2:WSUnsupportedVersionException"/>
+   <element name="deletePolicy">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="policyDN" type="xsd:string"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deletePolicyResponse">
+    <complexType>
+     <sequence>
+      <element name="deletePolicyReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPolicies">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="policyName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getPoliciesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getPoliciesReturn" type="tns1:WSProvisioningPolicy"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyPolicy">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsContainer" type="tns1:WSOrganizationalContainer"/>
+      <element name="policy" type="tns1:WSProvisioningPolicy"/>
+      <element name="date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyPolicyResponse">
+    <complexType>
+     <sequence>
+      <element name="modifyPolicyReturn" type="tns1:WSRequest"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSOrganizationalContainer">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="children" nillable="true" type="impl:ArrayOf_tns1_WSOrganizationalContainer"/>
+       <element name="parentDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="supervisorDN" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSServiceTarget">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="type" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSServiceAttributeParameter">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+     <element name="expressionTypes" nillable="true" type="impl:ArrayOf_xsd_int"/>
+     <element name="enforcementTypes" nillable="true" type="impl:ArrayOf_xsd_int"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSProvisioningParameters">
+    <sequence>
+     <element name="parameters" nillable="true" type="impl:ArrayOf_tns1_WSServiceAttributeParameter"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSProvisioningPolicyEntitlement">
+    <sequence>
+     <element name="serviceTarget" nillable="true" type="tns1:WSServiceTarget"/>
+     <element name="parameters" nillable="true" type="tns1:WSProvisioningParameters"/>
+     <element name="type" type="xsd:int"/>
+     <element name="processDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSProvisioningPolicyMembership">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="type" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSProvisioningPolicy">
+    <sequence>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="keywords" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+     <element name="caption" nillable="true" type="xsd:string"/>
+     <element name="entitlements" nillable="true" type="impl:ArrayOf_tns1_WSProvisioningPolicyEntitlement"/>
+     <element name="membership" nillable="true" type="impl:ArrayOf_tns1_WSProvisioningPolicyMembership"/>
+     <element name="priority" type="xsd:int"/>
+     <element name="scope" type="xsd:int"/>
+     <element name="organizationalContainer" nillable="true" type="tns1:WSOrganizationalContainer"/>
+     <element name="enabled" type="xsd:boolean"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSRequest">
+    <sequence>
+     <element name="timeCompleted" nillable="true" type="xsd:dateTime"/>
+     <element name="subjectProfile" nillable="true" type="xsd:string"/>
+     <element name="result" nillable="true" type="xsd:string"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="processTypeString" nillable="true" type="xsd:string"/>
+     <element name="title" nillable="true" type="xsd:string"/>
+     <element name="owner" nillable="true" type="xsd:string"/>
+     <element name="processStateString" nillable="true" type="xsd:string"/>
+     <element name="status" type="xsd:int"/>
+     <element name="requestee" nillable="true" type="xsd:string"/>
+     <element name="timeSubmitted" nillable="true" type="xsd:dateTime"/>
+     <element name="subject" nillable="true" type="xsd:string"/>
+     <element name="requestId" type="xsd:long"/>
+     <element name="processType" nillable="true" type="xsd:string"/>
+     <element name="subjectService" nillable="true" type="xsd:string"/>
+     <element name="statusString" nillable="true" type="xsd:string"/>
+     <element name="processState" nillable="true" type="xsd:string"/>
+     <element name="timeScheduled" nillable="true" type="xsd:dateTime"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSUnsupportedVersionException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="modifyPolicyRequest">
+
+      <wsdl:part element="intf:modifyPolicy" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deletePolicyRequest">
+
+      <wsdl:part element="intf:deletePolicy" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createPolicyRequest">
+
+      <wsdl:part element="intf:createPolicy" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSUnsupportedVersionException">
+
+      <wsdl:part element="intf:fault2" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPoliciesResponse">
+
+      <wsdl:part element="intf:getPoliciesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPoliciesRequest">
+
+      <wsdl:part element="intf:getPolicies" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createPolicyResponse">
+
+      <wsdl:part element="intf:createPolicyResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="deletePolicyResponse">
+
+      <wsdl:part element="intf:deletePolicyResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyPolicyResponse">
+
+      <wsdl:part element="intf:modifyPolicyResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSProvisioningPolicyService">
+
+      <wsdl:operation name="createPolicy">
+
+         <wsdl:input message="intf:createPolicyRequest" name="createPolicyRequest"/>
+
+         <wsdl:output message="intf:createPolicyResponse" name="createPolicyResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deletePolicy">
+
+         <wsdl:input message="intf:deletePolicyRequest" name="deletePolicyRequest"/>
+
+         <wsdl:output message="intf:deletePolicyResponse" name="deletePolicyResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPolicies">
+
+         <wsdl:input message="intf:getPoliciesRequest" name="getPoliciesRequest"/>
+
+         <wsdl:output message="intf:getPoliciesResponse" name="getPoliciesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyPolicy">
+
+         <wsdl:input message="intf:modifyPolicyRequest" name="modifyPolicyRequest"/>
+
+         <wsdl:output message="intf:modifyPolicyResponse" name="modifyPolicyResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+         <wsdl:fault message="intf:WSUnsupportedVersionException" name="WSUnsupportedVersionException"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSProvisioningPolicyServiceSoapBinding" type="intf:WSProvisioningPolicyService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createPolicy">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createPolicyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createPolicyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deletePolicy">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deletePolicyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deletePolicyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPolicies">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPoliciesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPoliciesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyPolicy">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyPolicyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyPolicyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSUnsupportedVersionException">
+
+            <wsdlsoap:fault name="WSUnsupportedVersionException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSProvisioningPolicyServiceService">
+
+      <wsdl:port binding="intf:WSProvisioningPolicyServiceSoapBinding" name="WSProvisioningPolicyService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSProvisioningPolicyServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

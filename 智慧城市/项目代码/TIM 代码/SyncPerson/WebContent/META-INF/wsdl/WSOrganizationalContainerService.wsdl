@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="getOrganizations">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getOrganizationsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getOrganizationsReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSOrganizationalContainer">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSOrganizationalContainer"/>
+    </sequence>
+   </complexType>
+   <element name="fault" type="tns2:WSLoginServiceException"/>
+   <element name="fault1" type="tns2:WSApplicationException"/>
+   <element name="getOrganizationSubTree">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="parent" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getOrganizationSubTreeResponse">
+    <complexType>
+     <sequence>
+      <element name="getOrganizationSubTreeReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getOrganizationTree">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getOrganizationTreeResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getOrganizationTreeReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchContainerByAttribute">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="parent" type="tns1:WSOrganizationalContainer"/>
+      <element name="attributeName" type="xsd:string"/>
+      <element name="attributeValue" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchContainerByAttributeResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchContainerByAttributeReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchContainerTreeByAttribute">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsparent" type="tns1:WSOrganizationalContainer"/>
+      <element name="attributeName" type="xsd:string"/>
+      <element name="attributeValue" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchContainerTreeByAttributeResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchContainerTreeByAttributeReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchContainerByName">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="parent" type="tns1:WSOrganizationalContainer"/>
+      <element name="profileName" type="xsd:string"/>
+      <element name="containerName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchContainerByNameResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchContainerByNameReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createContainer">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="parent" type="tns1:WSOrganizationalContainer"/>
+      <element name="newContainer" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createContainerResponse">
+    <complexType>
+     <sequence>
+      <element name="createContainerReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyContainer">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="wsOrgContainer" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="modifyContainerResponse">
+    <complexType/>
+   </element>
+   <element name="removeContainer">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="orgContainerDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeContainerResponse">
+    <complexType/>
+   </element>
+   <element name="lookupContainer">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="orgContainerDN" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="lookupContainerResponse">
+    <complexType>
+     <sequence>
+      <element name="lookupContainerReturn" type="tns1:WSOrganizationalContainer"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSOrganizationalContainer">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="children" nillable="true" type="impl:ArrayOf_tns1_WSOrganizationalContainer"/>
+       <element name="parentDN" nillable="true" type="xsd:string"/>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+       <element name="supervisorDN" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="searchContainerByAttributeRequest">
+
+      <wsdl:part element="intf:searchContainerByAttribute" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchContainerTreeByAttributeRequest">
+
+      <wsdl:part element="intf:searchContainerTreeByAttribute" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createContainerResponse">
+
+      <wsdl:part element="intf:createContainerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationsRequest">
+
+      <wsdl:part element="intf:getOrganizations" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationsResponse">
+
+      <wsdl:part element="intf:getOrganizationsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createContainerRequest">
+
+      <wsdl:part element="intf:createContainer" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupContainerResponse">
+
+      <wsdl:part element="intf:lookupContainerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="lookupContainerRequest">
+
+      <wsdl:part element="intf:lookupContainer" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyContainerResponse">
+
+      <wsdl:part element="intf:modifyContainerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyContainerRequest">
+
+      <wsdl:part element="intf:modifyContainer" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationTreeRequest">
+
+      <wsdl:part element="intf:getOrganizationTree" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationTreeResponse">
+
+      <wsdl:part element="intf:getOrganizationTreeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchContainerTreeByAttributeResponse">
+
+      <wsdl:part element="intf:searchContainerTreeByAttributeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchContainerByAttributeResponse">
+
+      <wsdl:part element="intf:searchContainerByAttributeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeContainerRequest">
+
+      <wsdl:part element="intf:removeContainer" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationSubTreeResponse">
+
+      <wsdl:part element="intf:getOrganizationSubTreeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchContainerByNameRequest">
+
+      <wsdl:part element="intf:searchContainerByName" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOrganizationSubTreeRequest">
+
+      <wsdl:part element="intf:getOrganizationSubTree" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeContainerResponse">
+
+      <wsdl:part element="intf:removeContainerResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchContainerByNameResponse">
+
+      <wsdl:part element="intf:searchContainerByNameResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSOrganizationalContainerService">
+
+      <wsdl:operation name="getOrganizations">
+
+         <wsdl:input message="intf:getOrganizationsRequest" name="getOrganizationsRequest"/>
+
+         <wsdl:output message="intf:getOrganizationsResponse" name="getOrganizationsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationSubTree">
+
+         <wsdl:input message="intf:getOrganizationSubTreeRequest" name="getOrganizationSubTreeRequest"/>
+
+         <wsdl:output message="intf:getOrganizationSubTreeResponse" name="getOrganizationSubTreeResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationTree">
+
+         <wsdl:input message="intf:getOrganizationTreeRequest" name="getOrganizationTreeRequest"/>
+
+         <wsdl:output message="intf:getOrganizationTreeResponse" name="getOrganizationTreeResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchContainerByAttribute">
+
+         <wsdl:input message="intf:searchContainerByAttributeRequest" name="searchContainerByAttributeRequest"/>
+
+         <wsdl:output message="intf:searchContainerByAttributeResponse" name="searchContainerByAttributeResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchContainerTreeByAttribute">
+
+         <wsdl:input message="intf:searchContainerTreeByAttributeRequest" name="searchContainerTreeByAttributeRequest"/>
+
+         <wsdl:output message="intf:searchContainerTreeByAttributeResponse" name="searchContainerTreeByAttributeResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchContainerByName">
+
+         <wsdl:input message="intf:searchContainerByNameRequest" name="searchContainerByNameRequest"/>
+
+         <wsdl:output message="intf:searchContainerByNameResponse" name="searchContainerByNameResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createContainer">
+
+         <wsdl:input message="intf:createContainerRequest" name="createContainerRequest"/>
+
+         <wsdl:output message="intf:createContainerResponse" name="createContainerResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyContainer">
+
+         <wsdl:input message="intf:modifyContainerRequest" name="modifyContainerRequest"/>
+
+         <wsdl:output message="intf:modifyContainerResponse" name="modifyContainerResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeContainer">
+
+         <wsdl:input message="intf:removeContainerRequest" name="removeContainerRequest"/>
+
+         <wsdl:output message="intf:removeContainerResponse" name="removeContainerResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupContainer">
+
+         <wsdl:input message="intf:lookupContainerRequest" name="lookupContainerRequest"/>
+
+         <wsdl:output message="intf:lookupContainerResponse" name="lookupContainerResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSOrganizationalContainerServiceSoapBinding" type="intf:WSOrganizationalContainerService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getOrganizations">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOrganizationsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOrganizationsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationSubTree">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOrganizationSubTreeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOrganizationSubTreeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOrganizationTree">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOrganizationTreeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOrganizationTreeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchContainerByAttribute">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchContainerByAttributeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchContainerByAttributeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchContainerTreeByAttribute">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchContainerTreeByAttributeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchContainerTreeByAttributeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchContainerByName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchContainerByNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchContainerByNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createContainer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createContainerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createContainerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="modifyContainer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyContainerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyContainerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeContainer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeContainerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeContainerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="lookupContainer">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="lookupContainerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="lookupContainerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSOrganizationalContainerServiceService">
+
+      <wsdl:port binding="intf:WSOrganizationalContainerServiceSoapBinding" name="WSOrganizationalContainerService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSOrganizationalContainerServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

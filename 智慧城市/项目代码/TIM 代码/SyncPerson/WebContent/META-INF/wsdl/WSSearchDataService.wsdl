@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions targetNamespace="http://services.ws.itim.ibm.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.ws.itim.ibm.com" xmlns:intf="http://services.ws.itim.ibm.com" xmlns:tns1="http://model.ws.itim.ibm.com" xmlns:tns2="http://exceptions.ws.itim.ibm.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <element name="findSearchControlObjects">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="searchArgs" type="tns1:WSSearchArguments"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findSearchControlObjectsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="findSearchControlObjectsReturn" type="tns1:WSSelectItem"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fault" type="tns2:WSLoginServiceException"/>
+   <element name="fault1" type="tns2:WSApplicationException"/>
+   <element name="findSearchFilterObjects">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="searchArgs" type="tns1:WSSearchArguments"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findSearchFilterObjectsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="findSearchFilterObjectsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAttributeNames">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="objectclass" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAttributeNamesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAttributeNamesReturn" type="tns1:WSSelectItem"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCommonPersonSearchAttributeNames">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCommonPersonSearchAttributeNamesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getCommonPersonSearchAttributeNamesReturn" type="tns1:WSSelectItem"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchData">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element maxOccurs="unbounded" name="searchParamsArray" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchDataResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchDataReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchForDelegates">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="filter" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="attrList" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchForDelegatesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchForDelegatesReturn" type="tns1:WSDelegatePerson"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_xsd_string">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSAttribute">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSAttribute"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_WSSystemUser">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:WSSystemUser"/>
+    </sequence>
+   </complexType>
+   <element name="searchPersonsFromRoot">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="filter" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="attrList" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchPersonsFromRootResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchPersonsFromRootReturn" type="tns1:WSPerson"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchPersonsWithITIMAccount">
+    <complexType>
+     <sequence>
+      <element name="session" type="tns1:WSSession"/>
+      <element name="filter" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="attrList" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchPersonsWithITIMAccountResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchPersonsWithITIMAccountReturn" type="tns1:WSPerson"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exceptions.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLocale">
+    <sequence>
+     <element name="country" nillable="true" type="xsd:string"/>
+     <element name="variant" nillable="true" type="xsd:string"/>
+     <element name="language" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSession">
+    <sequence>
+     <element name="clientSession" nillable="true" type="xsd:string"/>
+     <element name="enforceChallengeResponse" type="xsd:boolean"/>
+     <element name="locale" nillable="true" type="tns1:WSLocale"/>
+     <element name="sessionID" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSearchArguments">
+    <sequence>
+     <element name="category" nillable="true" type="xsd:string"/>
+     <element name="profile" nillable="true" type="xsd:string"/>
+     <element name="objectclass" nillable="true" type="xsd:string"/>
+     <element name="contextDN" nillable="true" type="xsd:string"/>
+     <element name="returnedAttributeName" nillable="true" type="xsd:string"/>
+     <element name="filter" nillable="true" type="xsd:string"/>
+     <element name="base" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSelectItem">
+    <sequence>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="label" nillable="true" type="xsd:string"/>
+     <element name="value" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSAttribute">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="values" nillable="true" type="impl:ArrayOf_xsd_string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSObject">
+    <sequence>
+     <element name="attributes" nillable="true" type="impl:ArrayOf_tns1_WSAttribute"/>
+     <element name="select" type="xsd:boolean"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="itimDN" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="WSSystemUser">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="itimAdmin" type="xsd:boolean"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSDelegatePerson">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="systemUsers" nillable="true" type="impl:ArrayOf_tns1_WSSystemUser"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="WSPerson">
+    <complexContent>
+     <extension base="tns1:WSObject">
+      <sequence>
+       <element name="profileName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exceptions.ws.itim.ibm.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.ws.itim.ibm.com"/>
+   <import namespace="http://services.ws.itim.ibm.com"/>
+   <complexType name="WSLoginServiceException">
+    <sequence/>
+   </complexType>
+   <complexType name="WSApplicationException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="searchPersonsWithITIMAccountResponse">
+
+      <wsdl:part element="intf:searchPersonsWithITIMAccountResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchPersonsFromRootResponse">
+
+      <wsdl:part element="intf:searchPersonsFromRootResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAttributeNamesResponse">
+
+      <wsdl:part element="intf:getAttributeNamesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchForDelegatesRequest">
+
+      <wsdl:part element="intf:searchForDelegates" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSLoginServiceException">
+
+      <wsdl:part element="intf:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCommonPersonSearchAttributeNamesRequest">
+
+      <wsdl:part element="intf:getCommonPersonSearchAttributeNames" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCommonPersonSearchAttributeNamesResponse">
+
+      <wsdl:part element="intf:getCommonPersonSearchAttributeNamesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchForDelegatesResponse">
+
+      <wsdl:part element="intf:searchForDelegatesResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchPersonsWithITIMAccountRequest">
+
+      <wsdl:part element="intf:searchPersonsWithITIMAccount" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchPersonsFromRootRequest">
+
+      <wsdl:part element="intf:searchPersonsFromRoot" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAttributeNamesRequest">
+
+      <wsdl:part element="intf:getAttributeNames" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchDataResponse">
+
+      <wsdl:part element="intf:searchDataResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="findSearchControlObjectsRequest">
+
+      <wsdl:part element="intf:findSearchControlObjects" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="findSearchFilterObjectsRequest">
+
+      <wsdl:part element="intf:findSearchFilterObjects" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="WSApplicationException">
+
+      <wsdl:part element="intf:fault1" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="findSearchControlObjectsResponse">
+
+      <wsdl:part element="intf:findSearchControlObjectsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchDataRequest">
+
+      <wsdl:part element="intf:searchData" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="findSearchFilterObjectsResponse">
+
+      <wsdl:part element="intf:findSearchFilterObjectsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WSSearchDataService">
+
+      <wsdl:operation name="findSearchControlObjects">
+
+         <wsdl:input message="intf:findSearchControlObjectsRequest" name="findSearchControlObjectsRequest"/>
+
+         <wsdl:output message="intf:findSearchControlObjectsResponse" name="findSearchControlObjectsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findSearchFilterObjects">
+
+         <wsdl:input message="intf:findSearchFilterObjectsRequest" name="findSearchFilterObjectsRequest"/>
+
+         <wsdl:output message="intf:findSearchFilterObjectsResponse" name="findSearchFilterObjectsResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAttributeNames">
+
+         <wsdl:input message="intf:getAttributeNamesRequest" name="getAttributeNamesRequest"/>
+
+         <wsdl:output message="intf:getAttributeNamesResponse" name="getAttributeNamesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCommonPersonSearchAttributeNames">
+
+         <wsdl:input message="intf:getCommonPersonSearchAttributeNamesRequest" name="getCommonPersonSearchAttributeNamesRequest"/>
+
+         <wsdl:output message="intf:getCommonPersonSearchAttributeNamesResponse" name="getCommonPersonSearchAttributeNamesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchData">
+
+         <wsdl:input message="intf:searchDataRequest" name="searchDataRequest"/>
+
+         <wsdl:output message="intf:searchDataResponse" name="searchDataResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchForDelegates">
+
+         <wsdl:input message="intf:searchForDelegatesRequest" name="searchForDelegatesRequest"/>
+
+         <wsdl:output message="intf:searchForDelegatesResponse" name="searchForDelegatesResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsFromRoot">
+
+         <wsdl:input message="intf:searchPersonsFromRootRequest" name="searchPersonsFromRootRequest"/>
+
+         <wsdl:output message="intf:searchPersonsFromRootResponse" name="searchPersonsFromRootResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsWithITIMAccount">
+
+         <wsdl:input message="intf:searchPersonsWithITIMAccountRequest" name="searchPersonsWithITIMAccountRequest"/>
+
+         <wsdl:output message="intf:searchPersonsWithITIMAccountResponse" name="searchPersonsWithITIMAccountResponse"/>
+
+         <wsdl:fault message="intf:WSApplicationException" name="WSApplicationException"/>
+
+         <wsdl:fault message="intf:WSLoginServiceException" name="WSLoginServiceException"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WSSearchDataServiceSoapBinding" type="intf:WSSearchDataService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="findSearchControlObjects">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findSearchControlObjectsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findSearchControlObjectsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findSearchFilterObjects">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findSearchFilterObjectsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findSearchFilterObjectsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAttributeNames">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAttributeNamesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAttributeNamesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCommonPersonSearchAttributeNames">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCommonPersonSearchAttributeNamesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCommonPersonSearchAttributeNamesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchForDelegates">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchForDelegatesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchForDelegatesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsFromRoot">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchPersonsFromRootRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchPersonsFromRootResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchPersonsWithITIMAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchPersonsWithITIMAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchPersonsWithITIMAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="WSApplicationException">
+
+            <wsdlsoap:fault name="WSApplicationException" use="literal"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="WSLoginServiceException">
+
+            <wsdlsoap:fault name="WSLoginServiceException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WSSearchDataServiceService">
+
+      <wsdl:port binding="intf:WSSearchDataServiceSoapBinding" name="WSSearchDataService">
+
+         <wsdlsoap:address location="http://10.47.1.51:9081/itim/services/WSSearchDataServiceService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

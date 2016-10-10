@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.ws.shx.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.ws.shx.com" xmlns:intf="http://service.ws.shx.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.ws.shx.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="syncPerson">
+    <complexType>
+     <sequence>
+      <element name="ixml" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="syncPersonResponse">
+    <complexType>
+     <sequence>
+      <element name="syncPersonReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="syncPersonRequest">
+
+      <wsdl:part element="impl:syncPerson" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="syncPersonResponse">
+
+      <wsdl:part element="impl:syncPersonResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="SyncManage">
+
+      <wsdl:operation name="syncPerson">
+
+         <wsdl:input message="impl:syncPersonRequest" name="syncPersonRequest"/>
+
+         <wsdl:output message="impl:syncPersonResponse" name="syncPersonResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SyncManageSoapBinding" type="impl:SyncManage">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="syncPerson">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="syncPersonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="syncPersonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SyncManageService">
+
+      <wsdl:port binding="impl:SyncManageSoapBinding" name="SyncManage">
+
+         <wsdlsoap:address location="http://localhost:9081/SyncPerson/services/SyncManage"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

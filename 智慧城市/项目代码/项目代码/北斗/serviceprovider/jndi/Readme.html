@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder V6.0.2 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+  <title>Running the Service Provider API Examples</title>
+  <link href="../../examples.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td align="left"> <img alt="Banner"
+ style="border: 0px solid ; width: 283px; height: 58px;"
+ src="../../ibm_banner.gif"></td>
+      <td align="right"> <img style="width: 170px; height: 58px;"
+ alt="Logo" src="../../tivolilogo.gif"></td>
+    </tr>
+  </tbody>
+</table>
+<h1>JNDI Service Provider Examples</h1>
+<p>The files in the JNDI directory implement a JNDI connector example.
+The
+JNDI connector example comes with configuration files that can be
+installed
+on the ITIM directory server to work without much effort. The JNDI
+connector,
+however, can be configured to use different schemas and can use
+different
+directory servers by updating these configuration files (see the <a
+ href="../../../doc/serviceprovider/serviceprovider.html">Connector
+API
+documentation</a> for more details). The only limitations of the
+connector
+is that it can&#8217;t support inheritance in the schema (other than from
+top),
+the user id attribute in the schema must be named erUid, and the
+password
+attribute must be named userPassword.</p>
+<p>To run the example, first make sure the example code has been built
+and
+integrated with the ITIM platform (see <a href="../../Building.html">Building
+the Examples</a>). Then register the connector and its associated
+schema
+by following these steps.</p>
+<p></p>To install the example, run the build file (build.bat for windows and 
+build.sh for unix) found in the serviceprovider directory. The build file will 
+create a jndisampleservice.jar file in the same directory. (You will need to set 
+the ANT_HOME_LIB variable first.)
+
+<br>
+<br>
+Now log in to ITIM as ITIM Manager and select Configure System &gt; Manage 
+Service Types. Press the Import button and select jndisampleservice.jar.
+</ol>
+<p>From this point, you can create an instance of the JNDI Sample
+Service
+registered by the connector and provision it. To properly configure an
+instance
+of the JNDI Sample Service, the following service attributes must be
+set
+correctly:</p>
+<p>erJNDIFactory &#8211; Class name of a JNDI service provider. You can use
+the
+<font face="Monospace">java.naming.factory.initial</font> property in the<font>
+</font>enRoleLDAPConnection.properties<font> </font>file to use ITIM&#8217;s JNDI service provider. </p>
+<p>erJNDIProviderURL &#8211; URL to the directory server to provision. You
+can
+use the <font face="Monospace">java.naming.provider.url</font> property in the
+enRoleLDAPConnection.properties
+file to use ITIM&#8217;s directory.</p>
+<p>erJNDIPrincipal &#8211; User id to authenticate as to the directory
+server.
+You can use the <font face="Monospace">java.naming.security.principal</font> property in the
+enRoleLDAPConnection.properties
+file to authenticate as the ITIM system.</p>
+<p>erJNDICredentials &#8211; Password to authenticate with to the directory
+server.
+You can use the <font face="Monospace">java.naming.security.credentials</font> property in the
+enRoleLDAPConnection.properties
+to authenticate as the ITIM system.</p>
+<p>erJNDIRoot &#8211; Root node in the directory tree to search from and to
+add
+users to. This value must be the distinguished name of an existing
+object
+in the directory.</p>
+</body>
+</html>
