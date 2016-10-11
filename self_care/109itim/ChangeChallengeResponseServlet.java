@@ -105,7 +105,8 @@ public class ChangeChallengeResponseServlet extends HttpServlet
 
 	getChallengesAndResponses(request, response, session);
 	  
-    /*if (isNullOrEmpty(action)) {
+    /*
+	if (isNullOrEmpty(action)) {
       getChallengesAndResponses(request, response, session);
 	  setAnswers(request, response, session);
     } else if (action.equals("setAnswers")) {
