@@ -230,7 +230,7 @@ public class ChangeChallengeResponseServlet extends HttpServlet
 
       session.setAttribute("updateCRAnswers", new Boolean(false));
 
-      goToInfoPage(CR_ANSWERS_INFO, "Your challenge/response answers have been updated.", session, request, response);
+      //goToInfoPage(CR_ANSWERS_INFO, "Your challenge/response answers have been updated.", session, request, response);
     }
     catch (RemoteException e)
     {

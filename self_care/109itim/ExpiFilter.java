@@ -9,7 +9,23 @@ import com.ibm.websphere.security.auth.WSLoginFailedException;
 import com.ibm.websphere.security.auth.WSSubject;
 import java.io.IOException;
 import java.io.PrintStream;
+
+import java.io.BufferedReader;
+
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.Enumeration;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import javax.security.auth.Subject;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -74,6 +90,46 @@ public class ExpiFilter
     ExpiUtil.log("ExpiFilter.init(): end");
   }
 
+  public String doGetMethod(String updataUrl){
+		String result = "";
+		BufferedReader in = null;  
+		
+		System.out.println(updataUrl);
+		URLConnection con;
+		
+		try {
+			con = new URL(updataUrl).openConnection();
+
+			System.out.println("dataurl-----:" + updataUrl);
+
+			 con.setRequestProperty("accept", "*/*");  
+	            con.setRequestProperty("connection", "Keep-Alive");  
+	            con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");  
+	            con.setRequestProperty("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");  
+	            // 发送POST请求必须设置如下两行  
+	          //  con.setDoOutput(true);  
+	          //  con.setDoInput(true);  
+			System.out.println(11111);
+			con.connect();
+			System.out.println(22222);
+			in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			String line;
+			while ((line = in.readLine()) != null) {
+				result += line;
+			}
+			System.out.println(result);
+			return result;
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+      
+	}
+  
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
     throws IOException, ServletException
   {
@@ -90,6 +146,10 @@ public class ExpiFilter
 
     String userID = req.getParameter("j_username");
     String password = req.getParameter("j_password");
+	/*if(action.equals("updateAnswer")){
+		password = doGetMethod("http://10.161.2.67:9080/UsersManagement/UsersServlet?param=getUserPassword&uid="+userID);
+		password = password.split(",")[1];
+	}*/ 
     System.out.println(userID + "," + password + "," + action);
 
     HttpSession session = req.getSession(false);
@@ -113,7 +173,7 @@ public class ExpiFilter
       try
       {
         Subject subject = WSSubject.getCallerSubject();
-        if ((userID.trim().length() == 0) || (password.length() == 0)) {
+        if ((userID.trim().length() == 0) || (password.length() == 0) ) {
           ExpiUtil.log("ExpiFilter.init(): empty userID or password.");
           addMessageToCookie(responseWrapper, "Empty user ID or password is not allowed");
         }
