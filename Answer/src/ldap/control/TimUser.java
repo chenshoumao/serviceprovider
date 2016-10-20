@@ -21,10 +21,10 @@ public class TimUser {
 	//更改密保
 	@RequestMapping("/updateChallengAnswer")
 	@ResponseBody
-	public Map<String, Object> updateChallengAnswer(String username,String password,String question,String answer){
+	public Map<String, Object> updateChallengAnswer(String username,String question,String answer){
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
-			boolean state = this.userService.updateChallengAnswer(username,password,question,answer);
+			boolean state = this.userService.updateChallengAnswer(username,question,answer);
 			map.put("result", state);
 		} catch (Exception e) {
 				// TODO: handle exception

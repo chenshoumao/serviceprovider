@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
  @Service
 public interface TimUserService { 
-	public boolean updateChallengAnswer(String username,String password, String question, String answer);
+	public boolean updateChallengAnswer(String username,String question, String answer);
 	
 	public List showAccount(String eruid);
 	

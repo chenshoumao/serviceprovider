@@ -24,7 +24,7 @@ public interface TimUserDao {
 	 
 	public List getUserInfo(String eruid);
 
-	public boolean updateChallengAnswer(String username,String password, String question, String answer);
+	public boolean updateChallengAnswer(String username,String question, String answer);
 
 	public List showAccount(String eruid);
 	

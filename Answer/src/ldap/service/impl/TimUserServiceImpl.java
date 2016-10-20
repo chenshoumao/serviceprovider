@@ -15,9 +15,9 @@ public class TimUserServiceImpl implements TimUserService{
 	private TimUserDao userDao;
 	 
 	@Override
-	public boolean updateChallengAnswer(String eruid,String password, String question, String answer) {
+	public boolean updateChallengAnswer(String eruid,String question, String answer) {
 		// TODO Auto-generated method stub
-		return this.userDao.updateChallengAnswer(eruid,password,question, answer);
+		return this.userDao.updateChallengAnswer(eruid,question, answer);
 	}
 
 	public List showAccount(String eruid) {

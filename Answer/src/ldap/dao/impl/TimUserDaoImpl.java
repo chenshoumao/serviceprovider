@@ -171,7 +171,7 @@ public class TimUserDaoImpl implements TimUserDao {
 		return "false";
 	} 
 	
-	public void doGetMethod(String updataUrl){
+	public String doGetMethod(String updataUrl){
 		String result = "";
 		BufferedReader in = null;  
 		
@@ -199,6 +199,7 @@ public class TimUserDaoImpl implements TimUserDao {
 				result += line;
 			}
 			System.out.println(result);
+			return result;
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -206,19 +207,28 @@ public class TimUserDaoImpl implements TimUserDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return null;
       
 	}
+	
+	 
+	
 
 	@Override
-	public boolean updateChallengAnswer(String username, String password,String question, String answer) {
+	public boolean updateChallengAnswer(String username,String question, String answer) {
 		 
 		//List list = this.getUserInfo("ITIM Manager");
 		 
 			System.out.println(22); 
+			
+			
 		    String erlostpasswordanswer =
 			 "<?xml version=\"1.0\" encoding=\"UTF-8\"?><ChallengeResponseSet><ChallengeResponse Challenge=\""+ question +"\" Response=\"********\"/></ChallengeResponseSet>";
 			 
 			try {   
+				String password = doGetMethod("http://10.161.2.67:9080/UsersManagement/UsersServlet?param=getUserPassword&uid="+username);
+				 
+				password = password.split(",")[1];
 				//想设置密保问题
 				ldapTemplate.modifyAttributes("eruid=" + username
 						+ ",ou=systemUser,ou=itim,ou=org",
