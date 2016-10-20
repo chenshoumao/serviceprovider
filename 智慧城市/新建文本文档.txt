@@ -1,0 +1,15 @@
+http://www.cnblogs.com/gnuhpc/category/349499.html
+
+命令行创建tds实例
+http://www.ibm.com/support/knowledgecenter/SSVJJU_6.3.0/com.ibm.IBMDS.doc/commandref189.htm#wq252
+
+
+cat /etc/group | grep 你要看的组名
+看看"，"隔开的部分就对了
+
+idscfgdb
+
+idscfgdb -I testtds –a dbinst –w 12345678 –t TDS –l /home/dbinst 
+
+
+改ldap实例添加db2
