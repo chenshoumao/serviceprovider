@@ -1,0 +1,21 @@
+{"obj":
+   {
+    "systemEnName":"hrxitong",
+    "systemCnName":"HR系统",
+    "data":[
+           {
+		"title":"张XX待审批0",
+		"receiveTime":"2016-08-01 16:01:59",
+		"pendingName":"张XX",
+		"url":"http://www.HR.com/zhansan"
+	    },
+	    {
+		"title":"李XX待审批1",
+		"receiveTime":"2016-08-01 16:01:59",
+		"pendingName":"李XX",
+		"url":"http://www.HR.com/lisi"
+	    }],
+    "count":"2",
+"pageUrl":"http://www.HR.com/daiban/list"
+}
+}

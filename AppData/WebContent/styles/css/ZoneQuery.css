@@ -1,0 +1,126 @@
+.stations_left {
+    padding: 10px;
+    float: left;
+    width: 270px;
+    background-color: #f6f6f6;
+}
+.wholeh1 {
+    border-bottom: 1px solid #ccc;
+    line-height: 33px;
+}
+.blue {
+    font-size: 18px;
+    color: #005bc1;
+    border-bottom: 3px solid #005bc1;
+    display: inline-block;
+    padding-right: 2px;
+    font-weight: 700;
+    position: relative;
+    top: 2px;
+}
+.wholeimg {
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+.stations_left ul li {
+    font-size: 15px;
+    color: #666666;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #dcdcdc;
+    width: 270px;
+    height: 55px;
+    line-height: 52px;
+}
+.stations_left ul li span {
+    color: #5c8cb8;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.stations_right{
+    padding-top: 10px;
+    width: 785px;
+    float: right;
+}
+
+.query span{
+    margin-top: 17px;
+}
+
+.query [type=text]{
+    margin-top: 17px;
+    margin-right: 25px;
+    width: 185px;
+}
+.stations_right{
+    padding-top: 10px;
+    width: 785px;
+    float: right;
+}
+
+.query{
+    float: right;
+    width: 100%;
+}
+
+.query span{
+    margin-top: 17px;
+}
+
+.query [type=text]{
+    margin-top: 17px;
+    margin-right: 25px;
+    width: 130px;
+}
+.stations_right > [type=text]{
+    margin-top: 25px;
+    margin-right: 25px;
+    width: 185px;
+}
+.query a{
+    margin-top: 15px;
+    width: 105px;
+    height: 26px;
+    display: block;
+    background-color: #005bc1;
+    color: #fff;
+    float: right;
+    line-height: 26px;
+}
+.query a img{
+    position: relative;
+    top: 4px;
+    left: 9px;
+    margin-right: 13px; 
+}
+.queryResult{
+    width: 100%;
+    margin-top: 73px;
+    height:75px;
+}
+.queryResult img{
+    float: left;
+}
+.queryResult p{
+    line-height: 27px;
+    margin-left: 135px;
+}
+.queryResult > p >span:nth-child(1){
+    float: left;
+    color: #666666;
+    font-weight: 600;
+}
+
+.stations_right ul{
+    float: right;
+    clear: both;
+    margin-top: 30px;
+}
+.stations_right ul li{
+    float: left;
+    margin-right: 20px;
+    
+}
+..

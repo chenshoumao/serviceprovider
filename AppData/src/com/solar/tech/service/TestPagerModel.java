@@ -1,0 +1,144 @@
+package com.solar.tech.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.solar.tech.bean.ToDo;
+
+public class TestPagerModel {
+
+	
+	   public static void main(String args[]) {
+	        List<ToDo> list = new ArrayList<ToDo>();
+	    /**    ToDo td=new ToDo();
+	        td.setAppName("oa1");
+	        td.setCount("23");
+	        td.setPageUrl("http://");
+	        td.setPendingName("zhangsan");
+	        td.setTitle("gen");
+	        td.setTitleUrl("http://");
+	        list.add(td);
+	        td=null;
+	        ToDo td1=new ToDo();
+	        td1.setAppName("hr");
+	        td1.setCount("23");
+	        td1.setPageUrl("http://");
+	        td1.setPendingName("zhangsan");
+	        td1.setTitle("gen");
+	        td1.setTitleUrl("http://");	        
+	        list.add(td1);
+	        ToDo td2=new ToDo();
+	        td2.setAppName("hr1");
+	        td2.setCount("23");
+	        td2.setPageUrl("http://");
+	        td2.setPendingName("zhangsan");
+	        td2.setTitle("gen");
+	        td2.setTitleUrl("http://");
+	        list.add(td2);
+	        ToDo td3=new ToDo();
+	        td3.setAppName("fina");
+	        td3.setCount("23");
+	        td3.setPageUrl("http://");
+	        td3.setPendingName("zhangsan");
+	        td3.setTitle("gen");
+	        td3.setTitleUrl("http://");
+	        list.add(td3);
+	        ToDo td4=new ToDo();
+	        td4.setAppName("fina1");
+	        td4.setCount("23");
+	        td4.setPageUrl("http://");
+	        td4.setPendingName("zhangsan");
+	        td4.setTitle("gen");
+	        td4.setTitleUrl("http://");
+	        list.add(td4);
+	        ToDo td5=new ToDo();
+	        td5.setAppName("dr1");
+	        td5.setCount("23");
+	        td5.setPageUrl("http://");
+	        td5.setPendingName("zhangsan");
+	        td5.setTitle("gen");
+	        td5.setTitleUrl("http://");
+	        list.add(td5);
+	        ToDo td6=new ToDo();
+	        td6.setAppName("bei");
+	        td6.setCount("23");
+	        td6.setPageUrl("http://");
+	        td6.setPendingName("zhangsan");
+	        td6.setTitle("gen");
+	        td6.setTitleUrl("http://");
+	        list.add(td6);
+	        ToDo td7=new ToDo();
+	        td7.setAppName("bei1");
+	        td7.setCount("23");
+	        td7.setPageUrl("http://");
+	        td7.setPendingName("zhangsan");
+	        td7.setTitle("gen");
+	        td7.setTitleUrl("http://");
+	        list.add(td7);
+	        ToDo td8=new ToDo();
+	        td8.setAppName("fen");
+	        td8.setCount("23");
+	        td8.setPageUrl("http://");
+	        td8.setPendingName("zhangsan");
+	        td8.setTitle("gen");
+	        td8.setTitleUrl("http://");
+	        list.add(td8);
+	        ToDo td9=new ToDo();
+	        td9.setAppName("fen1");
+	        td9.setCount("23");
+	        td9.setPageUrl("http://");
+	        td9.setPendingName("zhangsan");
+	        td9.setTitle("gen");
+	        td9.setTitleUrl("http://");
+	        list.add(td9);
+	        ToDo td10=new ToDo();
+	        td10.setAppName("oa2");
+	        td10.setCount("23");
+	        td10.setPageUrl("http://");
+	        td10.setPendingName("zhangsan");
+	        td10.setTitle("gen");
+	        td10.setTitleUrl("http://");
+	        list.add(td10);
+	        ToDo td11=new ToDo();
+	        td11.setAppName("oa3");
+	        td11.setCount("23");
+	        td11.setPageUrl("http://");
+	        td11.setPendingName("zhangsan");
+	        td11.setTitle("gen");
+	        td11.setTitleUrl("http://");
+	        list.add(td11);
+	        ToDo td12=new ToDo();
+	        td12.setAppName("oa4");
+	        td12.setCount("23");
+	        td12.setPageUrl("http://");
+	        td12.setPendingName("zhangsan");
+	        td12.setTitle("gen");
+	        td12.setTitleUrl("http://");
+	        list.add(td12);
+	        ToDo td13=new ToDo();
+	        td13.setAppName("oa5");
+	        td13.setCount("23");
+	        td13.setPageUrl("http://");
+	        td13.setPendingName("zhangsan");
+	        td13.setTitle("gen");
+	        td13.setTitleUrl("http://");
+	        list.add(td13);
+	        ToDo td14=new ToDo();
+	        td14.setAppName("oa6");
+	        td14.setCount("23");
+	        td14.setPageUrl("http://");
+	        td14.setPendingName("zhangsan");
+	        td14.setTitle("gen");
+	        td14.setTitleUrl("http://");
+	        list.add(td14);*/
+	        
+	    //    PageModel pm = new PageModel(list, 5);	        
+	   //     List sublist = pm.getObjects(3);
+	   //     for(int i = 0; i < sublist.size(); i++) {
+	   //         System.out.println(sublist.get(i));
+	   //     }
+	    //    System.out.println(sublist.get(0));
+	        
+	    //ListSorter ls=    new ListSorter();
+	    ListSorter.sort(list,"AppName");
+	    }
+}

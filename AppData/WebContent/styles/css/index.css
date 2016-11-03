@@ -1,0 +1,531 @@
+
+/*portal*/
+.wptheme3Col{width: 1100px;margin: 0 auto;}
+.Left{width: 282px;float: left;}
+.Center{width: 455px;float: left;}
+.Right{width: 360px;float: right;}
+.wpthemeClear{clear: both;}
+
+/* 左边的 */
+.container_left{
+	float: left;
+}
+.left_one{
+	width: 260px;
+    border: 1px solid #f3f1f1;
+    padding: 0px 10px 10px 10px;
+}
+.wholeh1{
+	border-bottom: 1px solid #ccc;
+    line-height: 33px;
+    display: block;
+}
+.left_one h2{
+	background-color: #f3f1f1;
+	text-align: center;
+	height: 20px;
+	padding-top: 6px;
+}
+.left_one h2 span{
+	font-size: 12px;
+}
+.left_one h2 span:nth-child(2){margin-left: 30px;}
+.Message{
+    float: left;
+}
+.Message,.Greetings{
+    float: right;
+    width: 165px;
+    height: 90px;
+    overflow: hidden;}
+.blue {
+    font-size: 18px;
+    color: #005bc1;
+    border-bottom: 3px solid #005bc1;
+    display: inline-block;
+    padding-right: 2px;
+    font-weight: 700;
+    position: relative;
+    top: 2px;
+}
+.wholeimg {
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+.span_gray {
+    float: right;
+    background: url(../images/bottom.png) no-repeat right 15px;
+    text-indent: -51px;
+    padding-top: 4px;
+    font-size: 12px;
+    color: #666;
+    width: 40px;
+    height: 30px;;
+}
+.span_gray2 {
+    float: right;
+    background: url(../images/bottom2.png) no-repeat right 12px;
+    text-indent: -51px;
+    padding-top: 4px;
+    font-size: 12px;
+    color: #666;
+    width: 40px;
+    height: 30px;;
+}
+.information{
+	margin-top: 25px;
+	height: 110px;
+    margin-bottom: 0px;
+    color: #666;
+
+}
+.information img{
+	float: left;
+    position: relative;
+    left: 10px;
+}
+.information p{
+	float: left;
+	margin-left: 20px;
+	line-height: 24px;
+	font-size: 12px;
+
+}
+.left_two{
+	width: 260px;
+	height: 285px;
+	border: 1px solid #f3f1f1;
+	padding: 0 10px 0 10px;
+    margin-top: 30px;
+    background-color: #f6f6f6;
+    margin-bottom: 25px;
+}
+.modify{
+	float: right;
+	margin-right: 10px;
+    font-size: 12px;
+}
+.favorites{
+    position: relative;
+	float: left;
+	margin-top: 25px;
+	margin-right: 8px;
+    margin-left: 9px;
+}
+.favorites input{position:absolute;top: 0px;z-index: 10;display: none;}
+.left_two .favorites:nth-child(5n+0){margin-right: 0px;}
+.favorites p{
+	margin-top: 8px;
+    font-size: 12px;
+}
+.left_three{
+	width: 260px;
+	height: 300px;
+	border: 1px solid #f3f1f1;
+	padding: 0 10px 0 10px;
+    margin-top: 30px;
+    background-color: #f6f6f6;
+}
+.aimg{
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    margin:20px 4px 0px 4px;
+    line-height: 30px;
+}
+.ssimg{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #f3f1f1;
+    border-radius: 10%;
+}
+
+
+.aimg:nth-child(2) .ssimg{
+    background:url(../images/ss1.png)  no-repeat;
+    background-size: 100% 200%;
+}
+.aimg:nth-child(3) .ssimg{
+    background:url(../images/ss2.png) no-repeat;
+    background-size: 100% 200%;
+}
+.aimg:nth-child(4) .ssimg{
+    background:url(../images/ss3.png) no-repeat;
+   
+    background-size: 100% 200%;
+}
+.aimg:nth-child(5) .ssimg{
+    background:url(../images/ss4.png) no-repeat;
+    background-size: 100% 200%;
+    
+}
+.aimg:nth-child(6) .ssimg{
+    background:url(../images/ss5.png) no-repeat;
+    
+    background-size: 100% 200%;
+}
+.aimg:nth-child(7) .ssimg{
+    background:url(../images/ss6.png) no-repeat;
+    
+    background-size: 100% 200%;
+}
+
+.ssimg:hover{
+    border: 2px solid #005bc1;
+}
+.aimg:hover{
+	color: #005bc1;
+}
+/* 右边的 */
+
+
+
+.totalFlet{
+    float: left;
+    width: 455px;
+}
+.totalRight{
+    float: right;
+    width: 360px;
+}
+.flet_one{
+	width: 395px;
+    margin: 0 auto;
+}
+.tabPanel{
+	margin-top: 10px;
+}
+.tabPanel > ul {
+    height: 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+.hit {
+    cursor: pointer;
+    border-bottom: 2px solid #e70000;
+    color: #005BC1;
+}
+.tabPanel > ul > li {
+    font-weight: 600;
+    float: left;
+    height: 29px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 13px;
+    font-size: 14px;
+    width: 85px;
+    text-align: center;
+    letter-spacing: 3px;
+    overflow: hidden;
+}
+.tabPanel2{
+	margin-top:10px;
+}
+.tabPanel2 > ul {
+    height: 30px;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+}
+.tabPanel2 > ul > li {
+	font-weight: 600;
+    float: left;
+    height: 29px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+    width: 63px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.pane {
+    border-top: 0;
+    min-height: 100px;
+    background-color: #fff;
+}
+.pane2,.pane3,.pane4,.pane5,.pane6{
+    display: none;
+}
+
+.pane8 {
+    border-top: 0;
+    min-height: 100px;
+    background-color: #fff;
+    display: none;
+}
+.pane9 {
+    border-top: 0;
+    min-height: 100px;
+    background-color: #fff;
+    display: none;
+}
+.pane10 {
+    border-top: 0;
+    min-height: 100px;
+    background-color: #fff;
+    display: none;
+}
+.number p {
+    padding: 15px 15px 10px 0px;
+}
+.number ul a li{
+	list-style-image: url(../images/z.png);
+	border: none;
+	color: #666666;
+	border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.number ul a li p{
+	font-weight: 600;
+}
+.number ul a li span{
+	float: right;
+}
+.number ul a li:hover{
+	color: #005bc1;
+}
+.z{
+	margin-right: 40%;
+    font-weight: 100;
+}
+
+.flet_three{
+    width: 360px;
+    margin: 0 auto;
+}
+.flet_three>ul{margin-left: 10px;
+}
+.flet_three>ul li{
+    list-style-image: url(../images/z.png);
+    color: #666666;
+    border-bottom: 1px solid #ccc;
+    padding: 14px 0px;
+}
+.flet_three>ul li a span:nth-child(2){float: right;text-align: right;}
+.flet_three>ul li a span:nth-child(1){width:75%;overflow: hidden;height: 14px;display: inline-block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;-webkit-text-overflow:ellipsis;}
+.flet_three ul a li p{
+    font-weight: 600;
+    padding: 15px 15px 12px 0px;
+}
+.flet_three ul a li span:nth-child(1){
+    width: 320px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.flet_three ul a li span:nth-child(2){
+    float: right;
+    display: inline-block;
+}
+.flet_three ul a li:hover{
+    color: #005bc1;
+}
+
+.flet_four{
+    width: 395px;
+    margin: 0 auto;
+}
+.flet_four>ul{
+    height: 30px;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 10px;
+}
+.flet_four>ul>li{
+    font-weight: 600;
+    float: left;
+    height: 29px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 13px;
+    font-size: 14px;
+    width: 117px;
+    text-align: center;
+    letter-spacing: 3px;
+    overflow: hidden;
+}
+.flet_five{
+    width: 360px;  
+    margin: 0 auto
+}
+.number22 ul{
+    margin-left: 10px;
+}
+.number22 ul li{
+    list-style-image: url(../images/z.png);
+    border: none;
+    color: #666666;
+    border-bottom: 1px solid #ccc;
+    height: 59px;
+    padding-bottom: 4px;
+}
+.number22 ul a li p{
+    font-weight: 600;
+    padding: 15px 15px 10px 0px;
+}
+.number22 ul a li span{
+    float: right;
+}
+.number22 ul a li:hover{
+    color: #005bc1;
+}
+
+.journalism{
+    width: 100%;
+    height: 110px;
+    margin-top:20px;
+    clear: both;
+}
+.journalism_img{
+    float: left;
+}
+.journalism_word{
+    width: 196px;
+    height: 110px;
+    float: right;
+    position: relative;
+}
+.journalism_word h1{
+    width: 145px;
+    margin:0px auto;
+    font-weight: 600;
+    height: 14px;
+    overflow: hidden;
+    text-overflow: clip;
+    word-wrap: break-word;
+}
+.journalism_word p{
+    font-size: 13px;
+    color: #969595;
+    line-height: 17px;
+    text-indent: 2em;
+    margin-top: 10px;
+}
+.journalism_word a{
+    float: right;
+    color: #005bc1;
+    font-size: 12px;
+    position: absolute;bottom: 2px;right: 2px;
+}
+/*新员工入职*/
+.NewWork{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.NewWork li{
+    list-style-image: url(../images/z.png);
+    color: #666666;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0px;
+}
+.NewWork li a:hover{color:#005bc1;}
+.NewWork li span:nth-child(2){float: right;}
+.right_two_img{
+    margin-top: 20px;
+    float: left;
+}
+/* 友情链接 */
+
+#footer{
+    height: 100px;
+    background-color: #eeeeee;
+    margin-top: 30px;
+}
+.footer_logo{
+    float: left;
+    width: 255px;
+    border-right: 2px solid #929292;
+    margin-left: 152px;
+    margin-top: 22px;
+}
+.footer_word{
+    width: 800px;
+    margin-left: 435px;
+    padding-top: 30px;
+}
+.footer_word span{
+    margin-right: 16px;
+    line-height: 25px;
+    color: #929292;
+    font-size: 13px;
+}
+.number > ul{
+    margin-left: 10px;
+}
+.page{width: 100%;text-align: center;}
+.numberUl > li{
+    float: left;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+.numberUl > li:hover{
+    color: #005BC1;
+}
+.numberUl{
+    line-height: 46px;
+    display: inline-block;
+}
+.number_shu{
+    cursor: pointer;
+    color: #005BC1;
+}
+.rslides1{z-index: -1;}
+}
+.unread_blue{ 
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    line-height: 18px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+} 
+.unread_red{    
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    line-height: 18px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+}
+.left_friendlink{
+    padding: 0 10px 30px 10px;
+    width: 260px;
+    margin-top: 30px;
+    background-color: #f6f6f6;
+}
+.left_friendlink ul{
+    width: 282px;
+    margin-top: 10px;
+}
+.left_friendlink ul a:hover{
+    color: #005bc1;
+}
+.left_friendlink ul li{
+    float: left;
+    margin-top: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.panes>.pane:not(:first-child) {
+    display: none;
+}
+.NewLists{margin-top: 7px; }
+.NewLists ul li{list-style-image: url(../images/z.png);
+    line-height: 32px;}
+.NewLists ul li a span:nth-child(2){float: right;}
+.System .tem ul li{list-style-image: url(../images/z.png);
+    border: none;
+    color: #666666;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 14px;}
+.System .tem ul {margin-top: 1px;}
+.System .tem ul li p{padding: 17px 15px 11px 0px;font-weight: 600;}
+.tem ul li span:nth-child(2){width: 60%;overflow: hidden;display: inline-block;height: 14px;overflow: hidden;}
+.tem ul li span:nth-child(3){width: 30%;overflow: hidden;display: inline-block;float: right;text-align: right;}

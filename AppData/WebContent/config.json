@@ -1,0 +1,54 @@
+
+{
+"oa":{
+  "EnName" : "systemEnName",
+  "CnName" : "systemCnName",
+  "sysUrl":"http://localhost:8080/AppData/oa.json",
+  "jsonroot":"obj",
+  "jsondata":"data",
+  "todomap":{
+  "Title" : "title",
+  "receiveTime" : "receiveTime",
+  "PendingName" : "pendingName",
+  "todoUrl" : "url"
+  },
+  "countmap":{
+  "sysCount" : "count",  
+  "sysListUrl" : "pageUrl"
+  }        
+},
+"hr":{
+  "EnName" : "systemEnName",
+  "CnName" : "systemCnName",
+  "sysUrl":"http://localhost:8080/AppData/hr.json",
+  "jsonroot":"obj", 
+  "jsondata":"data", 
+  "todomap":{
+  "Title" : "title",
+  "receiveTime" : "receiveTime",
+  "PendingName" : "pendingName",
+  "todoUrl" : "url"
+  },
+  "countmap":{
+  "sysCount" : "count",  
+  "sysListUrl" : "pageUrl"
+  }        
+},
+"pms":{
+  "EnName" : "systemEnName",
+  "CnName" : "systemCnName",
+  "sysUrl":"http://localhost:8080/AppData/pms.json",
+  "jsonroot":"obj",
+  "jsondata":"data",    
+  "todomap":{
+  "Title" : "title",
+  "receiveTime" : "receiveTime",
+  "PendingName" : "pendingName",
+  "todoUrl" : "url"
+  },
+  "countmap":{
+  "sysCount" : "count",  
+  "sysListUrl" : "pageUrl"
+  }        
+}
+}

@@ -1,0 +1,34 @@
+{
+   
+    "todo":[
+           {
+        "EnName":"oaxitong",
+        "CnName":"OA系统",           
+		"title":"张XX待审批0",
+		"receiveTime":"2016-08-01 16:01:59",
+		"pendingName":"张XX",
+		"todoUrl":"http://www.OA.com/zhansan"
+	    },
+	    {
+        "EnName":"hrxitong",
+        "CnName":"HR系统",	    
+		"title":"李XX待审批1",
+		"receiveTime":"2016-08-01 16:01:59",
+		"pendingName":"李XX",
+		"todoUrl":"http://www.HR.com/lisi"
+	    }],
+    "count":[
+             {
+             "EnName":"oaxitong",
+             "CnName":"OA系统",
+             "sysCount":"9",
+             "sysListUrl":"http://www.OA.com/daiban/list"
+             },
+             {
+             "EnName":"hrxitong",
+             "CnName":"HR系统",
+             "sysCount":"6",
+             "sysListUrl":"http://www.OA.com/daiban/list"
+             }]             
+
+}
